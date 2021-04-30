@@ -13,6 +13,7 @@
     "ui4jd/inventory_screens/creative_screen.ui4jd",
     "ui4jd/inventory_screens/inventory_screen.ui4jd",
     "ui4jd/inventory_screens/test_component.ui4jd",
+    "ui4jd/inventory_screens/trade_2_screen.ui4jd",
     "ui4jd/inventory_screens/crafting_sections/3x3_crafting_tabs.ui4jd",
     /* Creative Sections */
     "ui4jd/inventory_screens/creative_sections/building_blocks_sections.ui4jd",

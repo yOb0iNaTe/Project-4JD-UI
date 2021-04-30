@@ -119,8 +119,7 @@
   },
 
   "hover_text_image@ui_4jd_textures.text_panel": {
-    "$hover_anchor_from|default": "top_left",
-    "$hover_anchor_to|default": "top_left",
+    "$hover_anchor|default": "top_left",
     "$hover_text_offset|default": [ 7, -24.5 ],
     "$hover_text_label_control|default": "common_4jd.hover_text_label",
     "$hover_text_texture_bindings|default": [],
@@ -128,8 +127,8 @@
     "size": [ "100%c+12.5px", "100%c+14.5px" ],
     "color": [ 1.0, 1.0, 1.0, 1.0 ],
     "layer": 150,
-    "anchor_from": "$hover_anchor_from",
-    "anchor_to": "$hover_anchor_to",
+    "anchor_from": "$hover_anchor",
+    "anchor_to": "$hover_anchor",
     "offset": "$hover_text_offset",
     "bindings": "$hover_text_texture_bindings",
     "controls": [

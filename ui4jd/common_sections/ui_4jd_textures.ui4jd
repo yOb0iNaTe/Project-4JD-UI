@@ -1,6 +1,41 @@
 {
   "namespace": "ui_4jd_textures",
 
+  /* HUD */
+
+  "experience_bar_empty": {
+    "type": "image",
+    "texture": "textures/ui4jd/hud/experience_bar_empty"
+  },
+
+  "experience_bar_full": {
+    "type": "image",
+    "texture": "textures/ui4jd/hud/experience_bar_full"
+  },
+
+  "experience_bar_full_white": {
+    "type": "image",
+    "texture": "textures/ui4jd/hud/experience_bar_full_white"
+  },
+
+  /* Crafting */
+
+  "item_selected_highlight": {
+    "type": "image",
+    "texture": "textures/ui4jd/item_selected_highlight"
+  },
+
+  "lock_icon": {
+    "type": "image",
+    "texture": "textures/ui4jd/lock_icon"
+  },
+
+  "warning_icon": {
+    "type": "image",
+    "size": [ 8, 8 ],
+    "texture": "textures/ui4jd/warning_icon"
+  },
+
   /* Durability textures */
 
   "durability_bindings": {
