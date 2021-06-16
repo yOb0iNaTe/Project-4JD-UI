@@ -2,8 +2,6 @@
 
 ### An legacy console UI design for MC Win10 Bedrock.
 
-### NOTE: From now on I will try to update the project every Wednesday adding features and bug fixes.
-
 #### Description ####
 
 Is an testing/experimental resource pack that would change some UI designs, and the goal of this project is convert from default UI to high accuracy 4JD (Legacy Console) UI TP for Bedrock Edition users, replacing some designs to look more similar!
