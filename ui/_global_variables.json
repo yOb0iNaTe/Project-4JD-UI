@@ -1,6 +1,19 @@
-{
+{  ////*/ Main menu button /*////
+  "$main_menu_button_default_color": [ 0.87, 0.87, 0.87 ],
+  "$main_menu_button_hover_color": [ 1.0, 1.0, 0.62 ] ,
+  "$main_menu_button_preesed_color": [ 1.0, 1.0, 0.62 ],
+  "$main_menu_button_locked_color": [ 0.62, 0.62, 0.62 ],  
+
+  //////// Anvil ////////
   "$anvil_cost_fail_text_color": [ 1.0, 0.375, 0.375 ], //[ 0.929, 0.337, 0.337 ],
   //"$anvil_cost_success_text_color": [ 0.000, 0.647, 0.000 ]
 
-  "$global_font_type": "normal" //Use "smooth" if you are using JP language.
+  "$global_font_type": "normal", //Use "smooth" if you are using JP language.
+
+  ////*/ HUD /*////
+  "$experience_outline_text_color": [ 0.0, 0.0, 0.0 ],
+  "$chat_size": [ "100%", 180 ],
+  "$ignore_scoreboard_scores": false,
+  "$scoreboard_text_shadow": false,
+  "$player_score_color": [ 1.0, 0.333, 0.333, 1.0 ]
 }

@@ -1,0 +1,153 @@
+/*File made by @CrisXolt.
+//(c) Don't use any code design without permission!*/
+{
+  "namespace": "start_4jd",
+
+  /*//// Text Panel ////*/
+
+  "minecraft_text": {
+    "type": "label",
+    "color": "$main_header_text_color",
+    "shadow": true,
+    "text": "Minecraft "
+  },
+
+  "copyright_text@start_4jd.minecraft_text": {
+    "text": "Copyright Mojang AB. Do not distribute!"
+  },
+
+  "project_text@start_4jd.minecraft_text": {
+    "text": "/VDX: Java UI"
+  },
+
+  "version_text@start_4jd.minecraft_text": {
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "text": "#version",
+    "bindings": [ { "binding_name": "#version" } ]
+  },
+
+  "text_panel": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "size": [ "100%-4px", 10 ],
+    "controls": [
+      { "minecraft_text@start_4jd.minecraft_text": { } },
+      {
+        "version_panel": {
+          "type": "panel",
+          "size": [ "100%c-6px", 10 ],
+          "clips_children": true,
+          "controls": [
+            { "version_text@start_4jd.version_text": { } }
+          ]
+        }
+      },
+      { "project_text@start_4jd.project_text": { } },
+      { "fill": { "type": "panel", "size": [ "fill", 10 ] } },
+      { "copyright_text@start_4jd.copyright_text": { } }
+    ]
+  },
+
+  /*//// Title Panel ////*/
+
+  "title_panel": { 
+    "type": "panel",
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "size": [ 285.5, 69 ],
+    "offset": [ 0, 28 ],
+    "controls": [
+      { 
+        "title_image@ui_4jd_textures.title": {
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "layer": 5
+        }
+      },
+      { "splash_text@common_art.splash_text": { "layer": 10, "offset": [ -41, 1 ] } }
+    ]
+  },
+
+  /*//// Main Buttons ////*/
+
+  "main_button@common_buttons_4jd.main_button": { "anchor_from": "top_left", "anchor_to": "top_left", "size": [ "100%", 20 ] },
+  
+  "play_button@start_4jd.main_button": {
+    "$pressed_button_name": "button.menu_play",
+    "$button_text": "4jd.menu.play"
+  },
+
+  "profile_button@start_4jd.main_button": {
+    "$pressed_button_name": "button.to_profile_screen",
+    "$button_text": "profileScreen.header"
+  },
+
+  "achievements_button@start_4jd.main_button": {
+    "$pressed_button_name": "button.menu_achievements",
+    "$button_text": "menu.achievements"
+  },
+
+  "store_button@start_4jd.main_button": {
+    "$pressed_button_name": "button.menu_store",
+    "$button_text": "4jd.menu.store"
+  },
+
+  "settings_button@start_4jd.main_button": {
+    "$pressed_button_name": "button.menu_settings",
+    "$button_text": "4jd.menu.helpOptions"
+  },
+
+  "exit_button@start_4jd.main_button": {
+    "$pressed_button_name": "button.menu_exit",
+    "$button_text": "4jd.menu.exit"
+  },
+
+  "feedback_button@start_4jd.main_button": {
+    "$pressed_button_name": "button.menu_open_uri",
+    "$button_text": "",
+    "property_bag": {
+      "#hyperlink": "https://aka.ms/minecraftfb"
+    }
+  },
+
+  "stacked_row": {
+    "type": "panel",
+    "size": [ "100%", 25 ]
+  },
+
+  "main_buttons": {
+    "type": "stack_panel",
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "offset": [ 0, 0 ],
+    "size": [ 225, "100%c" ],
+    "controls": [
+      { "button_0@start_4jd.stacked_row": { "controls": [ { "play_button@start_4jd.play_button": { } } ] } },
+      //{ "button_1@start_4jd.stacked_row": { "controls": [ { "profile_button@start_4jd.profile_button": { } } ] } },
+      { "button_2@start_4jd.stacked_row": { "controls": [ { "achievements_button@start_4jd.achievements_button": { } } ] } },
+      { "button_3@start_4jd.stacked_row": { "controls": [ { "settings_button@start_4jd.settings_button": { } } ] } },
+      { "button_4@start_4jd.stacked_row": { "controls": [ { "store_button@start_4jd.store_button": { } } ] } },
+      { "button_5@start_4jd.stacked_row": { "controls": [ { "exit_button@start_4jd.exit_button": { } } ] } }
+    ]
+  },
+  
+  /*//// Screen ////*/
+
+  "center_screen": {
+    "type": "panel",
+    "controls": [
+      //{ "text_panel@start_4jd.text_panel": { } }
+    ]
+  },
+
+  "full_screen": {
+    "type": "panel",
+    "controls": [
+      { "title_panel@start_4jd.title_panel": { } },
+      { "main_buttons@start_4jd.main_buttons": { } }
+    ]
+  }
+}

@@ -49,14 +49,25 @@
     "$button_content|default": "common_buttons_4jd.button_label",
     "$ignore_hover_text|default": true,
     "$is_last_button|default": false,
+    "$hover_content|default": "common.empty_panel",
     "controls": [
       {
         "hover_content@$hover_content": {
-          "layer": 6,
           "ignored": "(not $has_hover_text)"
         }
       },
-      { "button_content@$button_content": { "layer": 3 } }
+      { "button_content@$button_content": { "layer": 3 } },
+      { "button_texture@$button_texture": { "layer": 1, "size": [ "100%", 20 ] } }
     ]
+  },
+
+  "button_label": {
+    "type": "label",
+    "shadow": true,
+    "size": [ "default", "default" ],
+    "$text_font_type|default": "default",
+    "color": "$text_color",
+    "font_type": "$text_font_type",
+    "text": "$button_text"
   }
 }

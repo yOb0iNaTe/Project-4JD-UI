@@ -487,7 +487,7 @@
       },
       {
         "item_number_scroll_panel@crafting.scroll_panel": {
-          "ignored": true,
+          "ignored": false,
           "size": [ 70, "100%" ],
           "anchor_from": "top_right",
           "anchor_to": "top_right",

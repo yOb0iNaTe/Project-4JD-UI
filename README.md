@@ -2,8 +2,6 @@
 
 ### An legacy console UI design for MC Win10 Bedrock.
 
-### NOTE: From now on I will try to update the project every Wednesday adding features and bug fixes.
-
 #### Description ####
 
 Is an testing/experimental resource pack that would change some UI designs, and the goal of this project is convert from default UI to high accuracy 4JD (Legacy Console) UI TP for Bedrock Edition users, replacing some designs to look more similar!
@@ -16,19 +14,23 @@ For mobile (Mini version) it will be available for late 2021.
 
 #### Current Features ####
 
+- Start
+- Progress
+- HUD
 - Anvil screen.
 - Beacon screen.
 - Trade v2 screen.
 - Classic Inventory and Crafting screen (Just like JE UI).
-- Creative Screen.
+- Creative Screen (Temporarily removed).
 
 #### To do list ####
 
 - CE 3x3 and 2x2 Crafting screen (10%, still in progress).
-- Start screen.
 - Pause screen.
-- Progress screen.
-- HUD screen.
+- Furnace
+- Enchanting
+- Chest
+- Horse
 
 #### License ####
 

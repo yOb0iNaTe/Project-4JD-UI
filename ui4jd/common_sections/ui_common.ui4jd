@@ -173,20 +173,20 @@
       }
     ],
     "controls": [
-      { "durability_bar_00@ui_4jd_textures.durability_bar_00": { "$min_amount": 0.03125, "$max_amount": 0.06250 } },
-      { "durability_bar_01@ui_4jd_textures.durability_bar_01": { "$min_amount": 0.06250, "$max_amount": 0.12500 } },
-      { "durability_bar_02@ui_4jd_textures.durability_bar_02": { "$min_amount": 0.12500, "$max_amount": 0.21875 } },
-      { "durability_bar_03@ui_4jd_textures.durability_bar_03": { "$min_amount": 0.21875, "$max_amount": 0.28125 } },
-      { "durability_bar_04@ui_4jd_textures.durability_bar_04": { "$min_amount": 0.28125, "$max_amount": 0.37500 } },
-      { "durability_bar_05@ui_4jd_textures.durability_bar_05": { "$min_amount": 0.37500, "$max_amount": 0.43750 } },
-      { "durability_bar_06@ui_4jd_textures.durability_bar_06": { "$min_amount": 0.43750, "$max_amount": 0.50000 } },
-      { "durability_bar_07@ui_4jd_textures.durability_bar_07": { "$min_amount": 0.50000, "$max_amount": 0.59375 } },
-      { "durability_bar_08@ui_4jd_textures.durability_bar_08": { "$min_amount": 0.59375, "$max_amount": 0.65625 } },
-      { "durability_bar_09@ui_4jd_textures.durability_bar_09": { "$min_amount": 0.65625, "$max_amount": 0.75000 } },
-      { "durability_bar_10@ui_4jd_textures.durability_bar_10": { "$min_amount": 0.75000, "$max_amount": 0.81250 } },
-      { "durability_bar_11@ui_4jd_textures.durability_bar_11": { "$min_amount": 0.81250, "$max_amount": 0.90625 } },
-      { "durability_bar_12@ui_4jd_textures.durability_bar_12": { "$min_amount": 0.90625, "$max_amount": 0.96875 } },
-      { "durability_bar_13@ui_4jd_textures.durability_bar_13": { "$min_amount": 0.96875, "$max_amount": 1.00000 } }
+      { "durability_bar_00@ui_4jd_textures.durability_bar_00": { "$min_amount": 0.0000, "$max_amount": 0.0714 } },
+      { "durability_bar_01@ui_4jd_textures.durability_bar_01": { "$min_amount": 0.0714, "$max_amount": 0.1428 } },
+      { "durability_bar_02@ui_4jd_textures.durability_bar_02": { "$min_amount": 0.1428, "$max_amount": 0.2142 } },
+      { "durability_bar_03@ui_4jd_textures.durability_bar_03": { "$min_amount": 0.2142, "$max_amount": 0.2856 } },
+      { "durability_bar_04@ui_4jd_textures.durability_bar_04": { "$min_amount": 0.2856, "$max_amount": 0.3570 } },
+      { "durability_bar_05@ui_4jd_textures.durability_bar_05": { "$min_amount": 0.3570, "$max_amount": 0.4284 } },
+      { "durability_bar_06@ui_4jd_textures.durability_bar_06": { "$min_amount": 0.4284, "$max_amount": 0.4998 } },
+      { "durability_bar_07@ui_4jd_textures.durability_bar_07": { "$min_amount": 0.4998, "$max_amount": 0.5712 } },
+      { "durability_bar_08@ui_4jd_textures.durability_bar_08": { "$min_amount": 0.5712, "$max_amount": 0.6426 } },
+      { "durability_bar_09@ui_4jd_textures.durability_bar_09": { "$min_amount": 0.6426, "$max_amount": 0.7140 } },
+      { "durability_bar_10@ui_4jd_textures.durability_bar_10": { "$min_amount": 0.7140, "$max_amount": 0.7854 } },
+      { "durability_bar_11@ui_4jd_textures.durability_bar_11": { "$min_amount": 0.7854, "$max_amount": 0.8568 } },
+      { "durability_bar_12@ui_4jd_textures.durability_bar_12": { "$min_amount": 0.8568, "$max_amount": 0.9282 } },
+      { "durability_bar_13@ui_4jd_textures.durability_bar_13": { "$min_amount": 0.9282, "$max_amount": 1.0000 } }
     ]
   },
 

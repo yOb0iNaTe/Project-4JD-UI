@@ -87,7 +87,7 @@
     "anchor_to": "bottom_left",
     "controls": [
       //{ "test_grid_panel@creative_4jd.test_grid_panel": { } },
-      { "creative_panel_content@creative_tabs_4jd.creative_panel_content": { } },
+      //{ "creative_panel_content@creative_tabs_4jd.creative_panel_content": { } },
       { "dialog_bg@ui_4jd_textures.dialog_bg_opaque_1_5": { "layer": 1 } },
       {
         "hotbar_grid@common.hotbar_grid_template": {

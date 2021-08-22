@@ -6,6 +6,17 @@
     "ui4jd/common_sections/ui_template_buttons.ui4jd",
     "ui4jd/common_sections/ui_template_toggles.ui4jd",
     "ui4jd/common_sections/ui_template_tooltip.ui4jd",
+    ////*/ Main Screens /*////
+    "ui4jd/main_screens/progress_screen.ui4jd",
+    "ui4jd/main_screens/start_screen.ui4jd",
+    /* HUD Sections */
+    "ui4jd/main_screens/hud_sections/bars_collection.ui4jd",
+    "ui4jd/main_screens/hud_sections/chat_panel.ui4jd",
+    "ui4jd/main_screens/hud_sections/hud_resources.ui4jd",
+    "ui4jd/main_screens/hud_sections/hud_screen.ui4jd",
+    "ui4jd/main_screens/hud_sections/item_text_factory.ui4jd",
+    "ui4jd/main_screens/hud_sections/rgb_text.ui4jd",
+    "ui4jd/main_screens/hud_sections/scoreboards.ui4jd",
     ////*/ Inventory Screens /*////
     "ui4jd/inventory_screens/anvil_screen.ui4jd",
     "ui4jd/inventory_screens/beacon_screen.ui4jd",

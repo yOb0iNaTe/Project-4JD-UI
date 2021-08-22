@@ -1,0 +1,350 @@
+/*File made by @CrisXolt.
+//(c) Don't use any code design without permission!*/
+{
+  "namespace": "progress_4jd",
+
+  /*//// Resources /////*/
+
+  "classic_progress_loading_bars": {
+    "type": "panel",
+    "size": [ 140, 10 ],
+    "offset": [ 0, 115 ],
+    "clips_children": true,
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "layer": 3,
+    "controls": [
+      { "server_loading_bar@progress_anim_dx.server_loading_bar": { } }
+    ]
+  },
+
+  "title_text_panel": {
+    "type": "panel",
+    "size": [ "100%", 20 ],
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "offset": [ 0, -15 ],
+    "$title_text": "#title_text",
+    "controls": [
+      {
+        "progress_title_text@progress.progress_title_text": {
+          "text": "$title_text",
+          "color": [ 1.0, 1.0, 1.0 ],
+          "font_size": "large",
+          "layer": 3,
+          "offset": [ 0, 0 ]
+        }
+      },
+      { "outline_1@progress.progress_title_text": { "text": "$title_text", "layer": 1, "font_size": "large", "color": [ 0.0, 0.0, 0.0, 1.0 ], "offset": [ 1, 0 ] } },
+      { "outline_2@progress.progress_title_text": { "text": "$title_text", "layer": 1, "font_size": "large", "color": [ 0.0, 0.0, 0.0, 1.0 ], "offset": [ -1, 0 ] } },
+      { "outline_3@progress.progress_title_text": { "text": "$title_text", "layer": 1, "font_size": "large", "color": [ 0.0, 0.0, 0.0, 1.0 ], "offset": [ 0, 1 ] } },
+      { "outline_4@progress.progress_title_text": { "text": "$title_text", "layer": 1, "font_size": "large", "color": [ 0.0, 0.0, 0.0, 1.0 ], "offset": [ 0, -1 ] } },
+      { "outline_5@progress.progress_title_text": { "text": "$title_text", "layer": 1, "font_size": "large", "color": [ 0.0, 0.0, 0.0, 1.0 ], "offset": [ 1, 1 ] } },
+      { "outline_6@progress.progress_title_text": { "text": "$title_text", "layer": 1, "font_size": "large", "color": [ 0.0, 0.0, 0.0, 1.0 ], "offset": [ -1, -1 ] } },
+      { "outline_7@progress.progress_title_text": { "text": "$title_text", "layer": 1, "font_size": "large", "color": [ 0.0, 0.0, 0.0, 1.0 ], "offset": [ 1, -1 ] } },
+      { "outline_8@progress.progress_title_text": { "text": "$title_text", "layer": 1, "font_size": "large", "color": [ 0.0, 0.0, 0.0, 1.0 ], "offset": [ -1, 1 ] } }
+    ]
+  },
+
+  "text_panel@ui_4jd_textures.text_panel": {
+    "size": [ 400, 55 ],
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "offset": [ 0, -49 ],
+    "controls": [
+      {
+        "text_hold_1": {
+          "type": "panel",
+          "size": [ "100%-24px", 10 ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "offset": [ 0, 12 ],
+          "clips_children": true,
+          "bindings": [
+            {
+              "binding_name": "(not #loading_bar_visible)",
+              "binding_name_override": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "pointer_text_tip_panel": {
+                "type": "label",
+                "shadow": true,
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "text_alignment": "center",
+                "size": [ "100%", "default" ],
+                "text": "#progress_text",
+                "bindings": [
+                  { "binding_name": "#progress_text" }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "text_hold_2": {
+          "type": "panel",
+          "size": [ "100%-24px", 10 ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "offset": [ 0, 24 ],
+          "clips_children": true,
+          "bindings": [
+            {
+              "binding_name": "(not #loading_bar_visible)",
+              "binding_name_override": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "pointer_text_tip_panel": {
+                "type": "label",
+                "shadow": true,
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "offset": [ 0, -10 ],
+                "text_alignment": "center",
+                "size": [ "100%", "default" ],
+                "text": "#progress_text",
+                "bindings": [
+                  { "binding_name": "#progress_text" }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "text_hold_3": {
+          "type": "panel",
+          "size": [ "100%-24px", 10 ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "offset": [ 0, 36 ],
+          "clips_children": true,
+          "bindings": [
+            {
+              "binding_name": "(not #loading_bar_visible)",
+              "binding_name_override": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "pointer_text_tip_panel": {
+                "type": "label",
+                "shadow": true,
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "offset": [ 0, -20 ],
+                "text_alignment": "center",
+                "size": [ "100%", "default" ],
+                "text": "#progress_text",
+                "bindings": [
+                  { "binding_name": "#progress_text" }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "progress_title_text@progress.progress_screen_text": {
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "size": [ "default", 20 ],
+    "shadow": true,
+    "max_size": [ "100% - 8px", 20 ],
+    "offset": [ 0, 69 ],
+    "text": "#title_text",
+    "font_size": "medium",
+    "bindings": [
+      {
+        "binding_name": "#title_text"
+      }
+    ]
+  },
+
+  "gamepad_helpers@start.gamepad_helpers": {
+    "anchor_from": "bottom_left",
+    "anchor_to": "bottom_left",
+    "offset": [ 0, 0 ],
+    "controls": [
+      { "gamepad_helper_a@common.gamepad_helper_a": {} }
+    ]
+  },
+
+  "cancel_button@common_buttons_dx.main_button_200": {
+    "$pressed_button_name": "button.menu_exit",
+    "layer": 10,
+    "$button_text": "gui.cancel",
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "bindings": [
+      {
+        "binding_name": "#cancel_visible",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+
+  /*//// World Loading Screen /////*/
+
+  "world_loading_progress_screen_content": {
+    "type": "panel",
+    "layer": 4,
+    "controls": [
+      { "main_title@start_4jd.title_panel": { "$splash_text_visible": false } },
+      { 
+        "title_text_panel@progress_4jd.title_text_panel": {
+          "bindings": [
+            {
+              "binding_name": "(not #loading_bar_visible)",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "loading_world_hold": {
+          "type": "panel",
+          "bindings": [
+            {
+              "binding_name": "(not #bar_animation_visible)",
+              "binding_name_override": "#visible"
+            }
+          ],
+          "controls": [
+            { 
+              "title_text_panel@progress_4jd.title_text_panel": {
+                "$title_text": "4jd.progress.initializingServer",
+                "bindings": [
+                  {
+                    "binding_name": "#loading_bar_visible",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            { "loading_bar_panel@progress_4jd.loading_bar_panel": { } },
+            { "text_panel@progress_4jd.text_panel": { } }
+          ]
+        }
+      },
+      //{ "title_panel@progress_4jd.title_stack_panel": {} },
+      //{ "cancel_button@progress_4jd.cancel_button": { "offset": [ 0, -56 ] } },
+      { "popup_dialog_factory@progress.popup_dialog_factory": {} },
+      { "gamepad_helpers@progress_4jd.gamepad_helpers": {} }
+    ]
+  },
+
+  "loading_bar_panel": {
+    "type": "panel",
+    "size": [ 320, 21 ],
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "offset": [ 0, 15 ],
+    "bindings": [
+      {
+        "binding_name": "#loading_bar_visible",
+        "binding_name_override": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "progress_bar_text@progress.progress_bar_text": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "shadow": true,
+          "offset": [ 1, 0 ]
+        }
+      },
+      {
+        "loading_bar_empty@ui_4jd_textures.loading_bar_empty": {
+          "layer": 2,
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left"
+        }
+      },
+      {
+        "loading_bar_full@ui_4jd_textures.loading_bar_full": {
+          "layer": 3,
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          "clip_direction": "left",
+          "clip_pixelperfect": false,
+          "bindings": [
+            {
+              "binding_name": "#loading_bar_percentage",
+              "binding_name_override": "#clip_ratio"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  /*//// World Dimension Loading Screen /////*/
+  
+  "world_dimension_progress_screen_content": {
+    "type": "panel",
+    "layer": 4,
+    "controls": [
+      { "main_title@start_4jd.title_panel": { "$splash_text_visible": false } },
+      { "title_text_panel@progress_4jd.title_text_panel": { } },
+      { "popup_dialog_factory@progress.popup_dialog_factory": {} },
+      { "gamepad_helpers@progress_4jd.gamepad_helpers": {} }
+    ]
+  },
+
+  /*//// World Saving Screen /////*/
+
+  "world_saving_progress_screen_content": {
+    "type": "panel",
+    "layer": 4,
+    "controls": [
+      { "main_title@start_4jd.title_panel": { "$splash_text_visible": false } },
+      { "title_text_panel@progress_4jd.title_text_panel": { } },
+      { "popup_dialog_factory@progress.popup_dialog_factory": {} }
+    ]
+  },
+
+  "title_saving_panel": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "controls": [
+      { "progress_title_text@progress_4jd.progress_title_text": {} },
+      {
+        "progress_bar_text@progress.progress_bar_text": {
+          "shadow": true,
+          "offset": [ 0, 93 ],
+          "text": "#progress_text",
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "bindings": [
+            {
+              "binding_name": "#progress_text"
+            },
+            {
+              "binding_name": "#loading_bar_visible",
+              "binding_name_override": "#progress_bar_visible"
+            }
+          ]
+        }
+      },
+      { 
+        "auto_save_icon@hud_resources_4jd.auto_save_icon": {
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "offset": [ 0, 10 ]
+        }
+      }
+    ]
+  }
+}

@@ -1,6 +1,10 @@
 ##  Start
 4jd.menu.play=Play Game
-4jd.menu.store=Minecraft Marketplace
+4jd.menu.store=Minecraft Store
+4jd.menu.helpOptions=Help & Options
+4jd.menu.exit=Exit Game
+
+4jd.progress.initializingServer=Initializing Server
 
 ##  Crafting
 4jd.craftingScreen.enableRecipe=Enable Recipe Book

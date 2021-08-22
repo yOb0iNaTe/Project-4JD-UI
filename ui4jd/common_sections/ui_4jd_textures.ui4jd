@@ -1,7 +1,39 @@
 {
   "namespace": "ui_4jd_textures",
 
+  /* Title */
+
+  "title": {
+    "type": "image",
+    "size": [ 285.5, 69 ],
+    "texture": "textures/ui4jd/title"
+  },
+
+  /* Progress */
+
+  "loading_bar_empty": {
+    "type": "image",
+    "size": [ 320, 10 ],
+    "texture": "textures/ui4jd/loading_bar_empty"
+  },
+
+  "loading_bar_full": {
+    "type": "image",
+    "size": [ 320, 10 ],
+    "texture": "textures/ui4jd/loading_bar_full"
+  },
+
   /* HUD */
+
+  "auto_save_arrow": {
+    "type": "image",
+    "texture": "textures/ui4jd/hud/auto_save_arrow"
+  },
+
+  "auto_save_chest": {
+    "type": "image",
+    "texture": "textures/ui4jd/hud/auto_save_chest"
+  },
 
   "experience_bar_empty": {
     "type": "image",
@@ -16,6 +48,16 @@
   "experience_bar_full_white": {
     "type": "image",
     "texture": "textures/ui4jd/hud/experience_bar_full_white"
+  },
+
+  "boss_bar_empty": {
+    "type": "image",
+    "texture": "textures/ui4jd/hud/boss_bar_empty"
+  },
+
+  "boss_bar_full": {
+    "type": "image",
+    "texture": "textures/ui4jd/hud/boss_bar_full"
   },
 
   /* Crafting */
