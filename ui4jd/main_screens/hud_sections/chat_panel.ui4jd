@@ -84,8 +84,7 @@
           "alpha": 0.7,
           "controls": [
             {
-              "player_position_text": {
-                "type": "label",
+              "player_position_text@common_4jd.global_label": {
                 "anchor_from": "bottom_middle",
                 "anchor_to": "bottom_middle",
                 "layer": 1,
@@ -151,13 +150,30 @@
           ],
           "controls": [
             {
-              "chat_text@hud.chat_label": {
-                "layer": 3,
+              "chat_text@common_4jd.global_label": {
+                "layer": 31,
                 "anchor_from": "top_left",
                 "anchor_to": "top_left",
                 "size": [ "90%-2px", "default" ],
                 "line_padding": 6,
-                "offset": [ "5%+1px", 1.5 ]
+                "offset": [ "5%+1px", 1.5 ],
+
+                "text": "#text",
+                "shadow": true,
+                "localize": false,
+                "color": "$chat_text_color",
+                "anims": [
+                  "@hud.anim_chat_txt_wait"
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#chat_text",
+                    "binding_name_override": "#text",
+                    "binding_type": "collection",
+                    "binding_collection_name": "chat_text_grid",
+                    "binding_condition": "once"
+                  }
+                ]
               }
             }
           ]

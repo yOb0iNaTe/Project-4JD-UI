@@ -1,0 +1,138 @@
+{
+  "namespace": "grindstone_4jd",
+
+  /*//// Main ////*/
+
+  "grindstone_panel@common_4jd.root_panel": {
+    "size": [ 207.5, 214.5 ],
+    "controls": [
+      {
+        "grindstone_label@common_4jd.global_label": {
+          "color": "$title_text_color",
+          "text": "container.repairAndDisenchant",
+          "offset": [ 10.5, 8.5 ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "layer": 4
+        }
+      },
+      {
+        "input_item_slot@grindstone.grindstone_item_slot": {
+          "layer": 4,
+          "size": [ 30, 30 ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 41, 28 ],
+          "$background_images": "ui_4jd_textures.cell_image_1_5",
+          "$highlight_control": "common_4jd.highlight_slot_panel",
+          "$container_item_size": [ 30, 30 ],
+          "$cell_image_size": [ 30, 30 ],
+          "$item_renderer_panel_size": [ 30, 30 ],
+          "$item_renderer_size": [ 27, 27 ],
+          "$stack_count_control": "common_4jd.stack_count_label_27",
+
+          "$item_collection_name": "grindstone_input_items",
+
+          "$focus_id_binding_type": "none",
+          "$focus_id": "grindstone_input",
+
+          "$focus_override_down_binding_type": "none",
+          "$focus_override_down": "grindstone_additional",
+
+          "$focus_override_right_binding_type": "none",
+          "$focus_override_right": "grindstone_result"
+        }
+      },
+      {
+        "additional_item_slot@grindstone.grindstone_item_slot": {
+          "layer": 4,
+          "size": [ 30, 30 ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 41, 64 ],
+          "$background_images": "ui_4jd_textures.cell_image_1_5",
+          "$highlight_control": "common_4jd.highlight_slot_panel",
+          "$container_item_size": [ 30, 30 ],
+          "$cell_image_size": [ 30, 30 ],
+          "$item_renderer_panel_size": [ 30, 30 ],
+          "$item_renderer_size": [ 27, 27 ],
+          "$stack_count_control": "common_4jd.stack_count_label_27",
+          
+          "$item_collection_name": "grindstone_additional_items",
+
+          "$focus_id_binding_type": "none",
+          "$focus_id": "grindstone_additional",
+
+          "$focus_override_up_binding_type": "none",
+          "$focus_override_up": "grindstone_input",
+
+          "$focus_override_right_binding_type": "none",
+          "$focus_override_right": "grindstone_result"
+        }
+      },
+      { 
+        "arrow_icon@grindstone.arrow_icon": {
+          "layer": 2,
+          "size": [ 33, 22.5 ],
+          "offset": [ 87.5, 50 ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left"
+        }
+      },
+      {
+        "cross_out_icon@grindstone.cross_out_icon": {
+          "layer": 3,
+          "size": [ 22.5, 22.5 ],
+          "offset": [ 92, 50 ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left"
+        }
+      },
+      {
+        "result_item_slot@grindstone.grindstone_item_slot": {
+          "layer": 4,
+          "size": [ 30, 30 ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 138, 46 ],
+          "$background_images": "ui_4jd_textures.cell_image_1_5",
+          "$highlight_control": "common_4jd.highlight_slot_panel",
+          "$container_item_size": [ 30, 30 ],
+          "$cell_image_size": [ 30, 30 ],
+          "$item_renderer_panel_size": [ 30, 30 ],
+          "$item_renderer_size": [ 27, 27 ],
+          "$stack_count_control": "common_4jd.stack_count_label_27",
+          
+          "$item_collection_name": "grindstone_result_items",
+          "$button_ref": "grindstone.grindstone_output_slot_button",
+
+          "$focus_id_binding_type": "none",
+          "$focus_id": "grindstone_result",
+
+          "$focus_override_left_binding_type": "none",
+          "$focus_override_left": "grindstone_additional"
+        }
+      },
+      { "dialog_bg@ui_4jd_textures.dialog_bg_opaque_1_5": { "layer": 1 } },
+      { 
+        "inventory_panel_bottom_half@common_4jd.inventory_panel_bottom_half": {
+          "$label_offset": [ 1, -93 ],
+          "layer": 2
+        }
+      }
+    ]
+  },
+
+  /*//// Screen ////*/
+
+  "center_screen@common_4jd.center_screen": {
+    "controls": [
+      { "grindstone_panel@grindstone_4jd.grindstone_panel": { } },
+      { "gamepad_cursor_button@common_4jd.gamepad_cursor_button": { } },
+      { "inventory_selected_icon_button@common_4jd.inventory_selected_icon_button": {} },
+      { "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {} }
+    ]
+  },
+
+  "full_screen@common_4jd.full_screen": { }
+}

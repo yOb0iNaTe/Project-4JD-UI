@@ -230,8 +230,9 @@
           "size": [ 19, 19 ],
           "anchor_to": "center",
           "anchor_from": "center",
+          "$number_aux_index": 65536,
           "property_bag": {
-            "#item_id_aux": "$item_id_beacon"
+            "#item_id_aux": "($item_id_beacon * $number_aux_index)"
           }
         }
       }
@@ -249,7 +250,7 @@
     "controls": [
       {
         "netherite@beacon_4jd.usable_item_renderer_panel": {
-          "$item_id_beacon": 38731776,
+          "$item_id_beacon": 601,
           "bindings": [
             {
               "binding_name": "#supports_netherite",
@@ -260,22 +261,22 @@
       },
       {
         "emerald@beacon_4jd.usable_item_renderer_panel": {
-          "$item_id_beacon": 32899072
+          "$item_id_beacon": 512
         }
       },
       {
         "diamond@beacon_4jd.usable_item_renderer_panel": {
-          "$item_id_beacon": 19922944
+          "$item_id_beacon": 304
         }
       },
       {
         "gold@beacon_4jd.usable_item_renderer_panel": {
-          "$item_id_beacon": 20054016
+          "$item_id_beacon": 306
         }
       },
       {
         "iron@beacon_4jd.usable_item_renderer_panel": {
-          "$item_id_beacon": 19988480
+          "$item_id_beacon": 305
         }
       }
     ]

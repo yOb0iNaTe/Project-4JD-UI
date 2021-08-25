@@ -1,0 +1,48 @@
+/*File modified by @CrisXolt.
+//(c) Don't use any code design without permission!*/
+{
+  "hopper_screen": {
+    "$is_container": true,
+    "variables": [
+      {
+        "requires": "$desktop_screen",
+        "$screen_content": "hopper_4jd.center_screen",
+        "$screen_bg_content": "hopper_4jd.full_screen"
+      },
+      {
+        "requires": "$pocket_screen",
+        "$screen_content": "pocket_containers.hopper_panel"
+      }
+    ]
+  },
+
+  "dispenser_screen": {
+    "$is_container": true,
+    "variables": [
+      {
+        "requires": "$desktop_screen",
+        "$screen_content": "dispenser_4jd.center_screen",
+        "$screen_bg_content": "dispenser_4jd.full_screen"
+      },
+      {
+        "requires": "$pocket_screen",
+        "$screen_content": "pocket_containers.dispenser_panel"
+      }
+    ]
+  },
+
+  "dropper_screen": {
+    "$is_container": true,
+    "variables": [
+      {
+        "requires": "$desktop_screen",
+        "$screen_content": "dispenser_4jd.center_screen",
+        "$screen_bg_content": "dispenser_4jd.full_screen"
+      },
+      {
+        "requires": "$pocket_screen",
+        "$screen_content": "pocket_containers.dropper_panel"
+      }
+    ]
+  }
+}

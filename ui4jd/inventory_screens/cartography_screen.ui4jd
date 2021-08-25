@@ -1,0 +1,197 @@
+{
+  "namespace": "cartography_4jd",
+
+  "stack_count_label_21@common.stack_count_label": {
+    "font_scale_factor": 1.3,
+    "offset": [ 1, 2.5 ]
+  },
+
+  /*//// Main ////*/
+
+  "cartography_panel@common_4jd.root_panel": {
+    "size": [ 207.5, 255 ],
+    "controls": [
+      {
+        "cartography_label@common_4jd.global_label": {
+          "color": "$title_text_color",
+          "text": "tile.cartography_table.name",
+          "offset": [ 0, 9 ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "layer": 4
+        }
+      },
+      {
+        "map_name_label@common_4jd.global_label": {
+          "color": "$title_text_color",
+          "text": "map.name",
+          "offset": [ 10.5, 26.5 ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "layer": 4
+        }
+      },
+      {
+        "text_edit_control@cartography.text_edit_control": {
+          "layer": 4,
+          "size": [ 120, 18 ],
+          "offset": [ 9.5, 38.5 ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "$text_background_default": "ui_4jd_textures.text_input",
+          "$text_background_hover": "ui_4jd_textures.text_input_hover"
+        }
+      },
+      {
+        "map_image_panel@cartography.map_image_panel": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 71, 61.5 ],
+          "layer": 4
+        }
+      },
+      {
+        "output_description_label@common_4jd.global_label": {
+          "color": "$title_text_color",
+          "text": "#text",
+          "offset": [ 0, 130 ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "layer": 4,
+          "bindings": [
+            {
+              "binding_name": "#output_description",
+              "binding_name_override": "#text"
+            }
+          ]
+        }
+      },
+      {
+        "input_item_slot@cartography.cartography_item_slot": {
+          "layer": 4,
+          "size": [ 23, 23 ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 9.5, 61.5 ],
+          "$background_images": "ui_4jd_textures.cell_image_1_5",
+          "$highlight_control": "common_4jd.highlight_slot_panel",
+          "$container_item_size": [ 23, 23 ],
+          "$cell_image_size": [ 23, 23 ],
+          "$item_renderer_panel_size": [ 21, 21 ],
+          "$item_renderer_size": [ 21, 21 ],
+          "$stack_count_control": "cartography_4jd.stack_count_label_21",
+
+          "$item_collection_name": "cartography_input_items",
+
+          "$focus_id_binding_type": "none",
+          "$focus_id": "cartography_input",
+
+          "$focus_override_down_binding_type": "none",
+          "$focus_override_down": "cartography_additional",
+
+          "$focus_override_right_binding_type": "none",
+          "$focus_override_right": "cartography_result"
+        }
+      },
+      { 
+        "plus_sign_icon@cartography.plus_sign_icon": {
+          "layer": 2,
+          "size": [ 13, 13 ],
+          "offset": [ 14, 88 ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left"
+        }
+      },
+      {
+        "additional_item_slot@cartography.cartography_item_slot": {
+          "layer": 4,
+          "size": [ 23, 23 ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 9.5, 104 ],
+          "$background_images": "ui_4jd_textures.cell_image_1_5",
+          "$highlight_control": "common_4jd.highlight_slot_panel",
+          "$container_item_size": [ 23, 23 ],
+          "$cell_image_size": [ 23, 23 ],
+          "$item_renderer_panel_size": [ 21, 21 ],
+          "$item_renderer_size": [ 21, 21 ],
+          "$stack_count_control": "cartography_4jd.stack_count_label_21",
+
+          "$item_collection_name": "cartography_additional_items",
+
+          "$focus_id_binding_type": "none",
+          "$focus_id": "cartography_additional",
+
+          "$focus_override_up_binding_type": "none",
+          "$focus_override_up": "cartography_input",
+
+          "$focus_override_right_binding_type": "none",
+          "$focus_override_right": "cartography_result"
+        }
+      },
+      { 
+        "arrow_icon_0@anvil.arrow_icon": {
+          "layer": 2,
+          "size": [ 22, 15 ],
+          "offset": [ 37, 87 ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left"
+        }
+      },
+      { 
+        "arrow_icon_1@anvil.arrow_icon": {
+          "layer": 2,
+          "size": [ 22, 15 ],
+          "offset": [ 140, 87 ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left"
+        }
+      },
+      {
+        "result_item_slot@cartography.cartography_item_slot": {
+          "layer": 4,
+          "size": [ 27, 27 ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 165.5, 81 ],
+          "$background_images": "ui_4jd_textures.cell_image_1_5",
+          "$highlight_control": "common_4jd.highlight_slot_panel",
+          "$container_item_size": [ 27, 27 ],
+          "$cell_image_size": [ 27, 27 ],
+          "$item_renderer_panel_size": [ 24, 24 ],
+          "$item_renderer_size": [ 24, 24 ],
+          "$stack_count_control": "common_4jd.stack_count_label_24",
+
+          "$item_collection_name": "cartography_result_items",
+          "$button_ref": "cartography.cartography_output_slot_button",
+
+          "$focus_id_binding_type": "none",
+          "$focus_id": "cartography_result",
+
+          "$focus_override_left_binding_type": "none",
+          "$focus_override_left": "cartography_additional"
+        }
+      },
+      { "dialog_bg@ui_4jd_textures.dialog_bg_opaque_1_5": { "layer": 1 } },
+      { 
+        "inventory_panel_bottom_half@common_4jd.inventory_panel_bottom_half": {
+          "$label_offset": [ 1, -93 ],
+          "layer": 2
+        }
+      }
+    ]
+  },
+  
+  /*//// Screen ////*/
+
+  "center_screen@common_4jd.center_screen": {
+    "controls": [
+      { "cartography_panel@cartography_4jd.cartography_panel": { } },
+      { "gamepad_cursor_button@common_4jd.gamepad_cursor_button": { } },
+      { "inventory_selected_icon_button@common_4jd.inventory_selected_icon_button": {} },
+      { "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {} }
+    ]
+  },
+
+  "full_screen@common_4jd.full_screen": { }
+}

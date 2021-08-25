@@ -3,8 +3,8 @@
     "variables": [
       {
         "requires": "$desktop_screen",
-        "$screen_content": "trade2_4jd.trade_full_screen",
-        "$screen_bg_content": "trade2_4jd.trade_screen_content"
+        "$screen_content": "trade2_4jd.trade_screen_content",
+        "$screen_bg_content": "trade2_4jd.trade_full_screen"
       },
       {
         "requires": "$pocket_screen",

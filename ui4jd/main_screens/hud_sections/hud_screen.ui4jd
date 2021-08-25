@@ -501,7 +501,7 @@
           }
         }
       },
-      { "auto_save@hud_resources_4jd.auto_save": {} }
+      { "auto_save_icon@hud_resources_4jd.auto_save_icon": {} }
     ]
   },
 

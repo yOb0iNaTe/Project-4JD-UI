@@ -8,8 +8,16 @@
   "$anvil_cost_fail_text_color": [ 1.0, 0.375, 0.375 ], //[ 0.929, 0.337, 0.337 ],
   //"$anvil_cost_success_text_color": [ 0.000, 0.647, 0.000 ]
 
-  "$global_font_type": "normal", //Use "smooth" if you are using JP language.
+  "$global_font_type": "normal", // Use "DFGMaruGothic" if you are using JPN language.
+  "$global_font_scale_factor": 1.0, // Use 0.8 if you are using JPN language.
 
+  //////// Enchanting Table ////////
+  //For java text colors, default, hover and locked.
+  "$enchanting_runes_default_color": [ 0.4, 0.36, 0.3 ],
+  "$enchanting_runes_hover_color": [ 1.0, 1.0, 0.5 ],
+  "$enchanting_runes_locked_color": [ 0.2, 0.18, 0.14 ],
+  "$enchanting_cost_locked_color": [ 0.25, 0.5, 0.06 ],
+  
   ////*/ HUD /*////
   "$experience_outline_text_color": [ 0.0, 0.0, 0.0 ],
   "$chat_size": [ "100%", 180 ],

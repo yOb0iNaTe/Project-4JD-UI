@@ -40,14 +40,14 @@
     "controls": [
       { "xp_number_label@hud_resources_4jd.xp_number_label":{ "offset": [ 0, 0 ] } },
       /* 4 directions about borders */
-      { "outline_1@hud_resources_4jd.border_xp_number_label":{ "offset": [ -1, 0 ] } },
-      { "outline_2@hud_resources_4jd.border_xp_number_label":{ "offset": [ 0, -1 ] } },
-      { "outline_3@hud_resources_4jd.border_xp_number_label":{ "offset": [ 0, 1 ] } },
-      { "outline_4@hud_resources_4jd.border_xp_number_label":{ "offset": [ 1, 0 ] } },
-      { "outline_5@hud_resources_4jd.border_xp_number_label":{ "offset": [ -1, 1 ] } },
-      { "outline_6@hud_resources_4jd.border_xp_number_label":{ "offset": [ 1, -1 ] } },
-      { "outline_7@hud_resources_4jd.border_xp_number_label":{ "offset": [ 1, 1 ] } },
-      { "outline_8@hud_resources_4jd.border_xp_number_label":{ "offset": [ -1, -1 ] } }
+      { "outline_1@hud_resources_4jd.border_xp_number_label":{ "offset": [ -0.5, 0 ] } },
+      { "outline_2@hud_resources_4jd.border_xp_number_label":{ "offset": [ 0, -0.5 ] } },
+      { "outline_3@hud_resources_4jd.border_xp_number_label":{ "offset": [ 0, 0.5 ] } },
+      { "outline_4@hud_resources_4jd.border_xp_number_label":{ "offset": [ 0.5, 0 ] } },
+      { "outline_5@hud_resources_4jd.border_xp_number_label":{ "alpha": 0.5, "offset": [ -0.5, 0.5 ] } },
+      { "outline_6@hud_resources_4jd.border_xp_number_label":{ "alpha": 0.5, "offset": [ 0.5, -0.5 ] } },
+      { "outline_7@hud_resources_4jd.border_xp_number_label":{ "alpha": 0.5, "offset": [ 0.5, 0.5 ] } },
+      { "outline_8@hud_resources_4jd.border_xp_number_label":{ "alpha": 0.5, "offset": [ -0.5, -0.5 ] } }
     ]
   },
   
@@ -79,22 +79,22 @@
   "anim_auto_save_arrow_move_down": {
     "anim_type": "offset",
     "easing": "linear",
-    "duration": 0.25,
-    "from": [ 0, -18 ],
-    "to": [ 0, -13 ],
+    "duration": 0.33,
+    "from": [ 0, -17.5 ],
+    "to": [ 0, -10.5 ],
     "next": "@hud_resources_4jd.anim_auto_save_arrow_move_up"
   },
 
   "anim_auto_save_arrow_move_up": {
     "anim_type": "offset",
     "easing": "linear",
-    "duration": 0.25,
-    "from": [ 0, -13 ],
-    "to": [ 0, -18 ],
+    "duration": 0.33,
+    "from": [ 0, -10.5 ],
+    "to": [ 0, -17.5 ],
     "next": "@hud_resources_4jd.anim_auto_save_arrow_move_down"
   },
 
-  "auto_save": {
+  "auto_save_icon": {
     "type": "panel",
     "anchor_from": "top_right",
     "anchor_to": "top_right",

@@ -61,13 +61,10 @@
     ]
   },
 
-  "button_label": {
-    "type": "label",
+  "button_label@common_4jd.global_label": {
     "shadow": true,
     "size": [ "default", "default" ],
-    "$text_font_type|default": "default",
     "color": "$text_color",
-    "font_type": "$text_font_type",
     "text": "$button_text"
   }
 }

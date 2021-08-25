@@ -27,7 +27,7 @@
     "$title_text": "#title_text",
     "controls": [
       {
-        "progress_title_text@progress.progress_title_text": {
+        "progress_title_text@progress_4jd.progress_title_text": {
           "text": "$title_text",
           "color": [ 1.0, 1.0, 1.0 ],
           "font_size": "large",
@@ -35,14 +35,14 @@
           "offset": [ 0, 0 ]
         }
       },
-      { "outline_1@progress.progress_title_text": { "text": "$title_text", "layer": 1, "font_size": "large", "color": [ 0.0, 0.0, 0.0, 1.0 ], "offset": [ 1, 0 ] } },
-      { "outline_2@progress.progress_title_text": { "text": "$title_text", "layer": 1, "font_size": "large", "color": [ 0.0, 0.0, 0.0, 1.0 ], "offset": [ -1, 0 ] } },
-      { "outline_3@progress.progress_title_text": { "text": "$title_text", "layer": 1, "font_size": "large", "color": [ 0.0, 0.0, 0.0, 1.0 ], "offset": [ 0, 1 ] } },
-      { "outline_4@progress.progress_title_text": { "text": "$title_text", "layer": 1, "font_size": "large", "color": [ 0.0, 0.0, 0.0, 1.0 ], "offset": [ 0, -1 ] } },
-      { "outline_5@progress.progress_title_text": { "text": "$title_text", "layer": 1, "font_size": "large", "color": [ 0.0, 0.0, 0.0, 1.0 ], "offset": [ 1, 1 ] } },
-      { "outline_6@progress.progress_title_text": { "text": "$title_text", "layer": 1, "font_size": "large", "color": [ 0.0, 0.0, 0.0, 1.0 ], "offset": [ -1, -1 ] } },
-      { "outline_7@progress.progress_title_text": { "text": "$title_text", "layer": 1, "font_size": "large", "color": [ 0.0, 0.0, 0.0, 1.0 ], "offset": [ 1, -1 ] } },
-      { "outline_8@progress.progress_title_text": { "text": "$title_text", "layer": 1, "font_size": "large", "color": [ 0.0, 0.0, 0.0, 1.0 ], "offset": [ -1, 1 ] } }
+      { "outline_1@progress_4jd.progress_title_text": { "text": "$title_text", "layer": 1, "font_size": "large", "color": [ 0.0, 0.0, 0.0, 1.0 ], "offset": [ 1, 0 ] } },
+      { "outline_2@progress_4jd.progress_title_text": { "text": "$title_text", "layer": 1, "font_size": "large", "color": [ 0.0, 0.0, 0.0, 1.0 ], "offset": [ -1, 0 ] } },
+      { "outline_3@progress_4jd.progress_title_text": { "text": "$title_text", "layer": 1, "font_size": "large", "color": [ 0.0, 0.0, 0.0, 1.0 ], "offset": [ 0, 1 ] } },
+      { "outline_4@progress_4jd.progress_title_text": { "text": "$title_text", "layer": 1, "font_size": "large", "color": [ 0.0, 0.0, 0.0, 1.0 ], "offset": [ 0, -1 ] } },
+      { "outline_5@progress_4jd.progress_title_text": { "text": "$title_text", "layer": 1, "font_size": "large", "color": [ 0.0, 0.0, 0.0, 1.0 ], "offset": [ 1, 1 ] } },
+      { "outline_6@progress_4jd.progress_title_text": { "text": "$title_text", "layer": 1, "font_size": "large", "color": [ 0.0, 0.0, 0.0, 1.0 ], "offset": [ -1, -1 ] } },
+      { "outline_7@progress_4jd.progress_title_text": { "text": "$title_text", "layer": 1, "font_size": "large", "color": [ 0.0, 0.0, 0.0, 1.0 ], "offset": [ 1, -1 ] } },
+      { "outline_8@progress_4jd.progress_title_text": { "text": "$title_text", "layer": 1, "font_size": "large", "color": [ 0.0, 0.0, 0.0, 1.0 ], "offset": [ -1, 1 ] } }
     ]
   },
 
@@ -68,8 +68,7 @@
           ],
           "controls": [
             {
-              "pointer_text_tip_panel": {
-                "type": "label",
+              "pointer_text_tip_panel@common_4jd.global_label": {
                 "shadow": true,
                 "anchor_from": "top_middle",
                 "anchor_to": "top_middle",
@@ -100,8 +99,7 @@
           ],
           "controls": [
             {
-              "pointer_text_tip_panel": {
-                "type": "label",
+              "pointer_text_tip_panel@common_4jd.global_label": {
                 "shadow": true,
                 "anchor_from": "top_middle",
                 "anchor_to": "top_middle",
@@ -133,8 +131,7 @@
           ],
           "controls": [
             {
-              "pointer_text_tip_panel": {
-                "type": "label",
+              "pointer_text_tip_panel@common_4jd.global_label": {
                 "shadow": true,
                 "anchor_from": "top_middle",
                 "anchor_to": "top_middle",
@@ -153,11 +150,18 @@
     ]
   },
 
-  "progress_title_text@progress.progress_screen_text": {
+  "progress_screen_text@common_4jd.global_label": {
+    "color": "$loading_text_color",
+    "anchor_to": "center",
+    "anchor_from": "center",
+    "layer": 2,
+    "shadow": false
+  },
+
+  "progress_title_text@progress_4jd.progress_screen_text": {
     "anchor_from": "top_middle",
     "anchor_to": "top_middle",
     "size": [ "default", 20 ],
-    "shadow": true,
     "max_size": [ "100% - 8px", 20 ],
     "offset": [ 0, 69 ],
     "text": "#title_text",
@@ -166,6 +170,16 @@
       {
         "binding_name": "#title_text"
       }
+    ]
+  },
+
+  "progress_bar_text@progress_4jd.progress_screen_text": {
+    "size": [ "default", 20 ],
+    "max_size": [ "100% - 8px", 20 ],
+    "offset": [ 0, 9 ],
+    "text": "#progress_text",
+    "bindings": [
+      { "binding_name": "#progress_text" }
     ]
   },
 
@@ -256,7 +270,7 @@
     ],
     "controls": [
       {
-        "progress_bar_text@progress.progress_bar_text": {
+        "progress_bar_text@progress_4jd.progress_bar_text": {
           "anchor_from": "top_left",
           "anchor_to": "top_left",
           "shadow": true,
@@ -321,7 +335,7 @@
     "controls": [
       { "progress_title_text@progress_4jd.progress_title_text": {} },
       {
-        "progress_bar_text@progress.progress_bar_text": {
+        "progress_bar_text@progress_4jd.progress_bar_text": {
           "shadow": true,
           "offset": [ 0, 93 ],
           "text": "#progress_text",

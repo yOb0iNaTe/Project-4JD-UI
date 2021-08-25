@@ -142,7 +142,6 @@
 
   "highlight_slot": {
     "type": "image",
-    "size": [ "100%-2px", "100%-2px" ],
     "texture": "textures/ui4jd/cell_images/highlight_slot"
   },
 
@@ -176,10 +175,58 @@
     "texture": "textures/ui4jd/menus/scroll_down"
   },
 
+  /* Beacon */
+
   "confirm": {
     "type": "image",
     "size": [ 14, 14 ],
     "texture": "textures/ui4jd/beacon/confirm"
+  },
+
+  /* Brewing Stand */
+
+  "brewing_fuel_bar_empty": {
+    "type": "image",
+    "size": [ 30, 9 ],
+    "texture": "textures/ui4jd/brewing_stand/brewing_fuel_bar_empty"
+  },
+
+  "brewing_fuel_bar_full": {
+    "type": "image",
+    "size": [ 30, 9 ],
+    "texture": "textures/ui4jd/brewing_stand/brewing_fuel_bar_full"
+  },
+
+  "brewing_fuel_pipes": {
+    "type": "image",
+    "size": [ 22, 30 ],
+    "texture": "textures/ui4jd/brewing_stand/brewing_fuel_pipes"
+  },
+
+  /* Furnace */
+
+  "arrow_empty": {
+    "type": "image",
+    "size": [ 36, 24 ],
+    "texture": "textures/ui4jd/furnace/arrow_empty"
+  },
+
+  "arrow_full": {
+    "type": "image",
+    "size": [ 36, 24 ],
+    "texture": "textures/ui4jd/furnace/arrow_full"
+  },
+
+  "flame_empty": {
+    "type": "image",
+    "size": [ 24, 24 ],
+    "texture": "textures/ui4jd/furnace/flame_empty"
+  },
+
+  "flame_full": {
+    "type": "image",
+    "size": [ 24, 24 ],
+    "texture": "textures/ui4jd/furnace/flame_full"
   },
 
   /* Cell Images */

@@ -1,25 +1,27 @@
 ##  Start
-4jd.menu.play=Play Game
-4jd.menu.store=Minecraft Store
-4jd.menu.helpOptions=Help & Options
-4jd.menu.exit=Exit Game
+4jd.menu.play=Play Game ##3343
+4jd.menu.store=Minecraft Store ##1441
+4jd.menu.helpOptions=Help & Options ##1649
+4jd.menu.exit=Exit Game ##1535
 
-4jd.progress.initializingServer=Initializing Server
+4jd.progress.initializingServer=Initializing Server ##3480
+
+furnaceScreen.input=Ingredient
 
 ##  Crafting
 4jd.craftingScreen.enableRecipe=Enable Recipe Book
 
-4jd.craftingScreen.tab.structures=Structures
-4jd.craftingScreen.tab.tools=Tools and Weapons
-4jd.craftingScreen.tab.food=Food
-4jd.craftingScreen.tab.armor=Armor
-4jd.craftingScreen.tab.mechanisms=Mechanisms
-4jd.craftingScreen.tab.transport=Transport
-4jd.craftingScreen.tab.decorations=Decorations
+4jd.craftingScreen.tab.structures=Structures ##1640
+4jd.craftingScreen.tab.tools=Tools and Weapons ##1641
+4jd.craftingScreen.tab.food=Food ##1633
+4jd.craftingScreen.tab.armor=Armor ##1630
+4jd.craftingScreen.tab.mechanisms=Mechanisms ##1635
+4jd.craftingScreen.tab.transport=Transport ##1643
+4jd.craftingScreen.tab.decorations=Decorations ##1632
 
-4jd.creativeScreen.tab.buildingBlocks=Building Blocks
-4jd.creativeScreen.tab.redstone_and_transport=Redstone & Transportation
-4jd.creativeScreen.tab.materials=Materials
-4jd.creativeScreen.tab.toolsWeaponsAndArmor=Tools, Weapons & Armor
-4jd.creativeScreen.tab.brewing=Brewing
-4jd.creativeScreen.tab.miscellaneous=Miscellaneous
+4jd.creativeScreen.tab.buildingBlocks=Building Blocks ##1631
+4jd.creativeScreen.tab.redstone_and_transport=Redstone & Transportation ##1639
+4jd.creativeScreen.tab.materials=Materials ##1634
+4jd.creativeScreen.tab.toolsWeaponsAndArmor=Tools, Weapons & Armor ##1642
+4jd.creativeScreen.tab.brewing=Brewing ##1637 or 1638
+4jd.creativeScreen.tab.miscellaneous=Miscellaneous ##1636

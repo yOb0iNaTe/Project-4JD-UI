@@ -5,12 +5,14 @@
     "type": "image",
     "texture": "textures/ui4jd/global/gamma_fix",
     "size": [ "200%", "200%" ],
+    "alpha": 0.25,
     "layer": 500
   },
   
   "global_label": {
     "type": "label",
-    "font_type": "normal" //"DFGMaruGothic" If you are using JPN Language.
+    "font_scale_factor": "$global_font_scale_factor",
+    "font_type": "$global_font_type"
   },
 
   "gamepad_cursor_button@common_4jd.hover_text_button": {
@@ -40,7 +42,7 @@
 
   "full_screen": {
     "type": "panel",
-    "size": [ "100%", "100%" ],
+    "size": [ "90%", "90%" ],
     "controls": [
       { "container_gamepad_helpers@common_tooltip_4jd.container_gamepad_helpers": { } }
     ]
@@ -65,7 +67,7 @@
     "offset": [ 0, 0 ],
     "$highlight_slot_image|default": "ui_4jd_textures.highlight_slot",
     "controls": [
-      { "highlight_slot_image@$highlight_slot_image": { } },
+      { "highlight_slot_image@$highlight_slot_image": { "size": "$item_renderer_size" } },
       {
         "custom_hover_text@common_4jd.hover_text_panel": {
           "$hover_text_label_control": "common_4jd.item_hover_text_label",
@@ -246,7 +248,7 @@
 
   "stack_count_label_14@common.stack_count_label": {
     "font_scale_factor": 0.9047619048,
-    "offset": [ 0, 0.5 ]
+    "offset": [ 1, 1.5 ]
   },
 
   "stack_count_label_19@common.stack_count_label": {
