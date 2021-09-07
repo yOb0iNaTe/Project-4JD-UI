@@ -3,6 +3,47 @@
 {
   "namespace": "start_4jd",
 
+  /*////// BUTTON TAB //////*/
+
+  "help_and_options_toggle@common_toggles_4jd.main_button_toggle": {
+    "$toggle_name": "start_screen_toggles",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "size": [ "100%", 20 ],
+    "$button_text": "4jd.menu.helpOptions",
+    "$tab_view_binding_name": "help_and_options_tab_toggle",
+    "$toggle_group_forced_index": 100
+  },
+
+  "main_panel_list_toggle@common_toggles_4jd.toggle_panel": {
+    "$toggle_name": "start_screen_toggles",
+    "$custom_toggle_sound_name": "ui.back",
+    "size": [ "100% + 27px", 16 ],
+    "offset": [ 0, 2 ],
+    "anchor_from": "bottom_left",
+    "anchor_to": "bottom_left",
+    "$is_back_button": true,
+    "$tabe_view_binding_name": "main_panel_tab_toggle",
+    "$toggle_default_state": true,
+    "$toggle_group_forced_index": 0
+  },
+
+  /*//// Help & Options ////*/
+
+  "help_and_options_buttons": {
+    "type": "stack_panel",
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "offset": [ 0, 125 ],
+    "size": [ 225, "100%c" ],
+    "controls": [
+      { "button_0@start_4jd.stacked_row": { "controls": [ { "profile_button@start_4jd.profile_button": { } } ] } },
+      { "button_1@start_4jd.stacked_row": { "ignored": "$pre_release", "controls": [ { "release_feedback_button@start_4jd.feedback_button": { "property_bag": { "#hyperlink": "https://aka.ms/minecraftfb" } } } ] } },
+      { "button_1_alt@start_4jd.stacked_row": { "ignored": "(not $pre_release)",  "controls": [ { "beta_feedback_button@start_4jd.feedback_button": { "property_bag": { "#hyperlink": "https://aka.ms/minecraftfbbeta" } } } ] } },
+      { "button_2@start_4jd.stacked_row": { "controls": [ { "settings_button@start_4jd.settings_button": { } } ] } }
+    ]
+  },
+
   /*//// Text Panel ////*/
 
   "minecraft_text": {
@@ -97,7 +138,7 @@
 
   "settings_button@start_4jd.main_button": {
     "$pressed_button_name": "button.menu_settings",
-    "$button_text": "4jd.menu.helpOptions"
+    "$button_text": "menu.options"
   },
 
   "exit_button@start_4jd.main_button": {
@@ -107,10 +148,7 @@
 
   "feedback_button@start_4jd.main_button": {
     "$pressed_button_name": "button.menu_open_uri",
-    "$button_text": "",
-    "property_bag": {
-      "#hyperlink": "https://aka.ms/minecraftfb"
-    }
+    "$button_text": "feedbackScreen.button"
   },
 
   "stacked_row": {
@@ -120,34 +158,202 @@
 
   "main_buttons": {
     "type": "stack_panel",
-    "anchor_from": "center",
-    "anchor_to": "center",
-    "offset": [ 0, 0 ],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "offset": [ 0, 125 ],
     "size": [ 225, "100%c" ],
     "controls": [
       { "button_0@start_4jd.stacked_row": { "controls": [ { "play_button@start_4jd.play_button": { } } ] } },
-      //{ "button_1@start_4jd.stacked_row": { "controls": [ { "profile_button@start_4jd.profile_button": { } } ] } },
-      { "button_2@start_4jd.stacked_row": { "controls": [ { "achievements_button@start_4jd.achievements_button": { } } ] } },
-      { "button_3@start_4jd.stacked_row": { "controls": [ { "settings_button@start_4jd.settings_button": { } } ] } },
-      { "button_4@start_4jd.stacked_row": { "controls": [ { "store_button@start_4jd.store_button": { } } ] } },
-      { "button_5@start_4jd.stacked_row": { "controls": [ { "exit_button@start_4jd.exit_button": { } } ] } }
+      { "button_1@start_4jd.stacked_row": { "controls": [ { "achievements_button@start_4jd.achievements_button": { } } ] } },
+      { "button_2@start_4jd.stacked_row": { "controls": [ { "help_and_options_toggle@start_4jd.help_and_options_toggle": { } } ] } },
+      { "button_3@start_4jd.stacked_row": { "controls": [ { "store_button@start_4jd.store_button": { } } ] } },
+      { "button_4@start_4jd.stacked_row": { "controls": [ { "exit_button@start_4jd.exit_button": { } } ] } }
+    ]
+  },
+  
+  /*//// Exit Game popup ////*/
+
+  "exit_popup@popup_dialog.modal_input_panel": {
+    "controls": [
+      {
+        "main_panel@ui_4jd_textures.dialog_bg_opaque_1_5": {
+          "size": [ 230, 120.5 ],
+          "layer": 200,
+          "controls": [
+            {
+              "title_panel@common_4jd.global_label": {
+                "color": "$title_text_color",
+                "text": "4jd.menu.exit",
+                "layer": 202,
+                "offset": [ 16, 13 ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left"
+              }
+            },
+            {
+              "desc_panel@common_4jd.global_label": {
+                "color": "$title_text_color",
+                "text": "4jd.menu.exitGameWarning",
+                "size": [ "100%-32px", "default" ],
+                "line_padding": 2,
+                "layer": 202,
+                "offset": [ 16, 34 ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left"
+              }
+            },
+            {
+              "cancel_button@common_buttons_4jd.main_button": {
+                "layer": 202,
+                "size": [ 200, 20 ],
+                "offset": [ 0, -33.5 ],
+                "$pressed_button_name": "popup_dialog.escape",
+                "$button_text": "gui.cancel",
+                "anchor_from": "bottom_middle",
+                "anchor_to": "bottom_middle"
+              }
+            },
+            {
+              "ok_button@common_buttons_4jd.main_button": {
+                "layer": 202,
+                "size": [ 200, 20 ],
+                "offset": [ 0, -11 ],
+                "$pressed_button_name": "popup_dialog.left_button",
+                "$button_text": "gui.ok",
+                "anchor_from": "bottom_middle",
+                "anchor_to": "bottom_middle"
+              }
+            }
+          ]
+        }
+      }
     ]
   },
   
   /*//// Screen ////*/
 
-  "center_screen": {
+  "full_screen": {
     "type": "panel",
+    "size": [ "90%", "90%" ],
     "controls": [
-      //{ "text_panel@start_4jd.text_panel": { } }
+      {
+        "main_panel": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          "size": [ "100%", 16 ],
+          "controls": [
+            { 
+              "gamepad_helper_a@common_tooltip_4jd.gamepad_helper_a": {
+                "bindings": [
+                  {
+                    "binding_type": "global",
+                    "binding_name": "#gamepad_helper_visible",
+                    "binding_name_override": "#visible",
+                    "binding_condition": "none"
+                  }
+                ]
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "help_and_options_tab_toggle",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "help_and_options_panel": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          "size": [ "100%", 16 ],
+          "controls": [
+            { 
+              "gamepad_helper_a@common_tooltip_4jd.gamepad_helper_a": {
+                "bindings": [
+                  {
+                    "binding_type": "global",
+                    "binding_name": "#gamepad_helper_visible",
+                    "binding_name_override": "#visible",
+                    "binding_condition": "none"
+                  }
+                ]
+              }
+            },
+            { 
+              "gamepad_helper_b@common_tooltip_4jd.gamepad_helper_b": {
+                "$icon_description_bind": "gui.back",
+                "$desc_panel_content": "start_4jd.main_panel_list_toggle"
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "help_and_options_tab_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      }
     ]
   },
 
-  "full_screen": {
+  "center_screen": {
     "type": "panel",
     "controls": [
-      { "title_panel@start_4jd.title_panel": { } },
-      { "main_buttons@start_4jd.main_buttons": { } }
+      {
+        "popup_dialog_factory": {
+          "type": "factory",
+          "control_ids": {
+            "modal_dialog_popup": "@start_4jd.exit_popup",
+            "storage_dependency_popup": "@storage_management_popup.storage_dependency_modal",
+            "storage_sharing_popup": "@storage_management_popup.sharing_popup_content"
+          }
+        }
+      },
+      {
+        "main_panel": {
+          "type": "panel",
+          "controls": [
+            { "title_panel@start_4jd.title_panel": { } },
+            { "main_buttons@start_4jd.main_buttons": { } }
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "help_and_options_tab_toggle",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "help_and_options_panel": {
+          "type": "panel",
+          "controls": [
+            { "title_panel@start_4jd.title_panel": { "$splash_text_visible": false } },
+            { "help_and_options_buttons@start_4jd.help_and_options_buttons": { } }
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "help_and_options_tab_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      }
     ]
   }
 }

@@ -1,0 +1,22 @@
+{
+  "namespace": "servers_4jd",
+
+  "servers_panel@ui_4jd_textures.panel_recess": {
+    "layer": 4,
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "size": [ "100%-14px", "100%-14px" ],
+    "offset": [ 7, 7 ],
+    "controls": [ 
+      {
+        "scrolling_panel@play.server_scroll_content": {
+          "size": [ "100% -14px", "100% - 2px" ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 7, 1 ],
+          "layer": 6
+        }
+      }
+    ]
+  }
+}

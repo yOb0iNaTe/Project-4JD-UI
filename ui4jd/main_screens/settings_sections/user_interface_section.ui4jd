@@ -1,0 +1,142 @@
+{
+  "namespace": "user_interface_4jd",
+  
+  /*//// Screen ////*/
+
+  "main_panel@ui_4jd_textures.dialog_bg_opaque_1_5": {
+    "size": [ "100%c+18px", "100%c+18px" ],
+    "controls": [
+      {
+        "stack_panel": {
+          "type": "stack_panel",
+          "size": [ 231, "100%c" ],
+          "controls": [
+            {
+              "option_toggle_hidehud@settings_common_4jd.option_toggle": {
+                "ignored": "($is_holographic)",
+                "$option_label": "options.hidehud",
+                "$option_binding_name": "#hide_hud",
+                "$option_enabled_binding_name": "#hide_hud_enabled",
+                "$toggle_name": "hide_hud"
+              }
+            },
+            {
+              "option_toggle3@settings_common_4jd.option_toggle": {
+                "ignored": "(not $text_to_speech_supported)",
+                "$option_label": "options.enableOpenChatMessage",
+                "$option_binding_name": "#enable_open_chat_message",
+                "$option_enabled_binding_name": "#enable_open_chat_message_enabled",
+                "$toggle_name": "enable_open_chat_message"
+              }
+            },
+            {
+              "auto_save_icon_toggle@settings_common_4jd.option_toggle": {
+                "$option_label": "options.showautosaveicon",
+                "$option_binding_name": "#show_auto_save_icon",
+                "$option_enabled_binding_name": "#show_auto_save_icon_enabled",
+                "$toggle_name": "show_auto_save_icon"
+              }
+            },
+            {
+              "hud_opacity_slider@settings_common_4jd.option_slider": {
+                "$option_label": "#interface_opacity_slider_label",
+                "$slider_name": "interface_opacity",
+                "$slider_value_binding_name": "#interface_opacity",
+                "$slider_tts_text_value": "#interface_opacity_text_value",
+                "$option_enabled_binding_name": "#interface_opacity_enabled",
+                "$label_bindings": [
+                  {
+                    "binding_name": "$option_label"
+                  }
+                ]
+              }
+            },
+            {
+              "option_toggle9@settings_common_4jd.option_toggle": {
+                "$option_label": "options.hidetooltips",
+                "$option_binding_name": "#hide_tooltips",
+                "$option_enabled_binding_name": "#hint_toggles_enabled",
+                "$toggle_name": "hide_tooltips",
+                "$focus_override_right": "FOCUS_OVERRIDE_STOP"
+              }
+            },
+            {
+              "gui_scale_slider@settings_common_4jd.option_slider": {
+                "ignored": "($is_holographic)",
+                "$option_label": "#gui_scale_slider_label",
+                "$slider_name": "gui_scale",
+                "$slider_value_binding_name": "#gui_scale",
+                "$slider_tts_text_value": "#gui_scale_text_value",
+                "$option_enabled_binding_name": "#gui_scale_enabled",
+                "$slider_steps_binding_name": "#gui_scale_steps",
+                "$label_bindings": [
+                  {
+                    "binding_name": "$option_label"
+                  }
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#gui_scale_visible",
+                    "binding_name_override": "#enabled"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }, 
+
+  "user_interface_panel": {
+    "type": "panel",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "user_interface_tab_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      { "title_panel@start_4jd.title_panel": { "$splash_text_visible": false } },
+      { "main_panel@user_interface_4jd.main_panel": { } },
+      {
+        "safezone": {
+          "type": "panel",
+          "size": [ "90%", "90%" ],
+          "controls": [
+            {
+              "gamepad_helpers": {
+                "type": "stack_panel",
+                "orientation": "horizontal",
+                "anchor_from": "bottom_left",
+                "anchor_to": "bottom_left",
+                "size": [ "100%", 16 ],
+                "controls": [
+                  {
+                    "gamepad_helper_a@common_tooltip_4jd.gamepad_helper_a": {
+                      "bindings": [
+                        {
+                          "binding_name": "#gamepad_helper_a_visible",
+                          "binding_name_override": "#visible",
+                          "binding_condition": "always"
+                        }
+                      ]
+                    }
+                  },
+                  { 
+                    "gamepad_helper_b@common_tooltip_4jd.gamepad_helper_b": {
+                      "$icon_description_bind": "gui.back",
+                      "$desc_panel_content": "settings_4jd.back_button"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

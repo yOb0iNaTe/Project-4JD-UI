@@ -6,7 +6,7 @@
   "toggle_panel": {
     "type": "panel",
     "$tab_size|default": [ "100%", "100%" ],
-    "$sound_name|default": "random.click",
+    "$custom_toggle_sound_name|default": "random.click",
     "size": [ "100%", "100%" ],
     "$radio_toggle_group": true,
     "$toggle_focus_enabled": true,
@@ -33,7 +33,7 @@
     "controls": [
       {
         "$tab_view_binding_name@common.toggle": {
-          "sound_name": "$sound_name",
+          "sound_name": "$custom_toggle_sound_name",
           "size": "$tab_size",
           "button_mappings": [
             {
@@ -68,6 +68,7 @@
   /* Main Button Toggle */
 
   "main_button_toggle@common_toggles_4jd.toggle_panel": {
+    "$custom_toggle_sound_name": "ui.press",
     "$toggle_tts_name": "",
     "$toggle_tts_header": "",
     "$toggle_tts_toggle_on_text": "accessibility.button.tts.title",

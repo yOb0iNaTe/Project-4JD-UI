@@ -1,0 +1,227 @@
+/*File made by @CrisXolt.
+//(c) Don't use any code design without permission!*/
+{
+  "namespace": "settings_common_4jd",
+
+  /*//// Base ////*/
+  
+  "option_generic@settings_common.option_generic_core": {
+    "type": "panel",
+    "$enabled|default": true,
+    "$option_enabled_binding_name|default": "",
+    "variables": [
+      {
+        "requires": "(not $enabled or not $option_enabled_binding_name)",
+        "$option_enabled_binding_type": "none",
+        "$option_enabled_binding_name": "#not_data_bound"
+      }
+    ]
+  },
+
+  /*//// Option Toggle ////*/
+  
+  "toggle_unchecked": {
+    "type": "panel",
+    "$toggle_alpha": 1.0,
+    "$toggle_texture": "ui_4jd_textures.toggle_off",
+    "controls": [
+      { 
+        "texture@$toggle_texture": {
+          "layer": 4,
+          "alpha": "$toggle_alpha",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left"
+        }
+      },
+      {
+        "option_label@common_4jd.global_label": {
+          "color": "$title_text_color",
+          "text": "$option_label",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 14, 2 ],
+          "layer": 5,
+          "bindings": "$label_bindings"
+        }
+      }
+    ]
+  },
+  
+  "toggle_unchecked_hover@settings_common_4jd.toggle_unchecked": {
+    "$toggle_alpha": 1.0,
+    "$toggle_texture": "ui_4jd_textures.toggle_off_hover",
+    "controls": [
+      { 
+        "texture@$toggle_texture": {
+          "layer": 4,
+          "alpha": "$toggle_alpha",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left"
+        }
+      },
+      {
+        "option_label@common_4jd.global_label": {
+          "color": "$main_menu_button_hover_color",
+          "text": "$option_label",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 13, 1 ],
+          "shadow": true,
+          "layer": 6,
+          "bindings": "$label_bindings"
+        }
+      }
+    ]
+  },
+  
+  "toggle_unchecked_locked@settings_common_4jd.toggle_unchecked": {
+    "$toggle_alpha": 0.5,
+    "$toggle_texture": "ui_4jd_textures.toggle_off"
+  },
+  
+  "toggle_checked@settings_common_4jd.toggle_unchecked": {
+    "$toggle_texture": "ui_4jd_textures.toggle_on"
+  },
+  
+  "toggle_checked_hover@settings_common_4jd.toggle_unchecked_hover": {
+    "$toggle_texture": "ui_4jd_textures.toggle_on_hover"
+  },
+  
+  "toggle_checked_locked@settings_common_4jd.toggle_unchecked": {
+    "$toggle_alpha": 0.5,
+    "$toggle_texture": "ui_4jd_textures.toggle_on"
+  },
+
+  "option_toggle@settings_common_4jd.option_generic": {
+    "size": [ "100%", 15 ],
+    "$label_bindings": [],
+    "controls": [
+      {
+        "option_toggle_control@settings_common.option_toggle_control": {
+          "size": [ "100%", "100%" ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "consume_hover_events": false,
+
+          "$unchecked_control": "settings_common_4jd.toggle_unchecked",
+          "$checked_control": "settings_common_4jd.toggle_checked",
+          "$unchecked_hover_control": "settings_common_4jd.toggle_unchecked_hover",
+          "$checked_hover_control": "settings_common_4jd.toggle_checked_hover",
+          
+          "$unchecked_locked_control": "settings_common_4jd.toggle_unchecked_locked",
+          "$unchecked_locked_hover_control": "settings_common_4jd.toggle_unchecked_locked",
+          "$checked_locked_control": "settings_common_4jd.toggle_checked_locked",
+          "$checked_locked_hover_control": "settings_common_4jd.toggle_checked_locked",
+
+          "$button_content": "settings_common_dx.button_label_with_value"
+        }
+      }
+    ]
+  },
+
+  /*//// Option Slider ////*/
+
+  "slider_bar_base": {
+    "type": "panel",
+    "size": [ "100%+8px", 16 ],
+    "$text_color": "$main_menu_button_default_color",
+    "$bg_texture": "ui_4jd_textures.slider_background",
+    "controls": [
+      {
+        "hold_panel": {
+          "type": "panel",
+          "bindings": [
+            {
+              "binding_name": "$option_enabled_binding_name",
+              "binding_name_override": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "option_label@common_buttons_4jd.button_label": {
+                "layer": 10,
+                "text": "$option_label",
+                "bindings": "$label_bindings"
+              }
+            },
+            { "bg_texture@$bg_texture": { "layer": 3 } }
+          ]
+        }
+      }
+    ]
+  },
+
+  "option_slider@settings_common_4jd.option_generic": {
+    "size": [ "100%", 18 ],
+    "controls": [
+      {
+        "slider@common.slider": {
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "size": [ "100% -8px", 16 ],
+          "offset": [ 0, 0 ],
+          "$slider_step_factory_control_ids": { },
+          "enabled": "$enabled",
+
+          "$slider_tts_header": "$option_label",
+          "$slider_tts_header_binding_type": "global",
+          
+          "$slider_enabled_binding_name": "$option_enabled_binding_name",
+          "$slider_enabled_binding_type": "global",
+          "variables": [
+            {
+              "requires": "(not $option_enabled_binding_name or not $enabled)",
+              "$slider_enabled_binding_name": "#not_data_bound",
+              "$slider_enabled_binding_type": "none"
+            }
+          ],
+          "controls": [
+            { 
+              "slider_box@common.slider_box": {
+                "size": [ 8, 16 ],
+                "layer": 4,
+                "$hover_content": "common.empty_panel",
+                "controls": [
+                  { "default@ui_4jd_textures.slider_box": { } },
+                  { "hover@ui_4jd_textures.slider_box_hover": { } },
+                  { "indent@ui_4jd_textures.slider_box_hover": { } },
+                  { "locked@ui_4jd_textures.slider_box": { "alpha": 0.5} }
+                ]
+              }
+            },
+            { "slider_bar_default@settings_common_4jd.slider_bar_base": { } },
+            {
+              "slider_bar_hover@settings_common_4jd.slider_bar_base": {
+                "$text_color": "$main_menu_button_hover_color",
+                "$bg_texture": "ui_4jd_textures.slider_background_hover"
+              }
+            },
+            {
+              "locked_panel": {
+                "type": "panel",
+                "bindings": [
+                  {
+                    "binding_name": "(not $option_enabled_binding_name)",
+                    "binding_name_override": "#visible"
+                  }
+                ],
+                "controls": [
+                  {
+                    "option_label_locked@common_buttons_4jd.button_label": {
+                      "layer": 10,
+                      "alpha": 0.5,
+                      "text": "$option_label",
+                      "color": "$main_menu_button_locked_color",
+                      "bindings": "$label_bindings"
+                    }
+                  },
+                  { "bg_texture@ui_4jd_textures.slider_background": { "alpha": 0.5, "layer": 3 } }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -22,7 +22,7 @@
   },
 
   "gamepad_cursor_image@common.gamepad_cursor_image": {
-    "texture": "textures/ui4jd/pointer",
+    "texture": "textures/ui4jd/menus/pointer",
     "size": [ 16, 16 ],
     "bindings": [
       {
@@ -35,7 +35,8 @@
   /* Center Screen Panel */
 
   "center_screen": {
-    "type": "panel"
+    "type": "panel",
+    "$container_item_button_sound": "ui.press"
   },
 
   /* Full Screen Panel */

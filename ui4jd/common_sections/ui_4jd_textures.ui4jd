@@ -6,7 +6,7 @@
   "title": {
     "type": "image",
     "size": [ 285.5, 69 ],
-    "texture": "textures/ui4jd/title"
+    "texture": "textures/ui4jd/menus/title"
   },
 
   /* Progress */
@@ -14,13 +14,13 @@
   "loading_bar_empty": {
     "type": "image",
     "size": [ 320, 10 ],
-    "texture": "textures/ui4jd/loading_bar_empty"
+    "texture": "textures/ui4jd/progress/loading_bar_empty"
   },
 
   "loading_bar_full": {
     "type": "image",
     "size": [ 320, 10 ],
-    "texture": "textures/ui4jd/loading_bar_full"
+    "texture": "textures/ui4jd/progress/loading_bar_full"
   },
 
   /* HUD */
@@ -64,18 +64,18 @@
 
   "item_selected_highlight": {
     "type": "image",
-    "texture": "textures/ui4jd/item_selected_highlight"
+    "texture": "textures/ui4jd/inventory/item_selected_highlight"
   },
 
   "lock_icon": {
     "type": "image",
-    "texture": "textures/ui4jd/lock_icon"
+    "texture": "textures/ui4jd/menus/lock_icon"
   },
 
   "warning_icon": {
     "type": "image",
     "size": [ 8, 8 ],
-    "texture": "textures/ui4jd/warning_icon"
+    "texture": "textures/ui4jd/inventory/warning_icon"
   },
 
   /* Durability textures */
@@ -129,10 +129,15 @@
 
   /* Panel objects */
 
+  "panel_recess": {
+    "type": "image",
+    "texture": "textures/ui4jd/menus/panel_recess"
+  },
+
   "dialog_bg_opaque_1_5": {
     "type": "image",
     "size": [ "100%", "100%" ],
-    "texture": "textures/ui4jd/dialog_bg_opaque_1.5"
+    "texture": "textures/ui4jd/menus/dialog_bg_opaque_1.5"
   },
 
   "text_panel": {
@@ -145,22 +150,37 @@
     "texture": "textures/ui4jd/cell_images/highlight_slot"
   },
 
-  "text_input": {
+  "highlight_border": {
     "type": "image",
     "size": [ "100%+2px", "100%+2px" ],
+    "texture": "textures/ui4jd/menus/highlight_border"
+  },
+
+  "text_input": {
+    "type": "image",
+    "size": [ "100%", "100%" ],
     "texture": "textures/ui4jd/menus/text_input"
   },
 
   "text_input_hover": {
     "type": "image",
-    "size": [ "100%+2px", "100%+2px" ],
-    "texture": "textures/ui4jd/menus/text_input_hover"
+    "size": [ "100%", "100%" ],
+    "texture": "textures/ui4jd/menus/text_input_hover",
+    "controls": [
+      { "highlight_border@ui_4jd_textures.highlight_border": { } }
+    ]
   },
 
   "panel_content_1_5": {
     "type": "image",
     "size": [ "100%", "100%" ],
-    "texture": "textures/ui4jd/panel_content_1.5"
+    "texture": "textures/ui4jd/menus/panel_content_1.5"
+  },
+
+  "panel_content_alt_1_5": {
+    "type": "image",
+    "size": [ "100%", "100%" ],
+    "texture": "textures/ui4jd/menus/panel_content_alt_1.5"
   },
 
   "scroll_up": {
@@ -173,6 +193,99 @@
     "type": "image",
     "size": [ 16, 11 ],
     "texture": "textures/ui4jd/menus/scroll_down"
+  },
+
+  /* Slider */
+
+  "slider_background": {
+    "type": "image",
+    "size": [ "100%", 16 ],
+    "texture": "textures/ui4jd/menus/slider_background"
+  },
+
+  "slider_background_hover": {
+    "type": "image",
+    "size": [ "100%", 16 ],
+    "texture": "textures/ui4jd/menus/slider_background_hover",
+    "controls": [
+      { "highlight_border@ui_4jd_textures.highlight_border": { } }
+    ]
+  },
+
+  "slider_box": {
+    "type": "image",
+    "size": [ 8, 16 ],
+    "texture": "textures/ui4jd/menus/slider_box"
+  },
+
+  "slider_box_hover": {
+    "type": "image",
+    "size": [ 8, 16 ],
+    "texture": "textures/ui4jd/menus/slider_box_hover"
+  },
+
+  /* Tabs */
+
+  "TabTopBackLeftMost": {
+    "type": "image",
+    "size": [ "100%", "100%" ],
+    "texture": "textures/ui4jd/menus/TabTopBackLeftMost"
+  },
+
+  "TabTopBack": {
+    "type": "image",
+    "size": [ "100%", "100%" ],
+    "texture": "textures/ui4jd/menus/TabTopBack"
+  },
+
+  "TabTopBackRightMost": {
+    "type": "image",
+    "size": [ "100%", "100%" ],
+    "texture": "textures/ui4jd/menus/TabTopBackRightMost"
+  },
+
+  "TabTopFrontLeftMost": {
+    "type": "image",
+    "size": [ "100%", "100%" ],
+    "texture": "textures/ui4jd/menus/TabTopFrontLeftMost"
+  },
+
+  "TabTopFront": {
+    "type": "image",
+    "size": [ "100%", "100%" ],
+    "texture": "textures/ui4jd/menus/TabTopFront"
+  },
+
+  "TabTopFrontRightMost": {
+    "type": "image",
+    "size": [ "100%", "100%" ],
+    "texture": "textures/ui4jd/menus/TabTopFrontRightMost"
+  },
+
+  /* Toggles */
+
+  "toggle_off": {
+    "type": "image",
+    "size": [ 14, 12 ],
+    "texture": "textures/ui4jd/menus/toggle_off"
+  },
+
+  "toggle_off_hover": {
+    "type": "image",
+    "size": [ 14, 12 ],
+    "texture": "textures/ui4jd/menus/toggle_off_hover"
+  },
+
+  "toggle_on": {
+    "type": "image",
+    "size": [ 14, 12 ],
+    "texture": "textures/ui4jd/menus/toggle_on"
+  },
+
+  "toggle_on_hover": {
+    "type": "image",
+    "size": [ 14, 12 ],
+    "texture": "textures/ui4jd/menus/toggle_on_hover"
   },
 
   /* Beacon */
@@ -285,44 +398,6 @@
     "texture": "textures/ui4jd/cell_images/red_2x"
   },
 
-  /* Tabs */
-
-  "TabTopBackLeftMost": {
-    "type": "image",
-    "size": [ "100%", "100%" ],
-    "texture": "textures/ui4jd/TabTopBackLeftMost"
-  },
-
-  "TabTopBack": {
-    "type": "image",
-    "size": [ "100%", "100%" ],
-    "texture": "textures/ui4jd/TabTopBack"
-  },
-
-  "TabTopBackRightMost": {
-    "type": "image",
-    "size": [ "100%", "100%" ],
-    "texture": "textures/ui4jd/TabTopBackRightMost"
-  },
-
-  "TabTopFrontLeftMost": {
-    "type": "image",
-    "size": [ "100%", "100%" ],
-    "texture": "textures/ui4jd/TabTopFrontLeftMost"
-  },
-
-  "TabTopFront": {
-    "type": "image",
-    "size": [ "100%", "100%" ],
-    "texture": "textures/ui4jd/TabTopFront"
-  },
-
-  "TabTopFrontRightMost": {
-    "type": "image",
-    "size": [ "100%", "100%" ],
-    "texture": "textures/ui4jd/TabTopFrontRightMost"
-  },
-
   /* Crafting Icons */
 
   "icon_structures": {
@@ -411,18 +486,18 @@
   "main_button_default": {
     "type": "image",
     "size": [ "100%", "100%" ],
-    "texture": "textures/ui4jd/main_button_default"
+    "texture": "textures/ui4jd/menus/main_button_default"
   },
 
   "main_button_hover": {
     "type": "image",
     "size": [ "100%", "100%" ],
-    "texture": "textures/ui4jd/main_button_hover"
+    "texture": "textures/ui4jd/menus/main_button_hover"
   },
 
   "main_button_locked": {
     "type": "image",
     "size": [ "100%", "100%" ],
-    "texture": "textures/ui4jd/main_button_locked"
+    "texture": "textures/ui4jd/menus/main_button_locked"
   }
 }

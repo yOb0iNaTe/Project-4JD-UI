@@ -1,0 +1,132 @@
+{
+  "namespace": "language_4jd",
+
+  /*//// Lang Button ////*/
+  
+  "button_label@common_buttons_4jd.button_label": {
+    "text": "$radio_label_text",
+    "bindings": "$radio_label_bindings"
+  },
+
+  "language_grid_item@general_section.language_grid_item": {
+    "size": [  "100%", 25 ],
+    "controls": [
+      { 
+        "lang_button_core@settings_common.radio_with_label_core": {
+          "sound_name": "ui.press",
+          "size": [  "100%", 20 ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "$button_content": "language_4jd.button_label",
+
+          "$unchecked_control": "common_buttons_4jd.default",
+          "$checked_control": "common_buttons_4jd.pressed",
+          "$unchecked_hover_control": "common_buttons_4jd.hover",
+          "$checked_hover_control": "common_buttons_4jd.hover",
+          
+          "$unchecked_locked_control": "common_buttons_4jd.locked",
+          "$checked_locked_control": "common_buttons_4jd.locked",
+          "$unchecked_locked_hover_control": "common_buttons_4jd.locked",
+          "$checked_locked_hover_control": "common_buttons_4jd.locked"
+        }
+      }
+    ]
+  },
+
+  "language_stack_panel_content": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [ "100%-1px", "100%c" ],
+    "controls": [
+      {
+        "language_list_grid": {
+          "type": "grid",
+          "size": [ "100%", "100%c" ],
+          "grid_item_template": "language_4jd.language_grid_item",
+          "grid_dimension_binding": "#language_grid_dimension",
+          "collection_name": "languages",
+          "bindings": [
+            {
+              "binding_name": "#language_grid_dimension",
+              "binding_condition": "visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  
+  /*//// Screen ////*/
+
+  "main_panel@ui_4jd_textures.dialog_bg_opaque_1_5": {
+    "size": [ 240, 200 ],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "offset": [ 0, 100 ],
+    "controls": [
+      {
+        "scrolling_panel@common.scrolling_panel": {
+          "size": [ 225, 175 ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 7, 7 ],
+          "$scrolling_content": "language_4jd.language_stack_panel_content",
+          "$show_background": false,
+          "$scroll_size": [ "5px", "100%" ],
+          "$scroll_bar_left_padding_size": [ 2, 0 ]
+        }
+      }
+    ]
+  }, 
+
+  "language_panel": {
+    "type": "panel",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "language_tab_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      { "main_panel@language_4jd.main_panel": { } },
+      {
+        "safezone": {
+          "type": "panel",
+          "size": [ "90%", "90%" ],
+          "controls": [
+            {
+              "gamepad_helpers": {
+                "type": "stack_panel",
+                "orientation": "horizontal",
+                "anchor_from": "bottom_left",
+                "anchor_to": "bottom_left",
+                "size": [ "100%", 16 ],
+                "controls": [
+                  {
+                    "gamepad_helper_a@common_tooltip_4jd.gamepad_helper_a": {
+                      "bindings": [
+                        {
+                          "binding_name": "#gamepad_helper_a_visible",
+                          "binding_name_override": "#visible",
+                          "binding_condition": "always"
+                        }
+                      ]
+                    }
+                  },
+                  { 
+                    "gamepad_helper_b@common_tooltip_4jd.gamepad_helper_b": {
+                      "$icon_description_bind": "gui.back",
+                      "$desc_panel_content": "game_options_4jd.back_button"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

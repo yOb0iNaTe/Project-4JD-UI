@@ -452,14 +452,155 @@
       { "exp_rend@hud_4jd.exp_progress_bar_and_hotbar": { "offset": [ 0, -22 ] } }
     ]
   },
+
+  "tooltip_helper": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [ "100%c", 16 ],
+    "layer": 100,
+    "controls": [
+      {
+        "icon": {
+          "type": "panel",
+          "size": [ 16, 16 ],
+          "controls": [
+            { 
+              "icon@$icon_image_ref": {
+              }
+            }
+          ]
+        }
+      },
+      {
+        "description_panel": {
+          "type": "panel",
+          "size": [ "100%cm", 16 ],
+          "controls": [
+            { 
+              "desc@hud.tooltip_helper_icon_description": {
+                "size": [ "default", 10 ],
+                "anchor_from": "bottom_middle",
+                "anchor_to": "bottom_middle",
+                "offset": [ 0, -2 ],
+                "shadow": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "separator": {
+          "type": "panel",
+          "size": [ 11, 16 ]
+        }
+      }
+    ]
+  },
+
+  "mixed_tooltip_helper": {
+    "type": "panel",
+    "size": [ "100%c", 16 ],
+    "controls": [
+      {
+        "gamepad_tooltip@hud_4jd.tooltip_helper": {
+          "$icon_image_ref": "hud.base_icon_image",
+          "bindings": [
+            {
+              "binding_name": "#is_gamepad_tip",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "keyboard_tooltip@hud.keyboard_tooltip_helper": {
+          "$icon_image_ref": "hud.base_keyboard_icon",
+          "bindings": [
+            {
+              "binding_name": "(not #is_gamepad_tip)",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ],
+    "$tooltip_collection_name|default": "",
+    "$tooltip_collection_prefix|default": "",
+    "bindings": [
+      {
+        "binding_name": "#tooltip_visible",
+        "binding_name_override": "#visible",
+        "binding_type": "collection",
+        "binding_collection_name": "$tooltip_collection_name",
+        "binding_condition": "always"
+      },
+      {
+        "binding_name": "#tooltip_visible",
+        "binding_name_override": "#visible",
+        "binding_type": "collection",
+        "binding_collection_name": "$tooltip_collection_name"
+      }
+    ]
+  },
+
+  "bottom_helpers": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "anchor_from": "bottom_left",
+    "anchor_to": "bottom_left",
+    "offset": [ 4.5, 0 ],
+    "size": [ "98.4375%", 16 ],
+    "controls": [
+      {
+        "stack_panel_0": {
+          "type": "stack_panel",
+          "size": [ "100%c", 16 ],
+          "orientation": "horizontal",
+
+          "$tooltip_collection_name": "left_helper_collection",
+          "$tooltip_collection_prefix": "left_helpers",
+          "collection_name": "$tooltip_collection_name",
+          "factory": {
+            "name": "left_tooltip_factory",
+            "control_name": "hud_4jd.mixed_tooltip_helper"
+          },
+          "bindings": [
+            {
+              "binding_name": "#left_helper_count",
+              "binding_name_override": "#collection_length"
+            }
+          ]
+        }
+      },
+      {
+        "stack_panel_1": {
+          "type": "stack_panel",
+          "size": [ "100%c", 16 ],
+          "orientation": "horizontal",
+
+          "$tooltip_collection_name": "right_helper_collection",
+          "$tooltip_collection_prefix": "right_helpers",
+          "collection_name": "$tooltip_collection_name",
+          "factory": {
+            "name": "right_tooltip_factory",
+            "control_name": "hud_4jd.mixed_tooltip_helper"
+          },
+          "bindings": [
+            {
+              "binding_name": "#right_helper_count",
+              "binding_name_override": "#collection_length"
+            }
+          ]
+        }
+      }
+    ]
+  },
   
   /*//// Root Panel ////*/
   
   "root_panel@hud.root_panel": {
     "variables": [],
     "controls": [
-      { "left_helpers@hud.left_helpers": {} },
-      { "right_helpers@hud.right_helpers": {} },
       { "gui_elements@hud_4jd.gui_elements": {} },
       { "vignette_rend@hud.vignette_renderer": {} },
       { "cursor_rend@hud.cursor_renderer": {} },
@@ -516,6 +657,39 @@
     "type": "panel",
     "size": [ "90%", "90%" ],
     "controls": [
+      {
+        "inventory_button_y@common.button": {
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          "offset": [ 4.5, 0 ],
+          "size": [ 100, 16 ],
+          "sound_name": "ui.press",
+          "button_mappings": [
+            {
+              "from_button_id": "button.controller_secondary_select",
+              "to_button_id": "button.hotbar_inventory_button",
+              "mapping_type": "global"
+            }
+          ]
+        }
+      },
+      {
+        "inventory_button_x@common.button": {
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          "offset": [ 4.5, 0 ],
+          "size": [ 100, 16 ],
+          "sound_name": "ui.press",
+          "button_mappings": [
+            {
+              "from_button_id": "button.controller_select",
+              "to_button_id": "button.hotbar_inventory_button",
+              "mapping_type": "global"
+            }
+          ]
+        }
+      },
+      { "bottom_helpers@hud_4jd.bottom_helpers": {} },
       { "root_panel@hud_4jd.root_panel": { } }
     ]
   }

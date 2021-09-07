@@ -2,6 +2,7 @@
 //(c) Don't use any code design without permission!*/
 {
   "start_screen": {
+    "$ignore_main_popup_dialog": true,
     "$screen_content": "start_4jd.center_screen",
     "$screen_bg_content": "start_4jd.full_screen"
   }

@@ -4,9 +4,22 @@
 4jd.menu.helpOptions=Help & Options ##1649
 4jd.menu.exit=Exit Game ##1535
 
+4jd.menu.exitGameWarning=Are you sure you want to exit the game?
+
 4jd.progress.initializingServer=Initializing Server ##3480
 
 furnaceScreen.input=Ingredient
+
+4jd.key.look=Look
+4jd.key.move=Move
+
+4jd.key.categories.standard=Standard
+
+##  Settings
+4jd.options.game=Game Options
+4jd.options.graphics=Graphics
+4jd.options.audio=Audio
+4jd.options.ui=User Interface
 
 ##  Crafting
 4jd.craftingScreen.enableRecipe=Enable Recipe Book

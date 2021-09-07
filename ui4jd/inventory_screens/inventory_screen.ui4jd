@@ -1,9 +1,7 @@
 {
   "namespace": "inventory_4jd",
 
-  "player_panel": {
-    "type": "image",
-    "texture": "textures/ui4jd/panel_recess",
+  "player_panel@ui_4jd_textures.panel_recess": {
     "size": [ 65, 86 ],
     "layer": 3,
     "anchor_from": "top_left",
@@ -434,6 +432,7 @@
     "offset": [ 0, 2 ],
     "anchor_from": "bottom_left",
     "anchor_to": "bottom_left",
+    "sound_name": "ui.back",
     "button_mappings": [
       {
         "from_button_id": "button.menu_cancel",

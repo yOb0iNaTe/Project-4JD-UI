@@ -1,0 +1,326 @@
+{
+  "namespace": "audio_4jd",
+  
+  /*//// Screen ////*/
+
+  "main_panel@ui_4jd_textures.dialog_bg_opaque_1_5": {
+    "size": [ "100%c+18px", "100%c+18px" ],
+    "controls": [
+      {
+        "stack_panel": {
+          "type": "stack_panel",
+          "size": [ 280, "100%c" ],
+          "controls": [
+            {
+              "option_slider_0@settings_common_4jd.option_slider": {
+                "$option_label": "#main_volume_slider_label",
+                "$slider_name": "main_volume",
+                "$slider_value_binding_name": "#main_volume",
+                "$slider_tts_text_value": "#main_volume_text_value",
+                "$option_enabled_binding_name": "#main_volume_enabled",
+                "$focus_override_up": "FOCUS_OVERRIDE_STOP",
+                "$label_bindings": [
+                  {
+                    "binding_name": "$option_label"
+                  }
+                ]
+              }
+            },
+            {
+              "panel_0": {
+                "type": "panel",
+                "size": [ "100%", 18 ],
+                "controls": [
+                  {
+                    "option_slider_1@settings_common_4jd.option_slider": {
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "size": [ "50%-1px", 18 ],
+
+                      "$option_label": "#music_volume_slider_label",
+                      "$slider_name": "music_volume",
+                      "$slider_value_binding_name": "#music_volume",
+                      "$slider_tts_text_value": "#music_volume_text_value",
+                      "$option_enabled_binding_name": "#music_volume_enabled",
+                      "$label_bindings": [
+                        {
+                          "binding_name": "$option_label"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "option_slider_8@settings_common_4jd.option_slider": {
+                      "anchor_from": "top_right",
+                      "anchor_to": "top_right",
+                      "size": [ "50%-1px", 18 ],
+
+                      "$option_label": "#record_volume_slider_label",
+                      "$slider_name": "record_volume",
+                      "$slider_value_binding_name": "#record_volume",
+                      "$slider_tts_text_value": "#record_volume_text_value",
+                      "$option_enabled_binding_name": "#record_volume_enabled",
+                      "$label_bindings": [
+                        {
+                          "binding_name": "$option_label"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "panel_1": {
+                "type": "panel",
+                "size": [ "100%", 18 ],
+                "controls": [
+                  {
+                    "option_slider_9@settings_common_4jd.option_slider": {
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "size": [ "50%-1px", 18 ],
+
+                      "$option_label": "#weather_volume_slider_label",
+                      "$slider_name": "weather_volume",
+                      "$slider_value_binding_name": "#weather_volume",
+                      "$slider_tts_text_value": "#weather_volume_text_value",
+                      "$option_enabled_binding_name": "#weather_volume_enabled",
+                      "$label_bindings": [
+                        {
+                          "binding_name": "$option_label"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "option_slider_4@settings_common_4jd.option_slider": {
+                      "anchor_from": "top_right",
+                      "anchor_to": "top_right",
+                      "size": [ "50%-1px", 18 ],
+
+                      "$option_label": "#block_volume_slider_label",
+                      "$slider_name": "block_volume",
+                      "$slider_value_binding_name": "#block_volume",
+                      "$slider_tts_text_value": "#block_volume_text_value",
+                      "$option_enabled_binding_name": "#block_volume_enabled",
+                      "$label_bindings": [
+                        {
+                          "binding_name": "$option_label"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "panel_2": {
+                "type": "panel",
+                "size": [ "100%", 18 ],
+                "controls": [
+                  {
+                    "option_slider_5@settings_common_4jd.option_slider": {
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "size": [ "50%-1px", 18 ],
+
+                      "$option_label": "#hostile_volume_slider_label",
+                      "$slider_name": "hostile_volume",
+                      "$slider_value_binding_name": "#hostile_volume",
+                      "$slider_tts_text_value": "#hostile_volume_text_value",
+                      "$option_enabled_binding_name": "#hostile_volume_enabled",
+                      "$label_bindings": [
+                        {
+                          "binding_name": "$option_label"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "option_slider_6@settings_common_4jd.option_slider": {
+                      "anchor_from": "top_right",
+                      "anchor_to": "top_right",
+                      "size": [ "50%-1px", 18 ],
+
+                      "$option_label": "#neutral_volume_slider_label",
+                      "$slider_name": "neutral_volume",
+                      "$slider_value_binding_name": "#neutral_volume",
+                      "$slider_tts_text_value": "#neutral_volume_text_value",
+                      "$option_enabled_binding_name": "#neutral_volume_enabled",
+                      "$label_bindings": [
+                        {
+                          "binding_name": "$option_label"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "panel_3": {
+                "type": "panel",
+                "size": [ "100%", 18 ],
+                "controls": [
+                  {
+                    "option_slider_7@settings_common_4jd.option_slider": {
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "size": [ "50%-1px", 18 ],
+
+                      "$option_label": "#player_volume_slider_label",
+                      "$slider_name": "player_volume",
+                      "$slider_value_binding_name": "#player_volume",
+                      "$slider_tts_text_value": "#player_volume_text_value",
+                      "$option_enabled_binding_name": "#player_volume_enabled",
+                      "$label_bindings": [
+                        {
+                          "binding_name": "$option_label"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "option_slider_3@settings_common_4jd.option_slider": {
+                      "anchor_from": "top_right",
+                      "anchor_to": "top_right",
+                      "size": [ "50%-1px", 18 ],
+
+                      "$option_label": "#ambient_volume_slider_label",
+                      "$slider_name": "ambient_volume",
+                      "$slider_value_binding_name": "#ambient_volume",
+                      "$slider_tts_text_value": "#ambient_volume_text_value",
+                      "$option_enabled_binding_name": "#ambient_volume_enabled",
+                      "$label_bindings": [
+                        {
+                          "binding_name": "$option_label"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "panel_4": {
+                "type": "panel",
+                "size": [ "100%", 18 ],
+                "controls": [
+                  {
+                    "option_slider_2@settings_common_4jd.option_slider": {
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "size": [ "50%-1px", 18 ],
+
+                      "$option_label": "#sound_volume_slider_label",
+                      "$slider_name": "sound_volume",
+                      "$slider_value_binding_name": "#sound_volume",
+                      "$slider_tts_text_value": "#sound_volume_text_value",
+                      "$option_enabled_binding_name": "#sound_volume_enabled",
+                      "$label_bindings": [
+                        {
+                          "binding_name": "$option_label"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "option_slider_10@settings_common_4jd.option_slider": {
+                      "anchor_from": "top_right",
+                      "anchor_to": "top_right",
+                      "size": [ "50%-1px", 18 ],
+
+                      "$option_label": "#texttospeech_volume_slider_label",
+                      "$slider_name": "texttospeech_volume",
+                      "$slider_value_binding_name": "#texttospeech_volume",
+                      "$slider_tts_text_value": "#texttospeech_volume_text_value",
+                      "$option_enabled_binding_name": "#texttospeech_volume_enabled",
+                      "$label_bindings": [
+                        {
+                          "binding_name": "$option_label"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "panel_5": {
+                "type": "panel",
+                "size": [ "100%", 20 ],
+                "ignored": "(not $is_pregame)",
+                "controls": [
+                  {
+                    "reset_button@common_buttons_4jd.main_button": {
+                      "size": [ "100%", 20 ],
+                      "$pressed_button_name": "button.reset_settings",
+                      "$button_text": "options.resetSettings",
+                      "$focus_override_down": "FOCUS_OVERRIDE_STOP",
+                      "property_bag": {
+                        "reset_group": "audio"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }, 
+
+  "audio_panel": {
+    "type": "panel",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "audio_tab_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      { "title_panel@start_4jd.title_panel": { "$splash_text_visible": false } },
+      { "main_panel@audio_4jd.main_panel": { } },
+      {
+        "safezone": {
+          "type": "panel",
+          "size": [ "90%", "90%" ],
+          "controls": [
+            {
+              "gamepad_helpers": {
+                "type": "stack_panel",
+                "orientation": "horizontal",
+                "anchor_from": "bottom_left",
+                "anchor_to": "bottom_left",
+                "size": [ "100%", 16 ],
+                "controls": [
+                  {
+                    "gamepad_helper_a@common_tooltip_4jd.gamepad_helper_a": {
+                      "bindings": [
+                        {
+                          "binding_name": "#gamepad_helper_a_visible",
+                          "binding_name_override": "#visible",
+                          "binding_condition": "always"
+                        }
+                      ]
+                    }
+                  },
+                  { 
+                    "gamepad_helper_b@common_tooltip_4jd.gamepad_helper_b": {
+                      "$icon_description_bind": "gui.back",
+                      "$desc_panel_content": "settings_4jd.back_button"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

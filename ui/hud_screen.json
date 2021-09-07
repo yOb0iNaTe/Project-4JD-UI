@@ -4,5 +4,10 @@
   "hud_screen": {
     "$screen_content": "hud_4jd.center_screen",
     "$screen_bg_content": "hud_4jd.full_screen"
+  },
+
+  "hud_content": {
+    "ignored": true,
+    "controls": []
   }
 } 

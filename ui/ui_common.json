@@ -1,4 +1,9 @@
 {
+  "container_slot_button_prototype":{
+    "$container_item_button_sound|default": "unset",
+    "sound_name": "$container_item_button_sound"
+  },
+  
   "container_item": {
     "$container_item_size|default": [ 18, 18 ],
     "size": "$container_item_size",
@@ -42,5 +47,13 @@
         }
       }
     ]
+  },
+
+  "base_screen": {
+    "$ignore_main_popup_dialog": false
+  },
+
+  "screen_panel/popup_dialog_factory": {
+    "ignored": "$ignore_main_popup_dialog"
   }
 }

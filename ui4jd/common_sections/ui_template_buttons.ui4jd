@@ -9,6 +9,7 @@
     "locked_control": "locked",
     "size": [ 200, 20 ],
     "consume_hover_events": false,
+    "sound_name": "ui.press",
     "controls": [
       { "default@common_buttons_4jd.default": { } },
       { "hover@common_buttons_4jd.hover": { } },

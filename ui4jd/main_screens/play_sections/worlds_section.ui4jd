@@ -1,0 +1,80 @@
+{
+  "namespace": "worlds_4jd",
+
+  "worlds_panel": {
+    "type": "panel",
+    "controls": [
+      {
+        "main_content@ui_4jd_textures.panel_recess": {
+          "layer": 4,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "size": [ "100%-14px", "100%-35px" ],
+          "offset": [ 7, 7 ],
+          "controls": [
+            {
+              "scrolling_panel@play.scrolling_offsets": {
+                "size": [ "100% -14px", "100% - 14px" ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [ 7, 7 ],
+                "layer": 6,
+                "$scrolling_content": "play.worlds_scroll_panel"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "storage_bar@ui_4jd_textures.panel_recess": {
+          "layer": 6,
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          "size": [ "100%-14px", 16 ],
+          "offset": [ 7, -10.5 ],
+          "controls": [
+            {
+              "legacy_world_bar": {
+                "type": "panel",
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "size": [ "100% - 6px", 10 ],
+                "offset": [ 3, 3 ],
+                "controls": [
+                  {
+                    "local_diskspace_bar@play.green_diskspace_bar": {
+                      "layer": 3,
+                      "bindings": [
+                        {
+                          "binding_name": "#local_worlds_storage_size",
+                          "binding_name_override": "#clip_ratio"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "legacy_diskspace_bar@play.blue_diskspace_bar": {
+                      "layer": 2,
+                      "bindings": [
+                        {
+                          "binding_name": "#legacy_worlds_storage_size",
+                          "binding_name_override": "#clip_ratio"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "empty_diskspace_bar@play.empty_diskspace_bar": {
+                      "layer": 1,
+                      "size": [ "100%", "100%" ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
