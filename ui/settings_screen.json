@@ -8,7 +8,7 @@
     "$header_safezone_control": "common.empty_panel",
     "$header_bar_control": "common.empty_panel",
     "$is_full_screen_layout": false
-  },/* 
+  }/*, 
 
   "screen_template_create": {
     "$title_text": "createWorldScreen.header.local",
