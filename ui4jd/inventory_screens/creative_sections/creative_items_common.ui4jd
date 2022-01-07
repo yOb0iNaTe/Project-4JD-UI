@@ -2,9 +2,36 @@
   "namespace": "creative_items_common_4jd",
 
   
+  /*//// Base Objects ////*/
+
+  "column_panel": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [ 270, 135 ]
+  },
+
+  "row_panel": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [ 270, 27 ],
+    "collection_name": "recipe_book"
+  },
+
+  "grid_item_for_creative@crafting.grid_item_for_recipe_book": {
+    "size": [ 27, 27 ],
+    "$background_images": "common.empty_panel",
+    "$highlight_control": "common_4jd.highlight_slot_panel",
+    "$container_item_size": [ 27, 27 ],
+    "$cell_image_size": [ 27, 27 ],
+    "$item_renderer_panel_size": [ 27, 27 ],
+    "$item_renderer_size": [ 22, 22 ],
+    "$stack_count_control": "common.empty_panel"
+  },
+  
   /*//// Button Tab ////*/
 
   "page_tab@common_toggles_4jd.toggle_panel": {
+    "$custom_toggle_sound_name": "ui.scroll",
     "size": [ 16, 11 ],
     "layer": 4,
     "$is_custom_button": true
@@ -128,56 +155,56 @@
     "type": "stack_panel",
     "orientation": "vertical",
     "size": [ 270, 135 ],
-    "$item_01": [ 0, 1367 ],
-    "$item_02": [ 0, 1367 ],
-    "$item_03": [ 0, 1367 ],
-    "$item_04": [ 0, 1367 ],
-    "$item_05": [ 0, 1367 ],
-    "$item_06": [ 0, 1367 ],
-    "$item_07": [ 0, 1367 ],
-    "$item_08": [ 0, 1367 ],
-    "$item_09": [ 0, 1367 ],
-    "$item_10": [ 0, 1367 ],
-    "$item_11": [ 0, 1367 ],
-    "$item_12": [ 0, 1367 ],
-    "$item_13": [ 0, 1367 ],
-    "$item_14": [ 0, 1367 ],
-    "$item_15": [ 0, 1367 ],
-    "$item_16": [ 0, 1367 ],
-    "$item_17": [ 0, 1367 ],
-    "$item_18": [ 0, 1367 ],
-    "$item_19": [ 0, 1367 ],
-    "$item_20": [ 0, 1367 ],
-    "$item_21": [ 0, 1367 ],
-    "$item_22": [ 0, 1367 ],
-    "$item_23": [ 0, 1367 ],
-    "$item_24": [ 0, 1367 ],
-    "$item_25": [ 0, 1367 ],
-    "$item_26": [ 0, 1367 ],
-    "$item_27": [ 0, 1367 ],
-    "$item_28": [ 0, 1367 ],
-    "$item_29": [ 0, 1367 ],
-    "$item_30": [ 0, 1367 ],
-    "$item_31": [ 0, 1367 ],
-    "$item_32": [ 0, 1367 ],
-    "$item_33": [ 0, 1367 ],
-    "$item_34": [ 0, 1367 ],
-    "$item_35": [ 0, 1367 ],
-    "$item_36": [ 0, 1367 ],
-    "$item_37": [ 0, 1367 ],
-    "$item_38": [ 0, 1367 ],
-    "$item_39": [ 0, 1367 ],
-    "$item_40": [ 0, 1367 ],
-    "$item_41": [ 0, 1367 ],
-    "$item_42": [ 0, 1367 ],
-    "$item_43": [ 0, 1367 ],
-    "$item_44": [ 0, 1367 ],
-    "$item_45": [ 0, 1367 ],
-    "$item_46": [ 0, 1367 ],
-    "$item_47": [ 0, 1367 ],
-    "$item_48": [ 0, 1367 ],
-    "$item_49": [ 0, 1367 ],
-    "$item_50": [ 0, 1367 ],
+    "$item_01": 1367,
+    "$item_02": 1367,
+    "$item_03": 1367,
+    "$item_04": 1367,
+    "$item_05": 1367,
+    "$item_06": 1367,
+    "$item_07": 1367,
+    "$item_08": 1367,
+    "$item_09": 1367,
+    "$item_10": 1367,
+    "$item_11": 1367,
+    "$item_12": 1367,
+    "$item_13": 1367,
+    "$item_14": 1367,
+    "$item_15": 1367,
+    "$item_16": 1367,
+    "$item_17": 1367,
+    "$item_18": 1367,
+    "$item_19": 1367,
+    "$item_20": 1367,
+    "$item_21": 1367,
+    "$item_22": 1367,
+    "$item_23": 1367,
+    "$item_24": 1367,
+    "$item_25": 1367,
+    "$item_26": 1367,
+    "$item_27": 1367,
+    "$item_28": 1367,
+    "$item_29": 1367,
+    "$item_30": 1367,
+    "$item_31": 1367,
+    "$item_32": 1367,
+    "$item_33": 1367,
+    "$item_34": 1367,
+    "$item_35": 1367,
+    "$item_36": 1367,
+    "$item_37": 1367,
+    "$item_38": 1367,
+    "$item_39": 1367,
+    "$item_40": 1367,
+    "$item_41": 1367,
+    "$item_42": 1367,
+    "$item_43": 1367,
+    "$item_44": 1367,
+    "$item_45": 1367,
+    "$item_46": 1367,
+    "$item_47": 1367,
+    "$item_48": 1367,
+    "$item_49": 1367,
+    "$item_50": 1367,
 
     "$size_24_item_01": false,
     "$size_24_item_02": false,
@@ -362,48 +389,18 @@
     "type": "stack_panel",
     "orientation": "horizontal",
     "size": [ 270, 27 ],
+    "collection_name": "recipe_book",
     "controls": [
-      { "row_01@creative_items_common_4jd.grid_item": { "$grid_position": "$row_01", "$item_size_24": "$size_24_row_01" } },
-      { "row_02@creative_items_common_4jd.grid_item": { "$grid_position": "$row_02", "$item_size_24": "$size_24_row_02" } },
-      { "row_03@creative_items_common_4jd.grid_item": { "$grid_position": "$row_03", "$item_size_24": "$size_24_row_03" } },
-      { "row_04@creative_items_common_4jd.grid_item": { "$grid_position": "$row_04", "$item_size_24": "$size_24_row_04" } },
-      { "row_05@creative_items_common_4jd.grid_item": { "$grid_position": "$row_05", "$item_size_24": "$size_24_row_05" } },
-      { "row_06@creative_items_common_4jd.grid_item": { "$grid_position": "$row_06", "$item_size_24": "$size_24_row_06" } },
-      { "row_07@creative_items_common_4jd.grid_item": { "$grid_position": "$row_07", "$item_size_24": "$size_24_row_07" } },
-      { "row_08@creative_items_common_4jd.grid_item": { "$grid_position": "$row_08", "$item_size_24": "$size_24_row_08" } },
-      { "row_09@creative_items_common_4jd.grid_item": { "$grid_position": "$row_09", "$item_size_24": "$size_24_row_09" } },
-      { "row_10@creative_items_common_4jd.grid_item": { "$grid_position": "$row_10", "$item_size_24": "$size_24_row_10" } }
+      { "row_01@creative_4jd.grid_item_for_creative": { "collection_index": "$row_01", "$item_size_24": "$size_24_row_01" } },
+      { "row_02@creative_4jd.grid_item_for_creative": { "collection_index": "$row_02", "$item_size_24": "$size_24_row_02" } },
+      { "row_03@creative_4jd.grid_item_for_creative": { "collection_index": "$row_03", "$item_size_24": "$size_24_row_03" } },
+      { "row_04@creative_4jd.grid_item_for_creative": { "collection_index": "$row_04", "$item_size_24": "$size_24_row_04" } },
+      { "row_05@creative_4jd.grid_item_for_creative": { "collection_index": "$row_05", "$item_size_24": "$size_24_row_05" } },
+      { "row_06@creative_4jd.grid_item_for_creative": { "collection_index": "$row_06", "$item_size_24": "$size_24_row_06" } },
+      { "row_07@creative_4jd.grid_item_for_creative": { "collection_index": "$row_07", "$item_size_24": "$size_24_row_07" } },
+      { "row_08@creative_4jd.grid_item_for_creative": { "collection_index": "$row_08", "$item_size_24": "$size_24_row_08" } },
+      { "row_09@creative_4jd.grid_item_for_creative": { "collection_index": "$row_09", "$item_size_24": "$size_24_row_09" } },
+      { "row_10@creative_4jd.grid_item_for_creative": { "collection_index": "$row_10", "$item_size_24": "$size_24_row_10" } }
     ]
-  },
-  
-  "grid_item@common_4jd.grid_panel": {
-    "size": [ 27, 27 ],
-    "$grid_dimensions": [ 1, 1367 ],
-    "$collection_name": "recipe_book",
-    "variables": [
-      {
-        "requires": "(not $item_size_24)",
-        "$grid_item_template": "creative_items_common_4jd.grid_item_for_creative"
-      },
-      {
-        "requires": "$item_size_24",
-        "$grid_item_template": "creative_items_common_4jd.grid_item_for_creative_alt"
-      }
-    ]
-  },
-
-  "grid_item_for_creative@crafting.grid_item_for_recipe_book": {
-    "size": [ 27, 27 ],
-    "$background_images": "common.empty_panel",
-    "$highlight_control": "common_4jd.highlight_slot_panel",
-    "$container_item_size": [ 27, 27 ],
-    "$cell_image_size": [ 27, 27 ],
-    "$item_renderer_panel_size": [ 27, 27 ],
-    "$item_renderer_size": [ 22, 22 ],
-    "$stack_count_control": "common.empty_panel"
-  },
-
-  "grid_item_for_creative_alt@creative_items_common_4jd.grid_item_for_creative": {
-    "$item_renderer_size": [ 24, 24 ]
   }
 }

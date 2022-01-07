@@ -358,6 +358,7 @@
       },
       { 
         "gamepad_helper_b@common_tooltip_4jd.gamepad_helper_b": {
+          "bindings": [ ],
           "$desc_panel_content": "inventory_4jd.close_button"
         }
       },
@@ -475,7 +476,6 @@
       },
       { 
         "creative_panel@creative_4jd.creative_panel": {
-          "ignored": true,
           "bindings": [
             {
               "binding_type": "global",
@@ -488,9 +488,13 @@
       {
         "item_number_scroll_panel@crafting.scroll_panel": {
           "ignored": true,
-          "size": [ 70, "100%" ],
+          "$scroll_background_image_control": "common.container_scroll_background_image",
+          "$show_background": false,
+          "layer": 100,
+          "size": [ 350, "100%" ],
           "anchor_from": "top_right",
           "anchor_to": "top_right",
+          "$scroll_size": [ 12, "100%" ],
           "$scrolling_content": "test_component_4jd.scroll_grid_panel",
           "$collection_name": "recipe_book"
         }

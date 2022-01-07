@@ -1,5 +1,8 @@
 {
   /*//// Building Blocks ////*/
+
+  /* Page 1 */
+
   // Stone
   // Grass Block
   // Grass (Dirt) Path Block
@@ -54,6 +57,8 @@
   // Spruce Log
   // Birch Log
   // Jungle Log
+
+  /* Page 2 */
 
   // Acacia Log
   // Dark Oak Log
@@ -110,6 +115,8 @@
   // Mossy Stone Bricks
   // Cracked Stone Bricks
 
+  /* Page 3 */
+
   // Chiseled Stone Bricks
   // Infested Stone
   // Infested Cobblestone
@@ -165,6 +172,8 @@
   // Jungle Slab
   // Acacia Slab
 
+  /* Page 4 */
+  
   // Dark Oak Slab
   // Sandstone Slab
   // Cut Sandstone Slab
@@ -220,6 +229,8 @@
   // Quartz Stairs
   // Smootn Quartz Stairs
 
+  /* Page 5 */
+  
   // Purpur Stairs
   // Prismarine Stairs
   // Dark Prismarine Stairs
@@ -308,6 +319,8 @@
   // Lilac
   // Double Tall Grass
   // Large Ferm
+
+  /* Page 2 */
   
   // Rose Bush
   // Peony
@@ -363,6 +376,8 @@
   // Brown Concrete
   // Orange Concrete
   // Yellow Concrete
+  
+  /* Page 3 */
   
   // White Concrete
   // Light Gray Concrete

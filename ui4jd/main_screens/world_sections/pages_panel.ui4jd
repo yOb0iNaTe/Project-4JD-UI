@@ -1,0 +1,32 @@
+/*File made by @CrisXolt.
+//(c) Don't use any code design without permission!*/
+{
+  "namespace": "world_pages_panels",
+  
+  /*//// Panels base ////*/
+
+  "world_tab_pages": {
+    "type": "panel",
+    "$1_page_only|default": false,
+    "controls": [
+      { "page_1@world_tab_pages.page_1": { "$ignore_next_button": "$1_page_only" } },
+      { "page_2@world_pages_panels.page_2": { "ignored": "$1_page_only" } }
+    ]
+  },
+
+  "page_2": {
+    "type": "panel",
+    "$2_pages_only|default": false,
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($category + '_page_2_button_toggle')",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      { "page_2@world_tab_pages.page_2": { } }
+    ]
+  }
+}

@@ -1,182 +1,258 @@
 {
   "namespace": "creative_miscellaneous_4jd",
 
-  "miscellaneous_items_page_1@creative_items_common_4jd.grid_items_panel": {
-    "$item_01": [ 0,  926 ], // Chest
-    "$item_02": [ 0,  928 ], // Ender Chest
-    "$item_03": [ 0,  905 ], // Crafting Table
-    "$item_04": [ 0,  912 ], // Furnace
-    "$item_05": [ 0,  916 ], // Brewing Stand
-    "$item_06": [ 0,  921 ], // Enchanting Table
-    "$item_07": [ 0,  994 ], // Beacon
-    "$item_08": [ 0,  996 ], // Conduit
-    "$item_09": [ 0,  929 ], // Barrel
-    "$item_10": [ 0,  906 ], // Cartography Table
-
-    "$item_11": [ 0, 1202 ], // Loom
-    "$item_12": [ 0,  923 ], // Lectern
-    "$item_13": [ 0,  913 ], // Blast Furnace
-    "$item_14": [ 0,  914 ], // Smoker
-    "$item_15": [ 0,  910 ], // Campfire
-    "$item_16": [ 0,  911 ], // Soul Campfire
-    "$item_17": [ 0,  925 ], // Composter
-    "$item_18": [ 0,  920 ], // Grindstone
-    "$item_19": [ 0,  997 ], // Stonecutter
-    "$item_20": [ 0,  907 ], // Fletching Table
-
-    "$item_21": [ 0,  908 ], // Smithing Table
-    "$item_22": [ 0,  995 ], // Bell
-    "$item_23": [ 0,  930 ], // Shulker Box
-    "$item_24": [ 0,  934 ], // Black Shulker Box
-    "$item_25": [ 0,  943 ], // Blue Shulker Box
-    "$item_26": [ 0,  942 ], // Light Blue Shulker Box
-    "$item_27": [ 0,  941 ], // Cyan Shulker Box
-    "$item_28": [ 0,  940 ], // Green Shulker Box
-    "$item_29": [ 0,  939 ], // Lime Shulker Box
-    "$item_30": [ 0,  946 ], // Pink Shulker Box
-
-    "$item_31": [ 0,  945 ], // Magenta Shulker Box
-    "$item_32": [ 0,  944 ], // Purple Shulker Box
-    "$item_33": [ 0,  936 ], // Red Shulker Box
-    "$item_34": [ 0,  935 ], // Brown Shulker Box
-    "$item_35": [ 0,  937 ], // Orange Shulker Box
-    "$item_36": [ 0,  938 ], // Yellow Shulker Box
-    "$item_37": [ 0,  931 ], // White Shulker Box
-    "$item_38": [ 0,  932 ], // Light Gray Shulker Box
-    "$item_39": [ 0,  933 ], // Gray Shulker Box
-    "$item_40": [ 0,  887 ], // Black Bed
-
-    "$item_41": [ 0,  896 ], // Blue Bed
-    "$item_42": [ 0,  895 ], // Light Bed
-    "$item_43": [ 0,  894 ], // Cyan Bed
-    "$item_44": [ 0,  893 ], // Green Bed
-    "$item_45": [ 0,  892 ], // Lime Bed
-    "$item_46": [ 0,  899 ], // Pink Bed
-    "$item_47": [ 0,  898 ], // Magenta Bed
-    "$item_48": [ 0,  897 ], // Purple Bed
-    "$item_49": [ 0,  889 ], // Red Bed
-    "$item_50": [ 0,  888 ]  // Brown Bed
+  "miscellaneous_items_page_1@creative_items_common_4jd.column_panel": {
+    "controls": [
+      {
+        "column_1@creative_items_common_4jd.row_panel": {
+          "controls": [
+            { "row_01@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1038 } }, // Chest
+            { "row_02@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1040 } }, // Ender Chest
+            { "row_03@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1017 } }, // Crafting Table
+            { "row_04@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1024 } }, // Furnace
+            { "row_05@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1028 } }, // Brewing Stand
+            { "row_06@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1033 } }, // Enchanting Table
+            { "row_07@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1110 } }, // Beacon
+            { "row_08@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1112 } }, // Conduit
+            { "row_09@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1041 } }, // Barrel
+            { "row_10@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1018 } }  // Cartography Table
+          ]
+        }
+      },
+      {
+        "column_2@creative_items_common_4jd.row_panel": {
+          "controls": [
+            { "row_01@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1324 } }, // Loom
+            { "row_02@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1035 } }, // Lectern
+            { "row_03@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1025 } }, // Blast Furnace
+            { "row_04@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1026 } }, // Smoker
+            { "row_05@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1022 } }, // Campfire
+            { "row_06@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1037 } }, // Composter
+            { "row_07@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1032 } }, // Grindstone
+            { "row_08@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1113 } }, // Stonecutter
+            { "row_09@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1019 } }, // Fletching Table
+            { "row_10@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1020 } }  // Smithing Table
+          ]
+        }
+      },
+      {
+        "column_3@creative_items_common_4jd.row_panel": {
+          "controls": [
+            { "row_01@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1111 } }, // Bell
+            { "row_02@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1042 } }, // Shulker Box
+            { "row_03@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1046 } }, // Black Shulker Box
+            { "row_04@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1055 } }, // Blue Shulker Box
+            { "row_05@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1054 } }, // Light Blue Shulker Box
+            { "row_06@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1053 } }, // Cyan Shulker Box
+            { "row_07@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1052 } }, // Green Shulker Box
+            { "row_08@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1051 } }, // Lime Shulker Box
+            { "row_09@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1058 } }, // Pink Shulker Box
+            { "row_10@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1057 } }  // Magenta Shulker Box
+          ]
+        }
+      },
+      {
+        "column_4@creative_items_common_4jd.row_panel": {
+          "controls": [
+            { "row_01@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1056 } }, // Purple Shulker Box
+            { "row_02@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1048 } }, // Red Shulker Box
+            { "row_03@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1047 } }, // Brown Shulker Box
+            { "row_04@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1049 } }, // Orange Shulker Box
+            { "row_05@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1050 } }, // Yellow Shulker Box
+            { "row_06@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1043 } }, // White Shulker Box
+            { "row_07@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1044 } }, // Light Gray Shulker Box
+            { "row_08@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1045 } }, // Gray Shulker Box
+            { "row_09@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 982 } }, // Black Bed
+            { "row_10@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 991 } }  // Blue Bed
+          ]
+        }
+      },
+      {
+        "column_5@creative_items_common_4jd.row_panel": {
+          "controls": [
+            { "row_01@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 990 } }, // Light Blue Bed
+            { "row_02@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 989 } }, // Cyan Bed
+            { "row_03@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 988 } }, // Green Bed
+            { "row_04@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 987 } }, // Lime Bed
+            { "row_05@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 994 } }, // Pink Bed
+            { "row_06@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 993 } }, // Magenta Bed
+            { "row_07@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 992 } }, // Purple Bed
+            { "row_08@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 984 } }, // Red Bed
+            { "row_09@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 983 } }, // Brown Bed
+            { "row_10@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 985 } }  // Orange Bed
+          ]
+        }
+      }
+    ]
   },
 
-  "miscellaneous_items_page_2@creative_items_common_4jd.grid_items_panel": {
-    "$item_01": [ 0,  890 ], // Orange Bed
-    "$item_02": [ 0,  891 ], // Yellow Bed
-    "$item_03": [ 0,  884 ], // White Bed
-    "$item_04": [ 0,  885 ], // Light Gray Bed
-    "$item_05": [ 0,  886 ], // Gray Bed
-    "$item_06": [ 0,  998 ], // End Frame Portal
-    "$item_07": [ 0, 1039 ], // Ender Crystal
-    "$item_08": [ 0,  949 ], // Jukebox
-    "$item_09": [ 0,  917 ], // Anvil
-    "$item_10": [ 0,  980 ], // Bucket
-    
-    "$item_11": [ 0,  983 ], // Lava Bucket
-    "$item_12": [ 0,  982 ], // Water Bucket
-    "$item_13": [ 0,  981 ], // Milk bucket
-    "$item_14": [ 0,  984 ], // Cod Bucket
-    "$item_15": [ 0,  985 ], // Salmon bucket
-    "$item_16": [ 0,  987 ], // Puffefish Bucket
-    "$item_17": [ 0,  986 ], // Tropical Fish Bucket
-    "$item_18": [ 0,  924 ], // Cauldron
-    "$item_19": [ 0,  735 ], // Snowball
-    "$item_20": [ 0, 1040 ], // Paper
-
-    "$item_21": [ 0, 1041 ], // Book
-    "$item_22": [ 0, 1042 ], // Book & Quill
-    "$item_23": [ 0, 1035 ], // Ender Pearl
-    "$item_24": [ 0, 1036 ], // Ender Eye
-    "$item_25": [ 0, 1201 ], // Name Tag
-    "$item_26": [ 0, 1037 ], // Nether Star
-    "$item_27": [ 0,  524 ], // Monster Spawner
-    "$item_28": [ 0,  532 ], // Sea Turtle Egg
-    "$item_29": [ 0,  560 ], // Spawn Creeper
-    "$item_30": [ 0,  563 ], // Spawn Skeleton
-
-    "$item_31": [ 0,  564 ], // Spawn Wither Skeleton
-    "$item_32": [ 0,  565 ], // Spawn Stray
-    "$item_33": [ 0,  567 ], // Spawn Spider
-    "$item_34": [ 0,  573 ], // Spawn Cave Spider
-    "$item_35": [ 0,  568 ], // Spawn Zombie
-    "$item_36": [ 0,  592 ], // Spawn Zombie Villager
-    "$item_37": [ 0,  570 ], // Spawn Husk
-    "$item_38": [ 0,  571 ], // Spawn Drowned
-    "$item_39": [ 0,  566 ], // Spawn Slime
-    "$item_40": [ 0,  578 ], // Spawn Magma Cube
-
-    "$item_41": [ 0,  574 ], // Spawn Witch
-    "$item_42": [ 0,  562 ], // Spawn Silverfish
-    "$item_43": [ 0,  584 ], // Spawn Ghast
-    "$item_44": [ 0,  569 ], // Spawn Zombified Piglin
-    "$item_45": [ 0,  585 ], // Spawn Blaze
-    "$item_46": [ 0,  561 ], // Spawn Enderman
-    "$item_47": [ 0,  577 ], // Spawn Endermite
-    "$item_48": [ 0,  586 ], // Spawn Shulker
-    "$item_49": [ 0,  593 ], // Spawn Phantom
-    "$item_50": [ 0,  575 ]  // Spawn Guardian
+  "miscellaneous_items_page_2@creative_items_common_4jd.column_panel": {
+    "controls": [
+      {
+        "column_1@creative_items_common_4jd.row_panel": {
+          "controls": [
+            { "row_01@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 986 } }, // Yellow Bed
+            { "row_02@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 979 } }, // White Bed
+            { "row_03@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 980 } }, // Light Gray Bed
+            { "row_04@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 981 } }, // Gray Bed
+            { "row_05@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1114 } }, // End Portal
+            { "row_06@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1161 } }, // Ender Crystal
+            { "row_07@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1061 } }, // Jukebox
+            { "row_08@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1029 } }, // Anvil
+            { "row_09@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1094 } }, // Bucket
+            { "row_10@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1097 } }  // Lava Bucket
+          ]
+        }
+      },
+      {
+        "column_2@creative_items_common_4jd.row_panel": {
+          "controls": [
+            { "row_01@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1096 } }, // Water Bucket
+            { "row_02@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1095 } }, // Milk
+            { "row_03@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1098 } }, // Bucket of Cod
+            { "row_04@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1099 } }, // Bucket of Salmon
+            { "row_05@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1101 } }, // Puffefish Bucket
+            { "row_06@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1100 } }, // Tropical Fish Bucket
+            { "row_07@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1036 } }, // Cauldron
+            { "row_08@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 829 } }, // Snowball
+            { "row_09@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1162 } }, // Paper
+            { "row_10@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1163 } }  // Book
+          ]
+        }
+      },
+      {
+        "column_3@creative_items_common_4jd.row_panel": {
+          "controls": [
+            { "row_01@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1164 } }, // Book & Quill
+            { "row_02@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1156 } }, // Ender Pearl
+            { "row_03@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1157 } }, // Ender Eye
+            { "row_04@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1323 } }, // Name Tag
+            { "row_05@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1158 } }, // Nether Star
+            { "row_06@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 614 } }, // Monster Spawner
+            { "row_07@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 623 } }, // Sea Turtle Egg
+            { "row_08@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 651 } }, // Spawn Creeper
+            { "row_09@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 654 } }, // Spawn Skeleton
+            { "row_10@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 655 } }  // Spawn Wither Skeleton
+          ]
+        }
+      },
+      {
+        "column_4@creative_items_common_4jd.row_panel": {
+          "controls": [
+            { "row_01@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 656 } }, // Spawn Stray
+            { "row_02@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 658 } }, // Spawn Spider
+            { "row_03@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 665 } }, // Spawn Cave Spider
+            { "row_04@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 659 } }, // Spawn Zombie
+            { "row_05@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 686 } }, // Spawn Zombie Villager
+            { "row_06@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 661 } }, // Spawn Husk
+            { "row_07@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 662 } }, // Spawn Drowned
+            { "row_08@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 657 } }, // Spawn Slime
+            { "row_09@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 670 } }, // Spawn Magma Cube
+            { "row_10@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 666 } }  // Spawn Witch
+          ]
+        }
+      },
+      {
+        "column_5@creative_items_common_4jd.row_panel": {
+          "controls": [
+            { "row_01@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 653 } }, // Spawn Silverfish
+            { "row_02@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 678 } }, // Spawn Ghast
+            { "row_03@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 660 } }, // Spawn Zombified Piglin
+            { "row_04@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 679 } }, // Spawn Blaze
+            { "row_05@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 652 } }, // Spawn Enderman
+            { "row_06@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 669 } }, // Spawn Endermite
+            { "row_07@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 680 } }, // Spawn Shulker
+            { "row_08@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 687 } }, // Spawn Phantom
+            { "row_09@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 667 } }, // Spawn Guardian
+            { "row_10@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 668 } }  // Spawn Elder Guardian
+          ]
+        }
+      }
+    ]
   },
 
-  "miscellaneous_items_page_3@creative_items_common_4jd.grid_items_panel": {
-    "$item_01": [ 0,  576 ], // Spawn Elder Guardian
-    "$item_02": [ 0,  588 ], // Spawn Evoker
-    "$item_03": [ 0,  589 ], // Spawn Vex
-    "$item_04": [ 0,  587 ], // Spawn Vindicator
-    "$item_05": [ 0,  594 ], // Spawn Pillager
-    "$item_06": [ 0,  595 ], // Spawn Ravager
-    "$item_07": [ 0,  590 ], // Spawn Villager
-    "$item_08": [ 0,  591 ], // Spawn Wandering Trader
-    "$item_09": [ 0,  543 ], // Spawn Bat
-    "$item_10": [ 0,  536 ], // Spawn Pig
-    
-    "$item_11": [ 0,  537 ], // Spawn Sheep
-    "$item_12": [ 0,  535 ], // Spawn Cow
-    "$item_13": [ 0,  542 ], // Spawn Mooshroom
-    "$item_14": [ 0,  533 ], // Spawn Chicken
-    "$item_15": [ 0,  545 ], // Spawn Rabbit
-    "$item_16": [ 0,  572 ], // Spawn Squid
-    "$item_17": [ 0,  553 ], // Spawn Cod
-    "$item_18": [ 0,  555 ], // Spawn Salmon
-    "$item_19": [ 0,  554 ], // Spawn Puffefish
-    "$item_20": [ 0,  552 ], // Spawn Tropical Fish
-
-    "$item_21": [ 0,  544 ], // Spawn Parrot
-    "$item_22": [ 0,  538 ], // Spawn Wolf
-    "$item_23": [ 0,  540 ], // Spawn Ocelot
-    "$item_24": [ 0,  541 ], // Spawn Cat
-    "$item_25": [ 0,  539 ], // Spawn Polar Bear
-    "$item_26": [ 0,  558 ], // Spawn Panda
-    "$item_27": [ 0,  547 ], // Spawn Horse
-    "$item_28": [ 0,  548 ], // Spawn Donkey
-    "$item_29": [ 0,  549 ], // Spawn Mule
-    "$item_30": [ 0,  550 ], // Spawn Skeleton Horse
-
-    "$item_31": [ 0,  551 ], // Spawn Zombie Horse
-    "$item_32": [ 0,  546 ], // Spawn Llama
-    "$item_33": [ 0,  557 ], // Spawn Sea Turtle
-    "$item_34": [ 0,  556 ], // Spawn Dolphin
-    "$item_35": [ 0,  559 ], // Spawn Fox
-    "$item_36": [ 0,  534 ], // Spawn Bee
-    "$item_37": [ 0,  581 ], // Spawn Piglin
-    "$item_38": [ 0,  583 ], // Spawn Piglin Brute
-    "$item_39": [ 0,  580 ], // Spawn Hoglin
-    "$item_40": [ 0,  582 ], // Spanw Zoglin
-
-    "$item_41": [ 0,  950 ], // Spawn Strider
-    "$item_42": [ 0,  950 ], // C418 - 13
-    "$item_43": [ 0,  951 ], // C418 - cat
-    "$item_44": [ 0,  952 ], // C418 - blocks
-    "$item_45": [ 0,  953 ], // C418 - chirp
-    "$item_46": [ 0,  954 ], // C418 - far
-    "$item_47": [ 0,  955 ], // C418 - mall
-    "$item_48": [ 0,  956 ], // C418 - mellohi
-    "$item_49": [ 0,  957 ], // C418 - stal
-    "$item_50": [ 0,  958 ]  // C418 - strad (My favorite)
+  "miscellaneous_items_page_3@creative_items_common_4jd.column_panel": {
+    "controls": [
+      {
+        "column_1@creative_items_common_4jd.row_panel": {
+          "controls": [
+            { "row_01@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 682 } }, //Spawn Evoker
+            { "row_02@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 683 } }, //Spawn Vex
+            { "row_03@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 681 } }, //Spawn Vindicator
+            { "row_04@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 688 } }, //Spawn Pillager
+            { "row_05@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 689 } }, //Spawn Ravager
+            { "row_06@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 684 } }, //Spawn Villager
+            { "row_07@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 685 } }, //Spawn Wandering Trader
+            { "row_08@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 634 } }, //Spawn Bat
+            { "row_09@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 627 } }, //Spawn Pig
+            { "row_10@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 628 } }  //Spawn Sheep
+          ]
+        }
+      },
+      {
+        "column_2@creative_items_common_4jd.row_panel": {
+          "controls": [
+            { "row_01@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 626 } }, // Spawn Cow
+            { "row_02@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 633 } }, // Spawn Mooshroom
+            { "row_03@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 624 } }, // Spawn Chicken
+            { "row_04@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 636 } }, // Spawn Rabbit
+            { "row_05@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 663 } }, // Spawn Squid
+            { "row_06@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 644 } }, // Spawn Cod
+            { "row_07@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 646 } }, // Spawn Salmon
+            { "row_08@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 645 } }, // Spawn Puffefish
+            { "row_09@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 643 } }, // Spawn Tropical Fish
+            { "row_10@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 635 } }  // Spawn Parrot
+          ]
+        }
+      },
+      {
+        "column_3@creative_items_common_4jd.row_panel": {
+          "controls": [
+            { "row_01@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 629 } }, // Spawn Wolf
+            { "row_02@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 631 } }, // Spawn Ocelot
+            { "row_03@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 632 } }, // Spawn Cat
+            { "row_04@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 630 } }, // Spawn Polar Bear
+            { "row_05@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 649 } }, // Spawn Panda
+            { "row_06@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 638 } }, // Spawn Horse
+            { "row_07@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 639 } }, // Spawn Donkey
+            { "row_08@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 640 } }, // Spawn Mule
+            { "row_09@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 641 } }, // Spawn Skeleton Horse
+            { "row_10@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 642 } }  // Spawn Zombie Horse
+          ]
+        }
+      },
+      {
+        "column_4@creative_items_common_4jd.row_panel": {
+          "controls": [
+            { "row_01@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 637 } }, // Spawn Llama
+            { "row_02@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 648 } }, // Spawn Sea Turtle
+            { "row_03@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 647 } }, // Spawn Dolphin
+            { "row_04@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1062 } }, // C418 - 13
+            { "row_05@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1063 } }, // C418 - cat
+            { "row_06@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1064 } }, // C418 - blocks
+            { "row_07@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1065 } }, // C418 - chirp
+            { "row_08@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1066 } }, // C418 - far
+            { "row_09@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1067 } }, // C418 - mall
+            { "row_10@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1068 } }  // C418 - mellohi
+          ]
+        }
+      },
+      {
+        "column_5@creative_items_common_4jd.row_panel": {
+          "controls": [
+            { "row_01@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1069 } }, // C418 - stal
+            { "row_02@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1070 } }, // C418 - strad (My favorite)
+            { "row_03@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1071 } }, // C418 - ward
+            { "row_04@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1072 } }, // C418 - 11
+            { "row_05@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1073 } }, // C418 - wait
+            { "row_06@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1349 } }  // Firework Rocket
+          ]
+        }
+      }
+    ]
   },
 
-  "miscellaneous_items_page_4@creative_items_common_4jd.grid_items_panel": {
-    "$item_01": [ 0,  959 ], // C418 - ward
-    "$item_02": [ 0,  960 ], // C418 - 11
-    "$item_03": [ 0,  961 ], // C418 - wait
-    "$item_04": [ 0,  962 ], // Lena Raine - Pigstep
-    "$item_05": [ 0, 1227 ]  // Firework Rocket
+  "miscellaneous_items_page_4@creative_items_common_4jd.column_panel": {
+
   }
 }

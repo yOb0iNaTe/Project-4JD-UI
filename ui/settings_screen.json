@@ -1,14 +1,14 @@
 /*File modified by @CrisXolt.
 //(c) Don't use any code design without permission!*/
-{/* 
+{
   "screen_world_create": {
     "$title_text": "createWorldScreen.header.local",
-    "$screen_content": "create_world_dx.center_screen",
-    "$screen_bg_content": "create_world_dx.full_screen",
+    "$screen_content": "create_world_4jd.center_screen",
+    "$screen_bg_content": "create_world_4jd.full_screen",
     "$header_safezone_control": "common.empty_panel",
     "$header_bar_control": "common.empty_panel",
     "$is_full_screen_layout": false
-  },
+  },/* 
 
   "screen_template_create": {
     "$title_text": "createWorldScreen.header.local",
@@ -28,14 +28,14 @@
     "$is_edit_screen": true,
     "$is_full_screen_layout": false
   },*/
-
+/* 
   "screen_controls_and_settings": {
     "$screen_content": "settings_4jd.center_screen",
     "$screen_bg_content": "settings_4jd.full_screen",
     "$header_safezone_control": "common.empty_panel",
     "$header_bar_control": "common.empty_panel",
     "$is_full_screen_layout": false
-  }/* ,
+  },
 
   "screen_world_controls_and_settings": {
     "$screen_content": "settings_dx.center_screen",

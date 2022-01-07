@@ -1,0 +1,92 @@
+/*File made by @CrisXolt.
+//(c) Don't use any code design without permission!*/
+{
+  "namespace": "world_tab_pages",
+
+  "world_panel_content": {
+    "type": "panel",
+    "$category|default": "default",
+    "$panel_content|default": "",
+    "$ignore_prev_button|default": false,
+    "$ignore_next_button|default": false,
+    "controls": [
+      { "content@$panel_content": { } },
+      {
+        "prev_button@world_tab_pages.page_tab": {
+          "$unchecked_control": "ui_4jd_textures.scroll_up",
+          "$checked_control": "ui_4jd_textures.scroll_up",
+          "$unchecked_hover_control": "ui_4jd_textures.scroll_up",
+          "$checked_hover_control": "ui_4jd_textures.scroll_up",
+          "$custom_from_button_id": "button.menu_alternate_tab_left",
+
+          "ignored": "$ignore_prev_button",
+          "anchor_from": "bottom_right",
+          "anchor_to": "bottom_right",
+          "offset": [ -25.5, -8 ],
+          "$toggle_name": "$prev_toggle_name",
+          "$tab_view_binding_name": "$prev_button_view_binding_name",
+          "$toggle_group_forced_index": 0
+        }
+      },
+      {
+        "next_button@world_tab_pages.page_tab": {
+          "$unchecked_control": "ui_4jd_textures.scroll_down",
+          "$checked_control": "ui_4jd_textures.scroll_down",
+          "$unchecked_hover_control": "ui_4jd_textures.scroll_down",
+          "$checked_hover_control": "ui_4jd_textures.scroll_down",
+          "$custom_from_button_id": "button.menu_alternate_tab_right",
+
+          "ignored": "$ignore_next_button",
+          "anchor_from": "bottom_right",
+          "anchor_to": "bottom_right",
+          "offset": [ -9.5, -8 ],
+          "$toggle_name": "$next_toggle_name",
+          "$tab_view_binding_name": "$next_button_view_binding_name",
+          "$toggle_group_forced_index": 1
+        }
+      }
+    ]
+  },
+
+  "page_tab@common_toggles_4jd.toggle_panel": {
+    "size": [ 16, 11 ],
+    "layer": 4,
+    "$is_custom_button": true,
+    "$custom_to_button_id": "button.menu_select",
+    "$custom_toggle_sound_name": "ui.scroll"
+  },
+
+  /*//// Pages ////*/
+
+  "page_1@world_tab_pages.world_panel_content": {
+    "$panel_content": "$panel_content_page_1",
+    "$ignore_prev_button": true,
+    "$next_button_view_binding_name": "($category + '_page_2_button_toggle')",
+    "$next_toggle_name": "($category + '_page_1_2_tabs')",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($category + '_page_2_button_toggle')",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "page_2@world_tab_pages.world_panel_content": {
+    "$panel_content": "$panel_content_page_2",
+    "$ignore_next_button": true,
+    "$prev_button_view_binding_name": "($category + '_page_1_button_toggle')",
+    "$next_button_view_binding_name": "($category + '_page_3_button_toggle')",
+    "$prev_toggle_name": "($category + '_page_1_2_tabs')",
+    "$next_toggle_name": "($category + '_page_2_3_tabs')",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($category + '_page_3_button_toggle')",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
+      }
+    ]
+  }
+}

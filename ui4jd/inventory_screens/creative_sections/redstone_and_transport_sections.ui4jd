@@ -1,71 +1,101 @@
 {
   "namespace": "creative_redstone_4jd",
 
-  "redstone_items_page_1@creative_items_common_4jd.grid_items_panel": {
-    "$item_01": [ 0, 1156 ], // Rail
-    "$item_02": [ 0, 1157 ], // Powered Rail
-    "$item_03": [ 0, 1158 ], // Detector Rail
-    "$item_04": [ 0, 1159 ], // Activator Rail
-    "$item_05": [ 0,  131 ], // Ladder
-    "$item_06": [ 0, 1160 ], // Minecart
-    "$item_07": [ 0, 1161 ], // Minecart with Chest
-    "$item_08": [ 0, 1268 ], // Minecart with Furnace, but it doesn't included in BE, Mojang please! ;-;
-    "$item_09": [ 0, 1162 ], // Minecart with Hopper
-    "$item_10": [ 0, 1163 ], // Minecart with TNT
-
-    "$item_11": [ 0,  750 ], // Elytra
-    "$item_12": [ 0,  743 ], // Saddle
-    "$item_13": [ 0, 1150 ], // Oak Boat
-    "$item_14": [ 0, 1151 ], // Spruce Boat
-    "$item_15": [ 0, 1152 ], // Birch Boat
-    "$item_16": [ 0, 1153 ], // Jungle Boat
-    "$item_17": [ 0, 1154 ], // Acacia Boat
-    "$item_18": [ 0, 1155 ], // Dark Oak Boat
-    "$item_19": [ 0, 1197 ], // Dispenser
-    "$item_20": [ 0,  948 ], // Note Block
-
-    "$item_21": [ 0, 1198 ], // Piston
-    "$item_22": [ 0, 1199 ], // Sticky Piston
-    "$item_23": [ 0, 1200 ], // TNT
-    "$item_24": [ 0, 1167 ], // Lever
-    "$item_25": [ 0, 1174 ], // Stone Button
-    "$item_26": [ 0, 1177 ], // Polished Blackstone Button
-    "$item_27": [ 0, 1168 ], // Oak Button
-    "$item_28": [ 0, 1169 ], // Spruce Button
-    "$item_29": [ 0, 1170 ], // Birch Button
-    "$item_30": [ 0, 1171 ], // Jungle Button
-
-    "$item_31": [ 0, 1172 ], // Acacia Button
-    "$item_32": [ 0, 1173 ], // Dark Oak Button
-    "$item_33": [ 0, 1175 ], // Crimson Button
-    "$item_34": [ 0, 1176 ], // Warped Button
-    "$item_35": [ 0, 1187 ], // Stone Pressure Plate
-    "$item_36": [ 0, 1190 ], // Polished Blackstone Pressure Plate
-    "$item_37": [ 0, 1179 ], // Oak Pressure Plate
-    "$item_38": [ 0, 1180 ], // Spruce Pressure Plate
-    "$item_39": [ 0, 1181 ], // Birch Pressure Plate
-    "$item_40": [ 0, 1182 ], // Jungle Pressure Plate
-
-    "$item_41": [ 0, 1183 ], // Acacia Pressure Plate
-    "$item_42": [ 0, 1184 ], // Dark Oak Pressure Plate
-    "$item_43": [ 0, 1185 ], // Crimson Pressure Plate
-    "$item_44": [ 0, 1186 ], // Warped Pressure Plate
-    "$item_45": [ 0, 1164 ], // Redstone Dust
-    "$item_46": [ 0, 1165 ], // Block of Redstone
-    "$item_47": [ 0, 1166 ], // Redstone Torch
-    "$item_48": [ 0, 1193 ], // Redstone Repeater
-    "$item_49": [ 0,  965 ], // Redstone Lamp
-    "$item_50": [ 0, 1178 ]  // Tripwire Hook
+  "redstone_items_page_1@creative_items_common_4jd.column_panel": {
+    "controls": [
+      {
+        "column_1@creative_items_common_4jd.row_panel": {
+          "controls": [
+            { "row_01@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1278 } }, // Rail
+            { "row_02@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1279 } }, // Powered Rail
+            { "row_03@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1280 } }, // Detector Rail
+            { "row_04@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1281 } }, // Activator Rail
+            { "row_05@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 148 } }, // Ladder
+            { "row_06@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1282 } }, // Minecart
+            { "row_07@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1283 } }, // Minecart with Chest
+            { "row_08": { "type": "panel", "size": [ 27, 27 ] } }, // Minecart with Furnace, but it doesn't included in BE, Mojang please! ;-;
+            { "row_09@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1284 } }, // Minecart with Hopper
+            { "row_10@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1285 } }  // Minecart with TNT
+          ]
+        }
+      },
+      {
+        "column_2@creative_items_common_4jd.row_panel": {
+          "controls": [
+            { "row_01@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 844 } }, // Elytra
+            { "row_02@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 837 } }, // Saddle
+            { "row_03@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1272 } }, // Oak Boat
+            { "row_04@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1273 } }, // Spruce Boat
+            { "row_05@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1274 } }, // Birch Boat
+            { "row_06@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1275 } }, // Jungle Boat
+            { "row_07@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1276 } }, // Acacia Boat
+            { "row_08@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1277 } }, // Dark Oak Boat
+            { "row_09@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1319 } }, // Dispenser
+            { "row_10@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1060 } }  // Note Block
+          ]
+        }
+      },
+      {
+        "column_3@creative_items_common_4jd.row_panel": {
+          "controls": [
+            { "row_01@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1320 } }, // Piston
+            { "row_02@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1321 } }, // Sticky Piston
+            { "row_03@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1322 } }, // TNT
+            { "row_04@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1289 } }, // Lever
+            { "row_05@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1296 } }, // Stone Button
+            { "row_06@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1290 } }, // Oak Button
+            { "row_07@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1291 } }, // Spruce Button
+            { "row_08@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1292 } }, // Birch Button
+            { "row_09@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1293 } }, // Jungle Button
+            { "row_10@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1294 } }  // Acacia Button
+          ]
+        }
+      },
+      {
+        "column_4@creative_items_common_4jd.row_panel": {
+          "controls": [
+            { "row_01@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1295 } }, // Dark Oak Button
+            { "row_02@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1309 } }, // Stone Pressure Plate
+            { "row_03@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1301 } }, // Oak Pressure Plate
+            { "row_04@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1302 } }, // Spruce Pressure Plate
+            { "row_05@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1303 } }, // Birch Pressure Plate
+            { "row_06@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1304 } }, // Jungle Pressure Plate
+            { "row_07@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1305 } }, // Acacia Pressure Plate
+            { "row_08@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1306 } }, // Dark Oak Pressure Plate
+            { "row_09@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1286 } }, // Redstone Dust
+            { "row_10@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1287 } }  // Block of Redstone
+          ]
+        }
+      },
+      {
+        "column_5@creative_items_common_4jd.row_panel": {
+          "controls": [
+            { "row_01@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1288 } }, // Redstone Torch
+            { "row_02@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1315 } }, // Redstone Repeater
+            { "row_03@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1078 } }, // Redstone Lamp
+            { "row_04@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1300 } }, // Tripwire Hook
+            { "row_05@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1314 } }, // Daylight Sensor
+            { "row_06@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1318 } }, // Dropper
+            { "row_07@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1317 } }, // Hopper
+            { "row_08@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1316 } }, // Redstone Comparator
+            { "row_09@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1039 } }, // Trapped Chest
+            { "row_10@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1311 } }  // Weighted Pressure Plate (Iron/Heavy)
+          ]
+        }
+      }
+    ]
   },
 
-  "redstone_items_page_2@creative_items_common_4jd.grid_items_panel": {
-    "$item_01": [ 0, 1192 ], // Daylight Sensor
-    "$item_02": [ 0, 1196 ], // Dropper
-    "$item_03": [ 0, 1194 ], // Redstone Comparator
-    "$item_04": [ 0,  927 ], // Trapped Chest
-    "$item_05": [ 0, 1189 ], // Weighted Pressure Plate (Iron/Heavy)
-    "$item_06": [ 0, 1188 ], // Weighted Pressure Plate (Gold/Light)
-    "$item_07": [ 0, 1191 ], // Observer
-    "$item_08": [ 0, 1261 ]  // Target
+  "redstone_items_page_2@creative_items_common_4jd.column_panel": {
+    "controls": [
+      {
+        "column_1@creative_items_common_4jd.row_panel": {
+          "controls": [
+            { "row_01@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1310 } }, // Weighted Pressure Plate (Gold/Light)
+            { "row_02@creative_items_common_4jd.grid_item_for_creative": { "collection_index": 1313 } } // Observer 
+          ]
+        }
+      }
+    ]
   }
 }

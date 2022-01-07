@@ -15,6 +15,8 @@ furnaceScreen.input=Ingredient
 
 4jd.key.categories.standard=Standard
 
+4jd.createWorldScreen.naturalregeneration.desc=When disabled, players will not regenerate health naturally.
+
 ##  Settings
 4jd.options.game=Game Options
 4jd.options.graphics=Graphics

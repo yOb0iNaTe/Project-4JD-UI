@@ -32,6 +32,12 @@
     ]
   },
 
+
+  "simple_safezone_panel": {
+    "type": "panel",
+    "size": [ "90%", "90%" ]
+  },
+
   /* Center Screen Panel */
 
   "center_screen": {

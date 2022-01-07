@@ -653,9 +653,7 @@
     ]
   },
 
-  "full_screen": {
-    "type": "panel",
-    "size": [ "90%", "90%" ],
+  "full_screen@common_4jd.simple_safezone_panel": {
     "controls": [
       {
         "inventory_button_y@common.button": {

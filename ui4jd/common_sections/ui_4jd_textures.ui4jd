@@ -9,6 +9,28 @@
     "texture": "textures/ui4jd/menus/title"
   },
 
+  /* Pack Showcase */
+
+  "pack_icon": {
+    "type": "image",
+    "size": [ 32, 32 ],
+    "texture": "textures/ui4jd/menus/pack_icon"
+  },
+
+  "pack_showcase": {
+    "type": "image",
+    "size": [ 145, 72 ],
+    "texture": "textures/ui4jd/menus/pack_showcase"
+  },
+
+  /* Text Icons */
+
+  "arrow_down": {
+    "type": "image",
+    "size": [ 12, 12 ],
+    "texture": "textures/ui4jd/text_icons/arrow_down"
+  },
+
   /* Progress */
 
   "loading_bar_empty": {
