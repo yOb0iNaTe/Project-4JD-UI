@@ -159,6 +159,7 @@
                   },
                   { 
                     "gamepad_helper_b@common_tooltip_4jd.gamepad_helper_b": {
+                      "bindings": [ ],
                       "$icon_description_bind": "gui.back",
                       "$desc_panel_content": "pause_4jd.main_panel_list_toggle"
                     }

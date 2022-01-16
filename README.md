@@ -10,9 +10,9 @@ Is an testing/experimental museum resource pack that would change some UI design
 
 The UI design was originally made by Julie "Danger" Kennedy from 4J Studios! I simply recreate the UI port for Bedrock Edition ;D.
 
-For now it will be designated only for PC Windows 10 or Consoles.
+For now it will be designated only for High-end PC Windows 10 or Last Gen Consoles.
 
-For mobile (Mini version) it will be available for late 2021.
+For mobile (Mini version, even for Switch) it will be available for late 2022.
 
 #### Current Features ####
 
@@ -37,7 +37,7 @@ For mobile (Mini version) it will be available for late 2021.
 #### Supported Languages ####
 
 - English (en_US)(Main)
-- Japanese (ja_JP)
+- Japanese (ja_JP), as separate patch.
 
 In progress:
 - Spanish (es_MX)
@@ -56,7 +56,7 @@ This project will be open source and under the GNU GPL v3.0.
 
 The only prerequisite before testing is:
 - To have High-end PC with Windows 10 Installed.
-- Or to have Xbox One/Series console.
+- Or to have Xbox Series S/X or PS5 console.
 
 Otherwise, the bug report will likely be ignored (So, don't do it if you have mobile device).
 
