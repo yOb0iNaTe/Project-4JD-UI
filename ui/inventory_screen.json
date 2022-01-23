@@ -44,13 +44,13 @@
 
   "inventory_screen": {
     "button_mappings": [],
-    "$screen_content": "inventory_4jd.inventory_screen_content",
+    "$screen_content": "inventory_4jd.inventory_center_screen",
     "$screen_bg_content": "inventory_4jd.inventory_full_screen"
   },
 
   "crafting_screen": {
     "button_mappings": [],
-    "$screen_content": "crafting_4jd.crafting_screen_content",
-    "$screen_bg_content": "inventory_4jd.inventory_full_screen"
+    "$screen_content": "crafting_4jd.crafting_center_screen",
+    "$screen_bg_content": "crafting_4jd.crafting_full_screen"
   }
 }

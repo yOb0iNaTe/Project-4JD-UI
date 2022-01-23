@@ -163,6 +163,144 @@
     "$icon_image_ref": "icon@common.gamepad_icon_button"
   },
 
+  "gamepad_helper_thumbstick_right@common_tooltip_4jd.gamepad_helper": {
+    "$icon_texture": "#controller_right_stick_icon",
+    "$icon_description_bind": "#button_thumbstick_right_description",
+    "$icon_image_ref": "icon@common.gamepad_icon_button"
+  },
+
+  "gamepad_helper_thumbstick_left@common_tooltip_4jd.gamepad_helper": {
+    "$icon_texture": "#controller_left_stick_icon",
+    "$icon_description_bind": "#button_thumbstick_left_description",
+    "$icon_image_ref": "icon@common.gamepad_icon_button"
+  },
+
+  /*//// Thumbstick Buttons Alt (No press) ////*/
+
+  "gamepad_helper_thumbstick_right_alt@common_tooltip_4jd.gamepad_helper_thumbstick_right": {
+    "$icon_image_ref": "icon@common_tooltip_4jd.thumbstick_right_alt_panel"
+  },
+
+  "thumbstick_right_alt_panel": {
+    "type": "panel",
+    "size": [ 26, 26 ],
+    "bindings": [
+      {
+        "binding_type": "$gamepad_icon_visible_binding_type",
+        "binding_name": "$gamepad_icon_visible_binding_name",
+        "binding_name_override": "#visible"
+      }
+    ],
+    "controls": [
+      { 
+        "pocket_select@common.gamepad_icon_button": {
+          "texture": "textures/ui4jd/gamepad_tooltip/generic_stick_right_alt",
+          "bindings": [
+            {
+              "binding_name": "(#controller_right_stick_icon = 'textures/ui/generic_stick_right')",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      { 
+        "xbox_one_select@common.gamepad_icon_button": {
+          "texture": "textures/ui4jd/gamepad_tooltip/xbox_stick_right_alt",
+          "bindings": [
+            {
+              "binding_name": "(#controller_right_stick_icon = 'textures/ui/xbox_stick_right')",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "ps4_touchpad@common.gamepad_icon_button": {
+          "texture": "textures/ui4jd/gamepad_tooltip/ps4_stick_right_alt",
+          "bindings": [
+            {
+              "binding_name": "(#controller_right_stick_icon = 'textures/ui/ps4_stick_right')",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      { 
+        "nintendo_switch_select@common.gamepad_icon_button": {
+          "texture": "textures/ui4jd/gamepad_tooltip/switch_stick_right_alt",
+          "bindings": [
+            {
+              "binding_name": "(#controller_right_stick_icon = 'textures/ui/switch_stick_right')",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "gamepad_helper_thumbstick_left_alt@common_tooltip_4jd.gamepad_helper_thumbstick_left": {
+    "$icon_image_ref": "icon@common_tooltip_4jd.thumbstick_left_alt_panel"
+  },
+
+  "thumbstick_left_alt_panel": {
+    "type": "panel",
+    "size": [ 26, 26 ],
+    "bindings": [
+      {
+        "binding_type": "$gamepad_icon_visible_binding_type",
+        "binding_name": "$gamepad_icon_visible_binding_name",
+        "binding_name_override": "#visible"
+      }
+    ],
+    "controls": [
+      { 
+        "pocket_select@common.gamepad_icon_button": {
+          "texture": "textures/ui4jd/gamepad_tooltip/generic_stick_left_alt",
+          "bindings": [
+            {
+              "binding_name": "(#controller_left_stick_icon = 'textures/ui/generic_stick_left')",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      { 
+        "xbox_one_select@common.gamepad_icon_button": {
+          "texture": "textures/ui4jd/gamepad_tooltip/xbox_stick_left_alt",
+          "bindings": [
+            {
+              "binding_name": "(#controller_left_stick_icon = 'textures/ui/xbox_stick_left')",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "ps4_touchpad@common.gamepad_icon_button": {
+          "texture": "textures/ui4jd/gamepad_tooltip/ps4_stick_left_alt",
+          "bindings": [
+            {
+              "binding_name": "(#controller_left_stick_icon = 'textures/ui/ps4_stick_left')",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      { 
+        "nintendo_switch_select@common.gamepad_icon_button": {
+          "texture": "textures/ui4jd/gamepad_tooltip/switch_stick_left_alt",
+          "bindings": [
+            {
+              "binding_name": "(#controller_left_stick_icon = 'textures/ui/switch_stick_left')",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
   /*//// Gamepad Helper Select ////*/
   
   "gamepad_helper_select@common_tooltip_4jd.gamepad_helper": {

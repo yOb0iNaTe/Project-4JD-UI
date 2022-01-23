@@ -1,6 +1,117 @@
 {
   "namespace": "worlds_4jd",
 
+  "worlds_stack_panel": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "controls": [
+      {
+        "top_padding": {
+          "type": "stack_panel",
+          "orientation": "vertical",
+          "size": [ "100%", "100%c" ],
+          "controls": [
+            {
+              "create_new@common_buttons_4jd.main_button": {
+                "size": [ "100%-2px", 30 ],
+                "$pressed_button_name": "button.menu_local_world_create",
+                "$button_text": "selectWorld.createNew"
+              }
+            },
+            {
+              "import_button@common_buttons_4jd.main_button": {
+                "size": [ "100%-2px", 30 ],
+                "$pressed_button_name": "button.menu_import_level",
+                "$button_text": "Import"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "grid@play.local_world_item_grid": {
+          "grid_item_template": "worlds_4jd.local_world_item",
+          "$tts_section_header": "playscreen.worlds",
+          "variables": [
+            {
+              "requires": "$pre_release",
+              "$tts_section_header": "playscreen.beta_worlds"
+            }
+          ]
+        }
+      },
+      {
+        "final_padding": {
+          "type": "panel",
+          "size": [ "100%", 1 ]
+        }
+      }
+    ]
+  },
+
+  "local_world_item@common_buttons_4jd.main_button": {
+    "size": [ "100%-2px", 30 ],
+    "$pressed_button_name": "button.menu_local_world_item_edit",
+    "$button_content": "worlds_4jd.local_world_item_button_content",
+    "bindings": [
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "local_worlds"
+      }
+    ]
+  },
+
+  "local_world_item_button_content": {
+    "type": "panel",
+    "controls": [
+      {
+        "screenshot_picture": {
+          "type": "image",
+          "layer": 5,
+          "force_texture_reload": true,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 7, 5 ],
+          "size": [ 20, 20 ],
+          "fill": true,
+          "$collection_binding_name": "local_worlds",
+          "$image_binding_name": "#local_world_image",
+          "$texture_source_binding_name": "#local_world_texture_source",
+          "bindings": [
+            {
+              "binding_name": "$image_binding_name",
+              "binding_name_override": "#texture",
+              "binding_type": "collection",
+              "binding_collection_name": "$collection_binding_name"
+            },
+            {
+              "binding_name": "$texture_source_binding_name",
+              "binding_name_override": "#texture_file_system",
+              "binding_type": "collection",
+              "binding_collection_name": "$collection_binding_name"
+            }
+          ]
+        }
+      },
+      {
+        "button_label@common_buttons_4jd.button_label": {
+          "layer": 6,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 39.5, 10.5 ],
+          "text": "#local_world_name",
+          "bindings": [
+            {
+              "binding_name": "#local_world_name",
+              "binding_type": "collection",
+              "binding_collection_name": "local_worlds"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
   "worlds_panel": {
     "type": "panel",
     "controls": [
@@ -14,36 +125,39 @@
           "controls": [
             {
               "scrolling_panel@play.scrolling_offsets": {
-                "size": [ "100% -14px", "100% - 14px" ],
+                "size": [ "100% -14px", "100% - 11px" ],
                 "anchor_from": "top_left",
                 "anchor_to": "top_left",
-                "offset": [ 7, 7 ],
+                "offset": [ 7, 8 ],
                 "layer": 6,
-                "$scrolling_content": "play.worlds_scroll_panel"
+                "$scrolling_content": "worlds_4jd.worlds_stack_panel"
               }
             }
           ]
         }
       },
       {
-        "storage_bar@ui_4jd_textures.panel_recess": {
+        "storage_bar@ui_4jd_textures.save_bar_background": {
           "layer": 6,
           "anchor_from": "bottom_left",
           "anchor_to": "bottom_left",
-          "size": [ "100%-14px", 16 ],
-          "offset": [ 7, -10.5 ],
+          "size": [ "100%-16px", 14 ],
+          "offset": [ 8, -11.5 ],
           "controls": [
             {
               "legacy_world_bar": {
                 "type": "panel",
                 "anchor_from": "top_left",
                 "anchor_to": "top_left",
-                "size": [ "100% - 6px", 10 ],
-                "offset": [ 3, 3 ],
+                "size": [ "100%-4px", 10 ],
+                "offset": [ 2, 2 ],
                 "controls": [
                   {
-                    "local_diskspace_bar@play.green_diskspace_bar": {
+                    "local_diskspace_bar@ui_4jd_textures.save_bar_1": {
+                      "size": [ "100%", 10 ],
                       "layer": 3,
+                      "clip_direction": "left",
+                      "clip_pixelperfect": false,
                       "bindings": [
                         {
                           "binding_name": "#local_worlds_storage_size",
@@ -53,20 +167,17 @@
                     }
                   },
                   {
-                    "legacy_diskspace_bar@play.blue_diskspace_bar": {
+                    "legacy_diskspace_bar@ui_4jd_textures.save_bar_2": {
+                      "size": [ "100%", 10 ],
                       "layer": 2,
+                      "clip_direction": "left",
+                      "clip_pixelperfect": false,
                       "bindings": [
                         {
                           "binding_name": "#legacy_worlds_storage_size",
                           "binding_name_override": "#clip_ratio"
                         }
                       ]
-                    }
-                  },
-                  {
-                    "empty_diskspace_bar@play.empty_diskspace_bar": {
-                      "layer": 1,
-                      "size": [ "100%", "100%" ]
                     }
                   }
                 ]

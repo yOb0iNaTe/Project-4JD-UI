@@ -244,6 +244,7 @@
           "text": "$option_label",
           "anchor_from": "top_left",
           "anchor_to": "top_left",
+          "offset": [ 1, 0 ],
           "layer": 5
         }
       },

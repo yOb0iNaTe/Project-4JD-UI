@@ -9,6 +9,36 @@
     "texture": "textures/ui4jd/menus/title"
   },
 
+  "title_pocket_edition": {
+    "type": "image",
+    "size": [ 285.5, 69 ],
+    "texture": "textures/ui4jd/menus/title_pocket_edition"
+  },
+
+  "title_windows_10_edition": {
+    "type": "image",
+    "size": [ 285.5, 69 ],
+    "texture": "textures/ui4jd/menus/title_windows_10_edition"
+  },
+
+  "title_xbox_one_edition": {
+    "type": "image",
+    "size": [ 285.5, 69 ],
+    "texture": "textures/ui4jd/menus/title_xbox_one_edition"
+  },
+
+  "title_playstation_4_edition": {
+    "type": "image",
+    "size": [ 285.5, 69 ],
+    "texture": "textures/ui4jd/menus/title_playstation_4_edition"
+  },
+
+  "title_nintendo_switch_edition": {
+    "type": "image",
+    "size": [ 285.5, 69 ],
+    "texture": "textures/ui4jd/menus/title_nintendo_switch_edition"
+  },
+
   /* Pack Showcase */
 
   "pack_icon": {
@@ -29,6 +59,23 @@
     "type": "image",
     "size": [ 12, 12 ],
     "texture": "textures/ui4jd/text_icons/arrow_down"
+  },
+
+  /* Save Bar */
+
+  "save_bar_background":{
+    "type": "image",
+    "texture": "textures/ui4jd/menus/save_bar_background"
+  },
+
+  "save_bar_1":{
+    "type": "image",
+    "texture": "textures/ui4jd/menus/save_bar_1"
+  },
+
+  "save_bar_2":{
+    "type": "image",
+    "texture": "textures/ui4jd/menus/save_bar_2"
   },
 
   /* Progress */

@@ -42,17 +42,16 @@
 
   "center_screen": {
     "type": "panel",
-    "$container_item_button_sound": "ui.press"
+    "controls": [
+      { "container_gamepad_helpers@common_tooltip_4jd.container_gamepad_helpers": { } }
+    ]
   },
 
   /* Full Screen Panel */
 
   "full_screen": {
     "type": "panel",
-    "size": [ "90%", "90%" ],
-    "controls": [
-      { "container_gamepad_helpers@common_tooltip_4jd.container_gamepad_helpers": { } }
-    ]
+    "$container_item_button_sound": "ui.press"
   },
 
   /* Highlight Panel and Hover Text */

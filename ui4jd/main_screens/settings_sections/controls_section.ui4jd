@@ -91,17 +91,23 @@
         }
       },
       {
-        "icon_image": {
-          "type": "image",
+        "icon@$keymapping_icon": {
           "size": [ 26, 26 ],
           "layer": 3,
-          "texture": "$keymapping_texture",
           "offset": [ -6, -3.5 ],
           "anchor_from": "top_right",
           "anchor_to": "top_right"
         }
       }
     ]
+  },
+
+  "unmodified_thumbstick_left@common_tooltip_4jd.thumbstick_left_alt_panel": {
+    "bindings": [ ]
+  },
+
+  "unmodified_thumbstick_right@common_tooltip_4jd.thumbstick_right_alt_panel": {
+    "bindings": [ ]
   },
 
   "key_mapping_grid_panel@common_4jd.grid_panel": {
@@ -168,8 +174,8 @@
           "$toggle_name": "left_handed"
         }
       },
-      { "look_keymapping@controls_4jd.unmodified_keymapping_panel": { "$keymapping_text": "4jd.key.look", "$keymapping_texture": "textures/ui4jd/tooltip/xbox_right_stick" } },
-      { "move_keymapping@controls_4jd.unmodified_keymapping_panel": { "$keymapping_text": "4jd.key.move", "$keymapping_texture": "textures/ui4jd/tooltip/xbox_left_stick" } },
+      { "look_keymapping@controls_4jd.unmodified_keymapping_panel": { "$keymapping_text": "4jd.key.look", "$keymapping_icon": "controls_4jd.unmodified_thumbstick_right" } },
+      { "move_keymapping@controls_4jd.unmodified_keymapping_panel": { "$keymapping_text": "4jd.key.move", "$keymapping_icon": "controls_4jd.unmodified_thumbstick_left" } },
       { "standard_text@controls_4jd.header_text_panel": { "size": [ "100%", 28 ], "$header_text": "4jd.key.categories.standard" } },
       { "attack_destroy_button@controls_4jd.key_mapping_grid_panel": { "$grid_position": [ 0, 2 ] } },
       { "use_place_block_button@controls_4jd.key_mapping_grid_panel": { "$grid_position": [ 0, 3 ] } },
@@ -212,6 +218,32 @@
       }
     ]
   }, 
+  
+  "gamepad_helpers": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "anchor_from": "bottom_left",
+    "anchor_to": "bottom_left",
+    "size": [ "100%", 16 ],
+    "controls": [
+      { "gamepad_helper_a@common_tooltip_4jd.gamepad_helper_a": { } },
+      { 
+        "gamepad_helper_b@common_tooltip_4jd.gamepad_helper_b": {
+          "bindings": [ ],
+          "$icon_description_bind": "gui.back",
+          "$desc_panel_content": "settings_4jd.back_button"
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "controls_tab_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
 
   "controls_panel": {
     "type": "panel",
@@ -224,43 +256,7 @@
       }
     ],
     "controls": [
-      { "main_panel@controls_4jd.main_panel": { } },
-      {
-        "safezone": {
-          "type": "panel",
-          "size": [ "90%", "90%" ],
-          "controls": [
-            {
-              "gamepad_helpers": {
-                "type": "stack_panel",
-                "orientation": "horizontal",
-                "anchor_from": "bottom_left",
-                "anchor_to": "bottom_left",
-                "size": [ "100%", 16 ],
-                "controls": [
-                  {
-                    "gamepad_helper_a@common_tooltip_4jd.gamepad_helper_a": {
-                      "bindings": [
-                        {
-                          "binding_name": "#gamepad_helper_a_visible",
-                          "binding_name_override": "#visible",
-                          "binding_condition": "always"
-                        }
-                      ]
-                    }
-                  },
-                  { 
-                    "gamepad_helper_b@common_tooltip_4jd.gamepad_helper_b": {
-                      "$icon_description_bind": "gui.back",
-                      "$desc_panel_content": "settings_4jd.back_button"
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        }
-      }
+      { "main_panel@controls_4jd.main_panel": { } }
     ]
   }
 }

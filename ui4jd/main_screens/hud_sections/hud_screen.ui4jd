@@ -649,12 +649,7 @@
   "center_screen": {
     "type": "panel",
     "controls": [
-      { "camera_renderer@hud.camera_renderer": {} }
-    ]
-  },
-
-  "full_screen@common_4jd.simple_safezone_panel": {
-    "controls": [
+      { "camera_renderer@hud.camera_renderer": {} },
       {
         "inventory_button_y@common.button": {
           "anchor_from": "bottom_left",
@@ -690,5 +685,9 @@
       { "bottom_helpers@hud_4jd.bottom_helpers": {} },
       { "root_panel@hud_4jd.root_panel": { } }
     ]
+  },
+
+  "full_screen": {
+    "type": "panel"
   }
 }

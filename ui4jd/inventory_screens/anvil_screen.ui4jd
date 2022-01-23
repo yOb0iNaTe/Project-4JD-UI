@@ -191,7 +191,7 @@
     ]
   },
 
-  "anvil_screen_content@common_4jd.center_screen": {
+  "anvil_screen_content@common_4jd.full_screen": {
     "controls": [
       { "anvil_panel@anvil_4jd.anvil_panel": { } },
       { "gamepad_cursor_button@common_4jd.gamepad_cursor_button": { } },

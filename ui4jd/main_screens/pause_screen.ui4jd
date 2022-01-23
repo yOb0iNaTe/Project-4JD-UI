@@ -127,44 +127,62 @@
 
   /*//// Screen ////*/
 
-  "full_screen": {
+  "center_screen": {
     "type": "panel",
-    "size": [ "100%", "100%" ],
     "controls": [
-      { "bg@common.screen_background": { "layer": -10 } },
       {
-        "safezone": {
-          "type": "panel",
-          "size": [ "90%", "90%" ],
+        "main_panel": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          "size": [ "100%", 16 ],
           "controls": [
+            { "gamepad_helper_a@common_tooltip_4jd.gamepad_helper_a": { } }
+          ],
+          "bindings": [
             {
-              "main_panel": {
-                "type": "stack_panel",
-                "orientation": "horizontal",
-                "anchor_from": "bottom_left",
-                "anchor_to": "bottom_left",
-                "size": [ "100%", 16 ],
-                "controls": [
-                  { 
-                    "gamepad_helper_a@common_tooltip_4jd.gamepad_helper_a": {
-                      "bindings": [
-                        {
-                          "binding_type": "global",
-                          "binding_name": "#gamepad_helper_visible",
-                          "binding_name_override": "#visible",
-                          "binding_condition": "none"
-                        }
-                      ]
-                    }
-                  },
-                  { 
-                    "gamepad_helper_b@common_tooltip_4jd.gamepad_helper_b": {
-                      "bindings": [ ],
-                      "$icon_description_bind": "gui.back",
-                      "$desc_panel_content": "pause_4jd.main_panel_list_toggle"
-                    }
+              "binding_type": "view",
+              "source_control_name": "help_and_options_tab_toggle",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "help_and_options_panel": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          "size": [ "100%", 16 ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "help_and_options_tab_toggle",
+              "source_property_name": "(#toggle_state)",
+              "target_property_name": "#visible"
+            }
+          ],
+          "controls": [
+            { 
+              "gamepad_helper_a@common_tooltip_4jd.gamepad_helper_a": {
+                "bindings": [
+                  {
+                    "binding_type": "global",
+                    "binding_name": "#gamepad_helper_visible",
+                    "binding_name_override": "#visible",
+                    "binding_condition": "none"
                   }
                 ]
+              }
+            },
+            { 
+              "gamepad_helper_b@common_tooltip_4jd.gamepad_helper_b": {
+                "bindings": [ ],
+                "$icon_description_bind": "gui.back",
+                "$desc_panel_content": "pause_4jd.main_panel_list_toggle"
               }
             }
           ]
@@ -173,9 +191,11 @@
     ]
   },
 
-  "center_screen": {
+  "full_screen": {
     "type": "panel",
+    "size": [ "100%", "100%" ],
     "controls": [
+      { "bg@common.screen_background": { "layer": -10 } },
       {
         "main_panel": {
           "type": "panel",

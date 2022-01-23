@@ -29,10 +29,12 @@
     "ui4jd/main_screens/settings_sections/controls_section.ui4jd",
     "ui4jd/main_screens/settings_sections/language_section.ui4jd",
     "ui4jd/main_screens/settings_sections/game_section.ui4jd",
+    "ui4jd/main_screens/settings_sections/global_resources_section.ui4jd",
     "ui4jd/main_screens/settings_sections/graphics_section.ui4jd",
     "ui4jd/main_screens/settings_sections/user_interface_section.ui4jd",
     "ui4jd/main_screens/settings_sections/settings_common.ui4jd",
     /* World Sections */
+    "ui4jd/main_screens/world_sections/edit_world_screen.ui4jd",
     "ui4jd/main_screens/world_sections/main_world_screen.ui4jd",
     "ui4jd/main_screens/world_sections/main_world_options_screen.ui4jd",
     "ui4jd/main_screens/world_sections/pages_panel.ui4jd",

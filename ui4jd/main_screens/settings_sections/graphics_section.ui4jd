@@ -49,12 +49,46 @@
                   }
                 ]
               }
+            },
+            {
+              "safe_zone_button@common_buttons_4jd.main_button": {
+                "ignored": "(not $supports_user_configured_safezone or (not $is_pregame))",
+                "size": [ "100%", 20 ],
+                "$pressed_button_name": "setup_safe_zone_button",
+                "$button_text": "options.safeZone.title"
+              }
             }
           ]
         }
       }
     ]
   }, 
+  
+  "gamepad_helpers": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "anchor_from": "bottom_left",
+    "anchor_to": "bottom_left",
+    "size": [ "100%", 16 ],
+    "controls": [
+      { "gamepad_helper_a@common_tooltip_4jd.gamepad_helper_a": { } },
+      { 
+        "gamepad_helper_b@common_tooltip_4jd.gamepad_helper_b": {
+          "bindings": [ ],
+          "$icon_description_bind": "gui.back",
+          "$desc_panel_content": "settings_4jd.back_button"
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "graphics_tab_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
 
   "graphics_panel": {
     "type": "panel",
@@ -68,43 +102,7 @@
     ],
     "controls": [
       { "title_panel@start_4jd.title_panel": { "$splash_text_visible": false } },
-      { "main_panel@graphics_4jd.main_panel": { } },
-      {
-        "safezone": {
-          "type": "panel",
-          "size": [ "90%", "90%" ],
-          "controls": [
-            {
-              "gamepad_helpers": {
-                "type": "stack_panel",
-                "orientation": "horizontal",
-                "anchor_from": "bottom_left",
-                "anchor_to": "bottom_left",
-                "size": [ "100%", 16 ],
-                "controls": [
-                  {
-                    "gamepad_helper_a@common_tooltip_4jd.gamepad_helper_a": {
-                      "bindings": [
-                        {
-                          "binding_name": "#gamepad_helper_a_visible",
-                          "binding_name_override": "#visible",
-                          "binding_condition": "always"
-                        }
-                      ]
-                    }
-                  },
-                  { 
-                    "gamepad_helper_b@common_tooltip_4jd.gamepad_helper_b": {
-                      "$icon_description_bind": "gui.back",
-                      "$desc_panel_content": "settings_4jd.back_button"
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        }
-      }
+      { "main_panel@graphics_4jd.main_panel": { } }
     ]
   }
 }

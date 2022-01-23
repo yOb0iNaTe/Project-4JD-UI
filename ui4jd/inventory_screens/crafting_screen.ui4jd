@@ -578,7 +578,14 @@
     ]
   },
 
-  "crafting_screen_content@common_4jd.center_screen": {
+  "crafting_center_screen":{
+    "type": "panel",
+    "controls": [
+      { "bottom_buttons_panel@inventory_4jd.bottom_buttons_panel": { } }
+    ]
+  },
+
+  "crafting_full_screen@common_4jd.full_screen": {
     "controls": [
       { "inventory_selected_icon_button@common_4jd.inventory_selected_icon_button": {} },
       { "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {} },

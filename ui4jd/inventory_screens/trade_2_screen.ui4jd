@@ -654,20 +654,19 @@
     ]
   },
 
-  "trade_screen_content@common_4jd.center_screen": {
+  "trade_screen_content": {
+    "type": "panel",
+    "controls": [
+      { "bottom_buttons_panel@trade2_4jd.bottom_buttons_panel": { } }
+    ]
+  },
+
+  "trade_full_screen@common_4jd.full_screen": {
     "controls": [
       { "trade_panel@trade2_4jd.trade_panel": { } },
       { "gamepad_cursor_button@common_4jd.gamepad_cursor_button": { } },
       { "inventory_selected_icon_button@common_4jd.inventory_selected_icon_button": {} },
       { "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {} }
-    ]
-  },
-
-  "trade_full_screen": {
-    "type": "panel",
-    "size": [ "90%", "90%" ],
-    "controls": [
-      { "bottom_buttons_panel@trade2_4jd.bottom_buttons_panel": { } }
     ]
   }
 }

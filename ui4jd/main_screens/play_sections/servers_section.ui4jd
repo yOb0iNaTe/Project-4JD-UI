@@ -1,6 +1,192 @@
 {
   "namespace": "servers_4jd",
 
+  "servers_stack_panel": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "controls": [
+      {
+        "third_party_servers_panel": {
+          "type": "stack_panel",
+          "size": [ "100%", "100%c" ],
+          "bindings": [
+            {
+              "binding_name": "#featured_servers_visible",
+              "binding_name_override": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "third_party_featured_grid@play.third_party_featured_server_grid": {
+                "grid_item_template": "servers_4jd.featured_server_world_item",
+                "$tts_section_header": "thirdPartyWorld.Featured"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "more_servers_panel": {
+          "type": "stack_panel",
+          "size": [ "100%", "100%c" ],
+          "bindings": [
+            {
+              "binding_name": "#servers_grid_visible",
+              "binding_name_override": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "more_servers_grid@play.more_servers_grid": {
+                "grid_item_template": "servers_4jd.more_server_world_item"
+              }
+            },
+            {
+              "add_server_toggle_button@play.add_server_toggle_button": {
+                "size": [ "100%-2px", 30 ],
+                "$button_content": "common_buttons_4jd.button_label",
+                "$unchecked_control": "common_buttons_4jd.default",
+                "$unchecked_hover_control": "common_buttons_4jd.hover",
+                "$checked_control": "common_buttons_4jd.default",
+                "$checked_hover_control": "common_buttons_4jd.hover"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "featured_server_world_item@common_buttons_4jd.main_button": {
+    "$pressed_button_name": "button.menu_network_world_item",
+    "$button_content": "servers_4jd.servers_world_item_button_content",
+    "size": [ "100%-2px", 30 ],
+    "bindings": [
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "$collection_name"
+      }
+    ]
+  },
+
+  "more_server_world_item@common_buttons_4jd.main_button": {
+    "size": [ "100%-2px", 30 ],
+    "$pressed_button_name": "button.menu_network_server_world_edit",
+    "$button_content": "servers_4jd.servers_world_item_button_content",
+    "bindings": [
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "$collection_name"
+      }
+    ]
+  },
+
+  "servers_world_item_button_content": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [ "100%-14px", 20 ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "offset": [ 7, 5 ],
+    "controls": [
+      {
+        "picture_hold": {
+          "type": "panel",
+          "size": [ 20, 20 ],
+          "controls": [
+            {
+              "screenshot_picture": {
+                "type": "image",
+                "layer": 5,
+                "force_texture_reload": true,
+                "size": [ 20, 20 ],
+                "fill": true,
+                "bindings": [
+                  {
+                    "binding_name": "#third_party_server_logo_texture_path",
+                    "binding_type": "collection",
+                    "binding_name_override": "#texture",
+                    "binding_collection_name": "$collection_name"
+                  },
+                  {
+                    "binding_name": "#third_party_server_logo_resource_location",
+                    "binding_type": "collection",
+                    "binding_name_override": "#texture_file_system",
+                    "binding_collection_name": "$collection_name"
+                  },
+                  {
+                    "binding_name": "#third_party_server_logo_resource_location",
+                    "binding_name_override": "#texture_file_system"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "padding": {
+          "type": "panel",
+          "size": [ 12.5, "100%" ]
+        }
+      },
+      {
+        "text_panel": {
+          "type": "panel",
+          "size": [ "fill", "100%" ],
+          "controls": [
+            { 
+              "network_world_header@common_4jd.global_label": {
+                "shadow": true,
+                "layer": 5,
+                "size": [ "100%", 10 ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [ 0, 5.5 ],
+                "color": "$text_color",
+                "text": "#network_world_header",
+                "bindings": [
+                  {
+                    "binding_name": "#network_world_header",
+                    "binding_type": "collection",
+                    "binding_collection_name": "$collection_name"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "player_count_panel": {
+          "type": "panel",
+          "size": [ "100%c", "100%" ],
+          "controls": [
+            {
+              "player_count@common_4jd.global_label": {
+                "text": "#server_player_count",
+                "shadow": true,
+                "layer": 5,
+                "color": [ 0.75, 0.75, 0.75 ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "offset": [ 0, 5.5 ],
+                "size": [ "default", 10 ],
+                "bindings": [
+                  {
+                    "binding_type": "collection",
+                    "binding_name": "#server_player_count",
+                    "binding_collection_name": "$collection_name"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
   "servers_panel@ui_4jd_textures.panel_recess": {
     "layer": 4,
     "anchor_from": "top_left",
@@ -9,12 +195,13 @@
     "offset": [ 7, 7 ],
     "controls": [ 
       {
-        "scrolling_panel@play.server_scroll_content": {
-          "size": [ "100% -14px", "100% - 2px" ],
+        "scrolling_panel@play.scrolling_offsets": {
+          "size": [ "100% -14px", "100% - 32px" ],
           "anchor_from": "top_left",
           "anchor_to": "top_left",
-          "offset": [ 7, 1 ],
-          "layer": 6
+          "offset": [ 7, 8 ],
+          "layer": 6,
+          "$scrolling_content": "servers_4jd.servers_stack_panel"
         }
       }
     ]

@@ -3,7 +3,7 @@
     "variables": [
       {
         "requires": "$desktop_screen",
-        "$screen_content": "common_4jd.full_screen",
+        "$screen_content": "common_4jd.center_screen",
         "$screen_bg_content": "anvil_4jd.anvil_screen_content"
       },
       {
