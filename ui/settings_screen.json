@@ -9,15 +9,15 @@
     "$header_bar_control": "common.empty_panel",
     "$is_full_screen_layout": false
   }, 
-/* 
+  
   "screen_template_create": {
-    "$title_text": "createWorldScreen.header.local",
-    "$screen_content": "create_world_dx.center_screen",
-    "$screen_bg_content": "create_world_dx.full_screen",
+    "$title_text": "createWorldScreen.header.editLocal",
+    "$screen_content": "create_world_4jd.center_screen",
+    "$screen_bg_content": "edit_world_4jd.full_screen",
     "$header_safezone_control": "common.empty_panel",
     "$header_bar_control": "common.empty_panel",
     "$is_full_screen_layout": false
-  },*/
+  },
 
   "screen_world_edit": {
     "$title_text": "createWorldScreen.header.editLocal",

@@ -64,6 +64,22 @@
               }
             },
             {
+              "created_in_name@common_4jd.global_label": {
+                "color": "$title_text_color",
+                "text": "#achievement_warning_text",
+                "size": [ "100%-36px", 10 ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [ 36, 19.5 ],
+                "layer": 5,
+                "bindings": [
+                  {
+                    "binding_name": "#achievement_warning_text"
+                  }
+                ]
+              }
+            },
+            {
               "seed_text": {
                 "type": "stack_panel",
                 "orientation": "horizontal",
@@ -297,6 +313,7 @@
 
   "full_screen": {
     "type": "panel",
+    "$education_ios": "($education_edition)",
     "controls": [
       {
         "main_panel": {
@@ -315,7 +332,7 @@
           ]
         }
       },
-      { "more_options_panel@create_world_optons_4jd.more_options_panel": { } }
+      { "more_options_panel@edit_world_optons_4jd.more_options_panel": { } }
     ]
   }
 }

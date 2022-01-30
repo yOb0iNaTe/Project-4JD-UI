@@ -21,25 +21,25 @@
   /*//// Main Button Resources ////*/
 
   "default@common_buttons_4jd.button_panel": {
-    "$has_hover_text": false,
+    "$default_state": true,
     "$text_color": "$main_menu_button_default_color",
     "$button_texture": "ui_4jd_textures.main_button_default"
   },
 
   "hover@common_buttons_4jd.button_panel": {
-    "$has_hover_text": true,
+    "$hover_state": true,
     "$text_color": "$main_menu_button_hover_color",
     "$button_texture": "ui_4jd_textures.main_button_hover"
   },
 
   "pressed@common_buttons_4jd.button_panel": {
-    "$has_hover_text": false,
+    "$pressed_state": true,
     "$text_color": "$main_menu_button_preesed_color",
     "$button_texture": "ui_4jd_textures.main_button_hover"
   },
 
   "locked@common_buttons_4jd.button_panel": {
-    "$has_hover_text": false,
+    "$locked_state": true,
     "$text_color": "$main_menu_button_locked_color",
     "$button_texture": "ui_4jd_textures.main_button_locked"
   },
@@ -48,15 +48,11 @@
     "type": "panel",
     "size": [ "100%", "100%" ],
     "$button_content|default": "common_buttons_4jd.button_label",
-    "$ignore_hover_text|default": true,
-    "$is_last_button|default": false,
-    "$hover_content|default": "common.empty_panel",
+    "$default_state": false,
+    "$hover_state": false,
+    "$pressed_state": false,
+    "$locked_state": false,
     "controls": [
-      {
-        "hover_content@$hover_content": {
-          "ignored": "(not $has_hover_text)"
-        }
-      },
       { "button_content@$button_content": { "layer": 3 } },
       { "button_texture@$button_texture": { "layer": 1, "size": [ "100%", "100%" ] } }
     ]

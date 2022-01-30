@@ -1,4 +1,8 @@
-{  ////*/ Main menu button /*////
+{  
+  ////*/ Compatibility /*////
+  "$is_4jd_ui": true,
+
+  ////*/ Main menu button /*////
   "$main_menu_button_default_color": [ 0.87, 0.87, 0.87 ],
   "$main_menu_button_hover_color": [ 1.0, 1.0, 0.0 ],
   "$main_menu_button_preesed_color": [ 1.0, 1.0, 0.0 ],

@@ -116,6 +116,7 @@
       }
     ],
     "controls": [
+      { "title_panel@start_4jd.title_panel": { "$splash_text_visible": false } },
       { "main_panel@language_4jd.main_panel": { } }
     ]
   }

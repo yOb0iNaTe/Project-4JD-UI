@@ -340,6 +340,7 @@
 
   "full_screen": {
     "type": "panel",
+    "$education_ios": "($education_edition)",
     "controls": [
       {
         "main_panel": {

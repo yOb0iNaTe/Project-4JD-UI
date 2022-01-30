@@ -9,6 +9,8 @@
     "$panel_content|default": "",
     "$ignore_prev_button|default": false,
     "$ignore_next_button|default": false,
+    "$prev_button_offset|default": [ -25.5, -8 ],
+    "$next_button_offset|default": [ -9.5, -8 ],
     "controls": [
       { "content@$panel_content": { } },
       {
@@ -22,7 +24,7 @@
           "ignored": "$ignore_prev_button",
           "anchor_from": "bottom_right",
           "anchor_to": "bottom_right",
-          "offset": [ -25.5, -8 ],
+          "offset": "$prev_button_offset",
           "$toggle_name": "$prev_toggle_name",
           "$tab_view_binding_name": "$prev_button_view_binding_name",
           "$toggle_group_forced_index": 0
@@ -39,7 +41,7 @@
           "ignored": "$ignore_next_button",
           "anchor_from": "bottom_right",
           "anchor_to": "bottom_right",
-          "offset": [ -9.5, -8 ],
+          "offset": "$next_button_offset",
           "$toggle_name": "$next_toggle_name",
           "$tab_view_binding_name": "$next_button_view_binding_name",
           "$toggle_group_forced_index": 1

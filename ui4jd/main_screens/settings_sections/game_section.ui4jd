@@ -23,6 +23,12 @@
     "$toggle_group_forced_index": 2
   },
 
+  "world_options_button@game_options_4jd.button_tab": {
+    "$button_text": "selectWorld.moreWorldOptions",
+    "$tab_view_binding_name": "world_options_tab_toggle",
+    "$toggle_group_forced_index": 3
+  },
+
   "back_button@settings_4jd.back_button": {
     "$toggle_name": "game_nav_tab",
     "$toggle_group_forced_index": 0
@@ -44,6 +50,12 @@
         "source_control_name": "resource_pack_tab_toggle",
         "source_property_name": "(not #toggle_state)",
         "target_property_name": "#visible"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "world_options_tab_toggle",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
       }
     ],
     "controls": [
@@ -53,12 +65,15 @@
           "size": [ 231, "100%c" ],
           "controls": [
             {
-              "splitscreen_panel": {
-                "type": "panel",
-                "size": [ "100%", 15 ],
-                "controls": [
-                  
-                ]
+              "split_screen_dropdown@settings_common_4jd.option_dropdown": {
+                "ignored": "(not $can_splitscreen)",
+                "$option_label": "options.splitscreen",
+                "$dropdown_content": "general_section.split_screen_dropdown_content",
+                "$dropdown_area": "content_area",
+                "$dropdown_name": "split_screen_dropdown",
+                "$option_enabled_binding_name": "#split_screen_dropdown_enabled",
+                "$options_dropdown_toggle_label_binding": "#split_screen_dropdown_toggle_label",
+                "$dropdown_scroll_content_size": [ "100%", "145%" ]
               }
             },/* 
             {
@@ -96,9 +111,27 @@
               }
             },
             {
+              "player_names_toggle@settings_common_4jd.option_toggle": {
+                "$option_label": "options.ingamePlayerNames",
+                "$option_binding_name": "#ingame_player_names",
+                "$option_enabled_binding_name": "#ingame_player_names_enabled",
+                "$toggle_name": "ingame_player_names"
+              }
+            },
+            {
+              "splitscreen_player_names_toggle@settings_common_4jd.option_toggle": {
+                "ignored": "(not $can_splitscreen)",
+                "$option_label": "options.splitscreenIngamePlayerNames",
+                "$option_binding_name": "#splitscreen_ingame_player_names",
+                "$option_enabled_binding_name": "#splitscreen_ingame_player_names_enabled",
+                "$toggle_name": "splitscreen_ingame_player_names"
+              }
+            },
+            {
               "languages_panel": {
                 "type": "panel",
                 "size": [ "100%", 22 ],
+                "ignored": "(not $is_pregame)",
                 "controls": [
                   { "languages_button@game_options_4jd.languages_button": { } }
                 ]
@@ -111,6 +144,40 @@
                 "ignored": "(not $is_pregame)",
                 "controls": [
                   { "global_resources_button@game_options_4jd.global_resources_button": { } }
+                ]
+              }
+            },
+            {
+              "pvp_toggle@settings_common_4jd.option_toggle": {
+                "ignored": "($is_pregame)",
+                "$tts_section_header": "createWorldScreen.worldSettings",
+                "$option_label": "createWorldScreen.pvp",
+                "$option_binding_name": "#pvp",
+                "$option_enabled_binding_name": "#pvp_enabled",
+                "$toggle_name": "pvp",
+                "$focus_override_right": "FOCUS_OVERRIDE_STOP",
+                "$toggle_binding_condition": "always_when_visible"
+              }
+            },
+            {
+              "allow_cheats_toggle@settings_common_4jd.option_toggle": {
+                "ignored": "($is_pregame)",
+                "$tts_section_header": "createWorldScreen.cheatSettings",
+                "$option_label": "selectWorld.cheats",
+                "$option_binding_name": "#allow_cheats",
+                "$option_enabled_binding_name": "#allow_cheats_enabled",
+                "$toggle_name": "allow_cheats",
+                "$focus_override_right": "FOCUS_OVERRIDE_STOP",
+                "$toggle_binding_condition": "always_when_visible"
+              }
+            },
+            {
+              "world_options_panel": {
+                "type": "panel",
+                "size": [ "100%", 22 ],
+                "ignored": "($is_pregame)",
+                "controls": [
+                  { "world_options_button@game_options_4jd.world_options_button": { } }
                 ]
               }
             }
@@ -165,13 +232,15 @@
           ]
         }
       },
-      { "language_panel@language_4jd.gamepad_helpers": { } },
-      { "global_resources_panel@global_resources_4jd.gamepad_helpers": { "ignored": "(not $is_pregame)" } }
+      { "language_panel@language_4jd.gamepad_helpers": { "ignored": "(not $is_pregame)" } },
+      { "global_resources_panel@global_resources_4jd.gamepad_helpers": { "ignored": "(not $is_pregame)" } },
+      { "in_game_world_options_panel@in_game_world_options_4jd.gamepad_helpers": { "ignored": "($is_pregame)" } }
     ]
   },
 
   "game_full_panel": {
     "type": "panel",
+    "$education_ios": "($education_edition)",
     "bindings": [
       {
         "binding_type": "view",
@@ -181,10 +250,38 @@
       }
     ],
     "controls": [
-      { "title_panel@start_4jd.title_panel": { "$splash_text_visible": false } },
+      {
+        "title_hold": {
+          "type": "panel",
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "language_tab_toggle",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#visible"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "resource_pack_tab_toggle",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#visible"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "world_options_tab_toggle",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#visible"
+            }
+          ],
+          "controls": [
+            { "title_panel@start_4jd.title_panel": { "$splash_text_visible": false } }
+          ]
+        }
+      },
       { "main_panel@game_options_4jd.main_panel": { } },
-      { "language_panel@language_4jd.language_panel": { } },
-      { "global_resources_panel@global_resources_4jd.global_resources_panel": { "ignored": "(not $is_pregame)" } }
+      { "language_panel@language_4jd.language_panel": { "ignored": "(not $is_pregame)" } },
+      { "global_resources_panel@global_resources_4jd.global_resources_panel": { "ignored": "(not $is_pregame)" } },
+      { "in_game_world_options_panel@in_game_world_options_4jd.in_game_world_options_panel": { "ignored": "($is_pregame)" } }
     ]
   }
 }

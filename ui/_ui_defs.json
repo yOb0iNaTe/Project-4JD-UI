@@ -7,8 +7,11 @@
     "ui4jd/common_sections/ui_template_toggles.ui4jd",
     "ui4jd/common_sections/ui_template_tooltip.ui4jd",
     ////*/ Main Screens /*////
+    "ui4jd/main_screens/death_screen.ui4jd",
+    "ui4jd/main_screens/in_bed_screen.ui4jd",
     "ui4jd/main_screens/pause_screen.ui4jd",
     "ui4jd/main_screens/progress_screen.ui4jd",
+    "ui4jd/main_screens/sign_screen.ui4jd",
     "ui4jd/main_screens/start_screen.ui4jd",
     /* HUD Sections */
     "ui4jd/main_screens/hud_sections/bars_collection.ui4jd",
@@ -27,6 +30,7 @@
     "ui4jd/main_screens/settings_sections/main_settings_screen.ui4jd",
     "ui4jd/main_screens/settings_sections/audio_section.ui4jd",
     "ui4jd/main_screens/settings_sections/controls_section.ui4jd",
+    "ui4jd/main_screens/settings_sections/in_game_world_options.ui4jd",
     "ui4jd/main_screens/settings_sections/language_section.ui4jd",
     "ui4jd/main_screens/settings_sections/game_section.ui4jd",
     "ui4jd/main_screens/settings_sections/global_resources_section.ui4jd",
@@ -35,10 +39,12 @@
     "ui4jd/main_screens/settings_sections/settings_common.ui4jd",
     /* World Sections */
     "ui4jd/main_screens/world_sections/edit_world_screen.ui4jd",
+    "ui4jd/main_screens/world_sections/edit_world_options_screen.ui4jd",
     "ui4jd/main_screens/world_sections/main_world_screen.ui4jd",
     "ui4jd/main_screens/world_sections/main_world_options_screen.ui4jd",
     "ui4jd/main_screens/world_sections/pages_panel.ui4jd",
     "ui4jd/main_screens/world_sections/panel_content_pages.ui4jd",
+    "ui4jd/main_screens/world_sections/seed_picker_screen.ui4jd",
     ////*/ Inventory Screens /*////
     "ui4jd/inventory_screens/anvil_screen.ui4jd",
     "ui4jd/inventory_screens/beacon_screen.ui4jd",

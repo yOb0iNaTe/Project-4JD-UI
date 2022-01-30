@@ -69,17 +69,53 @@
     ]
   },
 
-  "more_server_world_item@common_buttons_4jd.main_button": {
+  "config_icon": {
+    "type": "panel",
+    "$icon_texture|default": "common.empty_panel",
+    "variables": [
+      { "requires": "$hover_state", "$icon_texture": "ui_4jd_textures.config_hover" },
+      { "requires": "$default_state", "$icon_texture": "ui_4jd_textures.config_default" },
+      { "requires": "$pressed_state", "$icon_texture": "ui_4jd_textures.config_hover" }
+    ],
+    "controls": [
+      { "desired_icon@$icon_texture": { } }
+    ]
+  },
+
+  "more_server_world_item": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
     "size": [ "100%-2px", 30 ],
-    "$pressed_button_name": "button.menu_network_server_world_edit",
-    "$button_content": "servers_4jd.servers_world_item_button_content",
-    "bindings": [
+    "controls": [
       {
-        "binding_type": "collection_details",
-        "binding_collection_name": "$collection_name"
+        "main_button@common_buttons_4jd.main_button": {
+          "size": [ "fill", 30 ],
+          "$pressed_button_name": "button.menu_network_world_item",
+          "$button_content": "servers_4jd.servers_world_item_button_content",
+          "bindings": [
+            {
+              "binding_type": "collection_details",
+              "binding_collection_name": "$collection_name"
+            }
+          ]
+        }
+      },
+      {
+        "edit_item@common_buttons_4jd.main_button": {
+          "size": [ 30, 30 ],
+          "$pressed_button_name": "button.menu_network_server_world_edit",
+          "$button_content": "servers_4jd.config_icon",
+          "bindings": [
+            {
+              "binding_type": "collection_details",
+              "binding_collection_name": "$collection_name"
+            }
+          ]
+        }
       }
     ]
   },
+
 
   "servers_world_item_button_content": {
     "type": "stack_panel",

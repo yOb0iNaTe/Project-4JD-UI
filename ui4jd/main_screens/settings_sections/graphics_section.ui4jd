@@ -12,26 +12,21 @@
           "size": [ 231, "100%c" ],
           "controls": [
             {
+              "fullscreen_toggle@settings_common_4jd.option_toggle": {
+                "$show_fullscreen_toggle|default": true,
+                "visible": "($show_fullscreen_toggle and not $is_holographic)",
+                "$option_label": "options.fullscreen",
+                "$option_binding_name": "#full_screen",
+                "$option_enabled_binding_name": "#full_screen_enabled",
+                "$toggle_name": "full_screen"
+              }
+            },
+            {
               "render_clouds_toggle@settings_common_4jd.option_toggle": {
                 "$option_label": "options.renderclouds",
                 "$option_binding_name": "#render_clouds",
                 "$option_enabled_binding_name": "#render_clouds_enabled",
                 "$toggle_name": "render_clouds"
-              }
-            },
-            {
-              "option_toggle_screen_animations@settings_common_4jd.option_toggle": {
-                "ignored": "($is_holographic)",
-                "$option_label": "options.screenAnimations",
-                "$option_binding_name": "#screen_animations",
-                "$option_enabled_binding_name": "#screen_animations_enabled",
-                "$toggle_name": "screen_animations",
-                "bindings": [
-                  {
-                    "binding_name": "#screen_animations_visible",
-                    "binding_name_override": "#visible"
-                  }
-                ]
               }
             },
             {
@@ -51,11 +46,63 @@
               }
             },
             {
-              "safe_zone_button@common_buttons_4jd.main_button": {
-                "ignored": "(not $supports_user_configured_safezone or (not $is_pregame))",
-                "size": [ "100%", 20 ],
-                "$pressed_button_name": "setup_safe_zone_button",
-                "$button_text": "options.safeZone.title"
+              "smooth_lighting_toggle@settings_common_4jd.option_toggle": {
+                "ignored": "($is_holographic)",
+                "$option_label": "options.smooth_lighting",
+                "$option_binding_name": "#smooth_lighting",
+                "$option_enabled_binding_name": "#smooth_lighting_enabled",
+                "$toggle_name": "smooth_lighting"
+              }
+            },
+            {
+              "view_bobbing_toggle@settings_common_4jd.option_toggle": {
+                "ignored": "($is_holographic and $is_reality_mode and not $is_pregame)",
+                "$option_label": "options.viewBobbing",
+                "$option_binding_name": "#view_bobbing",
+                "$option_enabled_binding_name": "#view_bobbing_enabled",
+                "$toggle_name": "view_bobbing"
+              }
+            },
+            {
+              "camera_shake_toggle@settings_common_4jd.option_toggle": {
+                "ignored": "($is_holographic and $is_reality_mode and not $is_pregame)",
+                "$option_label": "options.screenShake",
+                "$option_binding_name": "#camera_shake",
+                "$option_enabled_binding_name": "#camera_shake_enabled",
+                "$toggle_name": "camera_shake"
+              }
+            },
+            {
+              "fancy_leaves_toggle@settings_common_4jd.option_toggle": {
+                "ignored": "($pocket_edition or $education_ios or $is_holographic)",
+                "$option_label": "options.transparentleaves",
+                "$option_binding_name": "#transparent_leaves",
+                "$option_enabled_binding_name": "#transparent_leaves_enabled",
+                "$toggle_name": "transparent_leaves"
+              }
+            },
+            {
+              "fancy_bubbles_toggle@settings_common_4jd.option_toggle": {
+                "$option_label": "options.bubbleparticles",
+                "$option_binding_name": "#bubble_particles",
+                "$option_enabled_binding_name": "#bubble_particles_enabled",
+                "$toggle_name": "bubble_particles"
+              }
+            },
+            {
+              "render_clouds_toggle@settings_common_4jd.option_toggle": {
+                "$option_label": "options.renderclouds",
+                "$option_binding_name": "#render_clouds",
+                "$option_enabled_binding_name": "#render_clouds_enabled",
+                "$toggle_name": "render_clouds"
+              }
+            },
+            {
+              "fancy_clouds_toggle@settings_common_4jd.option_toggle": {
+                "$option_label": "options.fancyskies",
+                "$option_binding_name": "#fancy_skies",
+                "$option_enabled_binding_name": "#fancy_skies_enabled",
+                "$toggle_name": "fancy_skies"
               }
             }
           ]

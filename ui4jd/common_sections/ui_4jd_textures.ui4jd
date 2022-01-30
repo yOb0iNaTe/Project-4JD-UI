@@ -39,6 +39,44 @@
     "texture": "textures/ui4jd/menus/title_nintendo_switch_edition"
   },
 
+  /* World Icons */
+
+  "local_world_icon": {
+    "type": "image",
+    "texture": "textures/ui4jd/world_icons/local_world_icon"
+  },
+
+  "realm_world_icon": {
+    "type": "image",
+    "texture": "textures/ui4jd/world_icons/realm_world_icon"
+  },
+
+  /* Button Icons */
+
+  "config_default": {
+    "type": "image",
+    "size": [ 30, 30 ],
+    "texture": "textures/ui4jd/button_icons/config_default"
+  },
+
+  "config_hover": {
+    "type": "image",
+    "size": [ 30, 30 ],
+    "texture": "textures/ui4jd/button_icons/config_hover"
+  },
+
+  "leave_default": {
+    "type": "image",
+    "size": [ 30, 30 ],
+    "texture": "textures/ui4jd/button_icons/leave_default"
+  },
+
+  "leave_hover": {
+    "type": "image",
+    "size": [ 30, 30 ],
+    "texture": "textures/ui4jd/button_icons/leave_hover"
+  },
+
   /* Pack Showcase */
 
   "pack_icon": {

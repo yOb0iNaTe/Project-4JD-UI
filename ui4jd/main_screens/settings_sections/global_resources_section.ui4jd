@@ -938,6 +938,7 @@
     "$selected_label_text": "resourcePack.selected.title",
     "$default_bottom_description": "resourcePack.description",
     "controls": [
+      { "title_panel@start_4jd.title_panel": { "$splash_text_visible": false } },
       { "main_screen_panel@global_resources_4jd.main_screen_panel": { } }
     ],
     "bindings": [

@@ -434,6 +434,7 @@
     "anchor_from": "bottom_left",
     "anchor_to": "bottom_left",
     "sound_name": "ui.back",
+    "focus_enabled": false,
     "button_mappings": [
       {
         "from_button_id": "button.menu_cancel",

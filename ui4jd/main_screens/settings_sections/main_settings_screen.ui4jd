@@ -140,6 +140,7 @@
 
   "full_screen": {
     "type": "panel",
+    "$education_ios": "($education_edition)",
     "controls": [
       { "bg@common.screen_background": { "layer": -10, "ignored": "($is_pregame)" } },
       {

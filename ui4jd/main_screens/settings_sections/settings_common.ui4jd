@@ -218,7 +218,7 @@
                       "bindings": "$label_bindings"
                     }
                   },
-                  { "bg_texture@ui_4jd_textures.slider_background": { "alpha": 0.5, "layer": 3 } }
+                  { "bg_texture@ui_4jd_textures.slider_background": { "size": [ "100%+8px", 16 ], "alpha": 0.5, "layer": 3 } }
                 ]
               }
             }

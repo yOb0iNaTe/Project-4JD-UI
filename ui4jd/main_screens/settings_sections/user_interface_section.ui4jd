@@ -81,6 +81,70 @@
                   }
                 ]
               }
+            },
+            {
+              "outline_selection_toggle@settings_common_4jd.option_toggle": {
+                "ignored": "($is_holographic)",
+                "$option_label": "options.classic_box_selection",
+                "$option_binding_name": "#classic_box_selection",
+                "$option_enabled_binding_name": "#classic_box_selection_enabled",
+                "$toggle_name": "classic_box_selection"
+              }
+            },
+            {
+              "option_toggle_screen_animations@settings_common_4jd.option_toggle": {
+                "ignored": "($is_holographic)",
+                "$option_label": "options.screenAnimations",
+                "$option_binding_name": "#screen_animations",
+                "$option_enabled_binding_name": "#screen_animations_enabled",
+                "$toggle_name": "screen_animations",
+                "bindings": [
+                  {
+                    "binding_name": "#screen_animations_visible",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "safe_zone": {
+                "type": "panel",
+                "size": [ "100%", 22 ],
+                "controls": [
+                  {
+                    "safe_zone_button@common_buttons_4jd.main_button": {
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "ignored": "(not $supports_user_configured_safezone or (not $is_pregame))",
+                      "size": [ "100%", 20 ],
+                      "$pressed_button_name": "setup_safe_zone_button",
+                      "$button_text": "options.safeZone.title"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "ui_profile": {
+                "type": "panel",
+                "size": [ "100%", 22 ],
+                "controls": [
+                  {
+                    "ui_profile_dropdown@settings_common_4jd.option_dropdown": {
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "ignored": "($console_edition)",
+                      "$option_label": "options.uiprofile",
+                      "$dropdown_content": "general_section.ui_profile_dropdown_content",
+                      "$dropdown_area": "content_area",
+                      "$dropdown_name": "ui_profile_dropdown",
+                      "$option_enabled_binding_name": "#ui_profile_dropdown_enabled",
+                      "$options_dropdown_toggle_label_binding": "#ui_profile_dropdown_toggle_label",
+                      "$dropdown_scroll_content_size": [ "100%", "145%" ]
+                    }
+                  }
+                ]
+              }
             }
           ]
         }

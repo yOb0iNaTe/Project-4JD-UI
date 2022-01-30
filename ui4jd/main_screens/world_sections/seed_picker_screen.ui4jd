@@ -1,0 +1,156 @@
+{
+  "namespace": "seed_picker_4jd",
+
+  "content_stack_panel": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "controls": [
+      { 
+        "grid_content@ugc_viewer.grid_content": {
+          "grid_item_template": "seed_picker_4jd.seed_button"
+        }
+      }
+    ]
+  },
+
+  "seed_button@common_buttons_4jd.main_button": {
+    "size": [ "100%-2px", 30 ],
+    "$pressed_button_name": "button.ugc_item",
+    "$button_content": "seed_picker_4jd.button_content",
+    "bindings": [
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "ugc_items"
+      }
+    ]
+  },
+
+  "button_content": {
+    "type": "panel",
+    "controls": [
+      {
+        "screenshot_picture": {
+          "type": "image",
+          "layer": 5,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 7, 5 ],
+          "size": [ 20, 20 ],
+          "fill": true,
+          "bindings": [
+            {
+              "binding_name": "#texture_name",
+              "binding_name_override": "#texture",
+              "binding_type": "collection",
+              "binding_collection_name": "ugc_items"
+            },
+            {
+              "binding_name": "#texture_locationtype",
+              "binding_name_override": "#texture_file_system",
+              "binding_type": "collection",
+              "binding_collection_name": "ugc_items"
+            }
+          ]
+        }
+      },
+      {
+        "button_label@common_buttons_4jd.button_label": {
+          "layer": 6,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 39.5, 10.5 ],
+          "text": "#text",
+          "bindings": [
+            {
+              "binding_type": "collection",
+              "binding_collection_name": "ugc_items",
+              "binding_name": "#text"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  
+  "gamepad_helpers": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "anchor_from": "bottom_left",
+    "anchor_to": "bottom_left",
+    "size": [ "100%", 16 ],
+    "controls": [
+      { "gamepad_helper_a@common_tooltip_4jd.gamepad_helper_a": { } },
+      {
+        "gamepad_helper_b@common_tooltip_4jd.gamepad_helper_b": {
+          "bindings": [ ],
+          "$icon_description_bind": "gui.back",
+          "$desc_panel_content": "inventory_4jd.close_button"
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "world_options_tab_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  
+  "main_panel@ui_4jd_textures.dialog_bg_opaque_1_5": {
+    "layer": 1,
+    "size": [ 300, 252 ],
+    "controls": [
+      {
+        "title@common_4jd.global_label": {
+          "offset": [ 0, 10 ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "text": "seedPicker.title",
+          "color": "$title_text_color",
+          "layer": 4
+        }
+      },
+      {
+        "main_content@ui_4jd_textures.panel_recess": {
+          "layer": 4,
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          "size": [ "100%-14px", 221 ],
+          "offset": [ 7, -7 ],
+          "controls": [
+            { 
+              "search_box@ugc_viewer.search_box": {
+                "offset": [ 8, 8 ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "size": [ "100% -16px", 18 ],
+                "$hover_content": "common.empty_panel",
+                "$text_background_default": "ui_4jd_textures.text_input",
+                "$text_background_hover": "settings_common_4jd.text_input_hover_for_settings"
+              }
+            },
+            {
+              "scrolling_panel@play.scrolling_offsets": {
+                "size": [ "100% -14px", 180 ],
+                "anchor_from": "bottom_left",
+                "anchor_to": "bottom_left",
+                "offset": [ 7, -8 ],
+                "layer": 6,
+                "$scrolling_content": "seed_picker_4jd.content_stack_panel"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "seed_picker_panel": {
+    "type": "panel",
+    "controls": [
+      { "main_panel@seed_picker_4jd.main_panel": { } }
+    ]
+  }
+}
