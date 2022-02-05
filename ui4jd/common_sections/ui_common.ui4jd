@@ -4,7 +4,7 @@
   "gamma_fix": {
     "type": "image",
     "texture": "textures/ui4jd/global/gamma_fix",
-    "size": [ "200%", "200%" ],
+    "fill": true,
     "alpha": 0.25,
     "layer": 500
   },

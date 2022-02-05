@@ -61,6 +61,64 @@
       }
     ]
   },
+  
+  "data_packs_content_stack_panel": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "offset": [ 9, 9 ],
+    "size": [ "100%-18px", 20 ],
+    "controls": [
+      {
+        "force_panel": {
+          "type": "panel",
+          "size": [ 30, "100%" ],
+          "controls": [
+            {
+              "accept_packs_toggle@settings_common_4jd.option_toggle": {
+                "layer": 8,
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [ 0, 6 ],
+                "ignored": "$education_edition",
+                "$option_label": "",
+                "$option_binding_name": "",
+                "$option_enabled_binding_name": "#force_user_agreement_level_enabled",
+                "$toggle_name": "force_user_agreement_level"
+              }
+            },
+            {
+              "lock_icon@ui_4jd_textures.lock_icon": {
+                "layer": 8,
+                "size": [ 16, 16 ],
+                "offset": [ -2, 0 ],
+                "anchor_from": "bottom_right",
+                "anchor_to": "bottom_right"
+              }
+            }
+          ]
+        }
+      },
+      { 
+        "resource_packs_button@create_world_4jd.resource_packs_button": {
+          "layer": 8,
+          "size": [ "fill", 20 ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left"
+        }
+      },
+      { "separator": { "type": "panel", "size": [ 2, "100%" ] } },
+      { 
+        "behavior_packs_button@create_world_4jd.behavior_packs_button": {
+          "layer": 8,
+          "size": [ "fill", 20 ],
+          "anchor_from": "top_right",
+          "anchor_to": "top_right"
+        }
+      }
+    ]
+  },
 
   "main_stack_panel": {
     "type": "stack_panel",
@@ -148,21 +206,8 @@
                 "anchor_to": "top_left",
                 "size": [ 226.5, 38 ],
                 "offset": [ -1, 13.5 ],
-                "controls": [/* 
-                  { 
-                    "resource_packs_button@create_world_4jd.resource_packs_button": {
-                      "size": [ "50%-2.5px", 20 ],
-                      "anchor_from": "top_left",
-                      "anchor_to": "top_left"
-                    }
-                  },
-                  { 
-                    "behavior_packs_button@create_world_4jd.behavior_packs_button": {
-                      "size": [ "50%-2.5px", 20 ],
-                      "anchor_from": "top_right",
-                      "anchor_to": "top_right"
-                    }
-                  } */
+                "controls": [
+                  { "data_packs_content_stack_panel@create_world_4jd.data_packs_content_stack_panel": { } }
                 ]
               }
             }
@@ -294,6 +339,18 @@
               "source_control_name": "more_options_tab_toggle",
               "source_property_name": "(not #toggle_state)",
               "target_property_name": "#visible"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "resource_packs_tab_toggle",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#visible"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "behavior_packs_tab_toggle",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#visible"
             }
           ],
           "controls": [
@@ -334,7 +391,9 @@
             }
           ]
         }
-      }
+      },
+      { "world_resources_screen_content@world_resources_4jd.gamepad_helpers": { } },
+      { "level_behavior_screen_content@world_behavior_4jd.gamepad_helpers": { } }
     ]
   },
 
@@ -351,6 +410,18 @@
               "source_control_name": "more_options_tab_toggle",
               "source_property_name": "(not #toggle_state)",
               "target_property_name": "#visible"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "resource_packs_tab_toggle",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#visible"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "behavior_packs_tab_toggle",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#visible"
             }
           ],
           "controls": [
@@ -358,7 +429,9 @@
           ]
         }
       },
-      { "more_options_panel@create_world_optons_4jd.more_options_panel": { } }
+      { "more_options_panel@create_world_optons_4jd.more_options_panel": { } },
+      { "world_resources_screen_content@world_resources_4jd.world_resources_screen_content": { } },
+      { "level_behavior_screen_content@world_behavior_4jd.level_behavior_screen_content": { } }
     ]
   }
 }

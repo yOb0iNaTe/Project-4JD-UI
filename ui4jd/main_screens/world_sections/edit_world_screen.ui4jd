@@ -181,21 +181,8 @@
                 "anchor_to": "top_left",
                 "size": [ 226.5, 38 ],
                 "offset": [ -1, 14 ],
-                "controls": [/* 
-                  { 
-                    "resource_packs_button@create_world_4jd.resource_packs_button": {
-                      "size": [ "50%-2.5px", 20 ],
-                      "anchor_from": "top_left",
-                      "anchor_to": "top_left"
-                    }
-                  },
-                  { 
-                    "behavior_packs_button@create_world_4jd.behavior_packs_button": {
-                      "size": [ "50%-2.5px", 20 ],
-                      "anchor_from": "top_right",
-                      "anchor_to": "top_right"
-                    }
-                  } */
+                "controls": [
+                  { "data_packs_content_stack_panel@create_world_4jd.data_packs_content_stack_panel": { } }
                 ]
               }
             }
@@ -324,6 +311,18 @@
               "source_control_name": "more_options_tab_toggle",
               "source_property_name": "(not #toggle_state)",
               "target_property_name": "#visible"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "resource_packs_tab_toggle",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#visible"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "behavior_packs_tab_toggle",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#visible"
             }
           ],
           "controls": [
@@ -332,7 +331,9 @@
           ]
         }
       },
-      { "more_options_panel@edit_world_optons_4jd.more_options_panel": { } }
+      { "more_options_panel@edit_world_optons_4jd.more_options_panel": { } },
+      { "world_resources_screen_content@world_resources_4jd.world_resources_screen_content": { } },
+      { "level_behavior_screen_content@world_behavior_4jd.level_behavior_screen_content": { } }
     ]
   }
 }

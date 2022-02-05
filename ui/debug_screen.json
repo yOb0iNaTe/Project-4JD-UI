@@ -1,13 +1,5 @@
 {
-  "content_panel": {
-    "modifications": [
-      {
-        "array_name": "controls",
-        "operation": "insert_front",
-        "value": {
-          "gamma_fix@common_4jd.gamma_fix": {}
-        }
-      }
-    ]
+  "debug_screen": {
+    "$screen_bg_content": "common_4jd.gamma_fix"
   }
 }

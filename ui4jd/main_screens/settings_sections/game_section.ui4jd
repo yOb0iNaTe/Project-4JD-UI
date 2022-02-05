@@ -8,7 +8,7 @@
     "layer": 5,
     "anchor_from": "top_left",
     "anchor_to": "top_left",
-    "$toggle_name": "game_nav_tab"
+    "$toggle_name": "navigation_tab"
   },
 
   "languages_button@game_options_4jd.button_tab": {
@@ -29,8 +29,17 @@
     "$toggle_group_forced_index": 3
   },
 
+  "storage_button@game_options_4jd.button_tab": {
+    "$button_text": "menu.storageManagement",
+    "$tab_view_binding_name": "storage_management_button_toggle",
+    "$toggle_group_forced_index": "$storage_management_forced_index",
+    "$toggle_property_bag": {
+      "#panel_title": "menu.storageManagement"
+    }
+  },
+
   "back_button@settings_4jd.back_button": {
-    "$toggle_name": "game_nav_tab",
+    "$toggle_name": "navigation_tab",
     "$toggle_group_forced_index": 0
   },
   
@@ -56,14 +65,228 @@
         "source_control_name": "world_options_tab_toggle",
         "source_property_name": "(not #toggle_state)",
         "target_property_name": "#visible"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "storage_management_button_toggle",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
       }
     ],
     "controls": [
       {
         "stack_panel": {
           "type": "stack_panel",
+          "orientation": "vertical",
           "size": [ 231, "100%c" ],
           "controls": [
+            {
+              "name_controls": {
+                "type": "stack_panel",
+                "orientation": "vertical",
+                "size": [ "100%", "100%c" ],
+                "controls": [
+                  { 
+                    "option_text_edit_control@settings_common_4jd.option_text_edit": {
+                      "$option_label": "options.name",
+                      "$option_place_holder_text": "options.defaultName",
+                      "$max_text_edit_length": 16,
+                      "$option_binding_name": "#player_name",
+                      "$text_box_name": "player_name_text_box",
+                      "$option_enabled_binding_name": "#player_name_enabled"
+                    }
+                  }
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#can_change_name",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "signin_controls": {
+                "type": "panel",
+                "size": [ "100%", 22 ],
+                "ignored": "(not $is_pregame or not $is_xboxlive_enabled)",
+                "controls": [
+                  {
+                    "action_button@common_buttons_4jd.main_button": {
+                      "size": [ "100%", 20 ],
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "$pressed_button_name": "sign_in_button",
+                      "$button_text": "xbox.signInLong"
+                    }
+                  }
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#not_logged_in",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "gamertag_controls": {
+                "type": "stack_panel",
+                "orientation": "vertical",
+                "size": [ "100%", "100%c" ],
+                "controls": [
+                  {
+                    "gamertag_panel": {
+                      "type": "panel",
+                      "size": [ "100%", 29 ],
+                      "controls": [
+                        {
+                          "option_label@common_4jd.global_label": {
+                            "color": "$title_text_color",
+                            "text": "options.gamertag",
+                            "anchor_from": "top_left",
+                            "anchor_to": "top_left",
+                            "offset": [ 1, 0 ],
+                            "layer": 5
+                          }
+                        },
+                        {
+                          "gamerpic": {
+                            "type": "image",
+                            "size": [ 16, 16 ],
+                            "offset": [ 1, -1 ],
+                            "layer": 5,
+                            "anchor_from": "bottom_left",
+                            "anchor_to": "bottom_left",
+                            "bindings": [
+                              {
+                                "binding_name": "#gamerpic_texture_path",
+                                "binding_name_override": "#texture"
+                              },
+                              {
+                                "binding_name": "#gamerpic_texture_location_type",
+                                "binding_name_override": "#texture_file_system"
+                              }
+                            ],
+                            "controls": [
+                              {
+                                "name@common_4jd.global_label": {
+                                  "color": "$title_text_color",
+                                  "text": "#gamertag_label",
+                                  "anchor_from": "top_left",
+                                  "anchor_to": "top_left",
+                                  "offset": [ 20, 3 ],
+                                  "layer": 5,
+                                  "bindings": [
+                                    {
+                                      "binding_name": "#gamertag_label"
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#logged_in",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "xboxlive_deep_link_buttons": {
+                "ignored": "($device_must_be_removed_for_xbl_signin or $fire_tv or not $is_pregame or $disable_gamertag_controls)",
+                "type": "stack_panel",
+                "size": [ "100%", "100%c" ],
+                "bindings": [
+                  {
+                    "binding_name": "#logged_in",
+                    "binding_name_override": "#visible"
+                  }
+                ],
+                "controls": [
+                  {
+                    "change_gamertag": {
+                      "type": "panel",
+                      "size": [ "100%", 22 ],
+                      "controls": [
+                        {
+                          "action_button@common_buttons_4jd.main_button": {
+                            "size": [ "100%", 20 ],
+                            "anchor_from": "top_left",
+                            "anchor_to": "top_left",
+                            "$pressed_button_name": "change_gamertag_button",
+                            "$button_text": "options.changeGamertag"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "manage_account": {
+                      "type": "panel",
+                      "size": [ "100%", 22 ],
+                      "controls": [
+                        {
+                          "action_button@common_buttons_4jd.main_button": {
+                            "size": [ "100%", 20 ],
+                            "anchor_from": "top_left",
+                            "anchor_to": "top_left",
+                            "$pressed_button_name": "manage_account_button",
+                            "$button_text": "options.manageAccount"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "privacy_button": {
+                      "type": "panel",
+                      "ignored": "($is_holographic or $fire_tv or $education_edition or $nx_os)",
+                      "size": [ "100%", 22 ],
+                      "controls": [
+                        {
+                          "action_button@common_buttons_4jd.main_button": {
+                            "size": [ "100%", 20 ],
+                            "anchor_from": "top_left",
+                            "anchor_to": "top_left",
+                            "property_bag": {
+                              "#hyperlink": "https://account.xbox.com/Settings"
+                            },
+                            "$pressed_button_name": "button.menu_open_uri",
+                            "$button_text": "options.xboxLive.privacyControl"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "sign_out": {
+                      "type": "panel",
+                      "ignored": "($build_platform_UWP or not $is_pregame or $requires_xbl_signin_to_play)",
+                      "size": [ "100%", 22 ],
+                      "controls": [
+                        {
+                          "action_button@common_buttons_4jd.main_button": {
+                            "size": [ "100%", 20 ],
+                            "anchor_from": "top_left",
+                            "anchor_to": "top_left",
+                            "$pressed_button_name": "sign_out_button",
+                            "$button_text": "xbox.signOutLong"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
             {
               "split_screen_dropdown@settings_common_4jd.option_dropdown": {
                 "ignored": "(not $can_splitscreen)",
@@ -148,6 +371,16 @@
               }
             },
             {
+              "storage_panel": {
+                "type": "panel",
+                "size": [ "100%", 22 ],
+                "ignored": "(not $is_pregame)",
+                "controls": [
+                  { "storage_button@game_options_4jd.storage_button": { } }
+                ]
+              }
+            },
+            {
               "pvp_toggle@settings_common_4jd.option_toggle": {
                 "ignored": "($is_pregame)",
                 "$tts_section_header": "createWorldScreen.worldSettings",
@@ -218,6 +451,18 @@
               "source_control_name": "resource_pack_tab_toggle",
               "source_property_name": "(not #toggle_state)",
               "target_property_name": "#visible"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "world_options_tab_toggle",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#visible"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "storage_management_button_toggle",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#visible"
             }
           ],
           "controls": [
@@ -232,6 +477,7 @@
           ]
         }
       },
+      { "storage_panel@storage_4jd.gamepad_helpers": { "ignored": "(not $is_pregame)" } },
       { "language_panel@language_4jd.gamepad_helpers": { "ignored": "(not $is_pregame)" } },
       { "global_resources_panel@global_resources_4jd.gamepad_helpers": { "ignored": "(not $is_pregame)" } },
       { "in_game_world_options_panel@in_game_world_options_4jd.gamepad_helpers": { "ignored": "($is_pregame)" } }
@@ -271,14 +517,21 @@
               "source_control_name": "world_options_tab_toggle",
               "source_property_name": "(not #toggle_state)",
               "target_property_name": "#visible"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "storage_management_button_toggle",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#visible"
             }
           ],
           "controls": [
-            { "title_panel@start_4jd.title_panel": { "$splash_text_visible": false } }
+            { "title_panel@start_4jd.title_panel": { "$splash_text_visible": false, "ignored": "($is_pregame)" } }
           ]
         }
       },
       { "main_panel@game_options_4jd.main_panel": { } },
+      { "storage_panel@storage_4jd.storage_panel": { "ignored": "(not $is_pregame)" } },
       { "language_panel@language_4jd.language_panel": { "ignored": "(not $is_pregame)" } },
       { "global_resources_panel@global_resources_4jd.global_resources_panel": { "ignored": "(not $is_pregame)" } },
       { "in_game_world_options_panel@in_game_world_options_4jd.in_game_world_options_panel": { "ignored": "($is_pregame)" } }

@@ -77,6 +77,27 @@
     "texture": "textures/ui4jd/button_icons/leave_hover"
   },
 
+  /* Inventory Mode Icons */
+
+  "inventory_layout": {
+    "type": "image",
+    "size": [ 23, 16 ],
+    "texture": "textures/ui4jd/inventory/inventory_layout"
+  },
+
+  "recipe_book_layout": {
+    "type": "image",
+    "size": [ 23, 16 ],
+    "texture": "textures/ui4jd/inventory/recipe_book_layout"
+  },
+
+  "creative_layout": {
+    "type": "image",
+    "size": [ 23, 16 ],
+    "texture": "textures/ui4jd/inventory/creative_layout"
+  },
+
+
   /* Pack Showcase */
 
   "pack_icon": {

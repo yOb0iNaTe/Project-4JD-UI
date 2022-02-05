@@ -46,7 +46,7 @@
     "size": [ "100%", 20 ],
     "anchor_from": "top_left",
     "anchor_to": "top_left",
-    "$toggle_name": "navigation_tab"
+    "$toggle_name": "main_options_tab"
   },
 
   "game_button@settings_4jd.button_tab": {
@@ -85,7 +85,7 @@
     "offset": [ 0, 2 ],
     "anchor_from": "bottom_left",
     "anchor_to": "bottom_left",
-    "$toggle_name": "navigation_tab",
+    "$toggle_name": "main_options_tab",
     "$is_back_button": true,
     "$tab_view_binding_name": "back_tab_toggle",
     "$toggle_group_forced_index": 100

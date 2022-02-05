@@ -1,0 +1,120 @@
+{
+  "namespace": "world_resources_4jd",
+
+  "selected_pack_grid@global_resources_4jd.resource_packs_item_grid_base": {
+    "factory": {
+      "name": "selected_pack_factory",
+      "control_name": "global_resources_4jd.pack_panel"
+    },
+    "$pack_items_type": "#selected_pack_items_level",
+    "$button.deselected_pack": "button.deselected_pack_level",
+    "$pressed_button_name_type": "button.selected_pack_level",
+    "$is_selected": true,
+    "$button.move_left": "button.move_left_level",
+    "$button.sort_up": "button.sort_up_level",
+    "$button.sort_down": "button.sort_down_level",
+    "$button.pack_settings": "button.pack_settings_level",
+    "$button.report_errors": "button.report_errors_level",
+    "collection_name": "$pack_items_type",
+    "bindings": [
+      {
+        "binding_name": "#selected_grid_dimensions_level",
+        "binding_name_override": "#collection_length"
+      }
+    ]
+  },
+
+  "available_pack_grid@global_resources_4jd.resource_packs_item_grid_base": {
+    "factory": {
+      "name": "available_pack_factory",
+      "control_name": "global_resources_4jd.pack_panel"
+    },
+    "$pack_items_type": "#available_pack_items_level",
+    "$button.deselected_pack": "button.deselected_pack_level",
+    "$pressed_button_name_type": "button.available_pack_level",
+    "$is_selected": false,
+    "$button.move_left": "button.move_left_level",
+    "$button.sort_up": "button.sort_up_level",
+    "$button.sort_down": "button.sort_down_level",
+    "collection_name": "$pack_items_type",
+    "$available_grid_visible_binding_name|default": "",
+    "$available_grid_visible_binding_type|default": "none",
+    "bindings": [
+      {
+        "binding_name": "#available_grid_dimensions_level",
+        "binding_name_override": "#collection_length"
+      },
+      {
+        "binding_name": "$available_grid_visible_binding_name",
+        "binding_name_override": "#visible",
+        "binding_type": "$available_grid_visible_binding_type"
+      }
+    ]
+  },
+  
+  "gamepad_helpers": {
+    "type": "panel",
+    "controls": [
+      {
+        "gamepad_helpers": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          "size": [ "100%", 16 ],
+          "controls": [
+            { "gamepad_helper_a@common_tooltip_4jd.gamepad_helper_a": { } },
+            { 
+              "gamepad_helper_b@common_tooltip_4jd.gamepad_helper_b": {
+                "bindings": [ ],
+                "$icon_description_bind": "gui.back",
+                "$desc_panel_content": "create_world_4jd.back_button"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "resource_packs_tab_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "world_resources_screen_content": {
+    "type": "panel",
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "$resources_title_text": "menu.resourcepacks",
+    "$back_button": "world_game_settings_pocket_midalpha_old.addons_back_button",
+
+    "$available_grid_visible_binding_type": "level",
+    "$available_pack_grid": "world_resources_4jd.available_pack_grid",
+    "$available_label_text": "resourcePack.available.title",
+    
+    "$default_item_zip": "#default_item_zip_global",
+    "$default_item_file_system": "#default_item_file_system_global",
+    "$default_item_texture": "#default_item_texture_global",
+    "$default_pack_name": "menu.globalpacks",
+    "$default_pack_description": "resourcePack.description.default.level",
+    "$selected_pack_grid": "world_resources_4jd.selected_pack_grid",
+    "$selected_label_text": "resourcePack.selected.title",
+    "$default_bottom_description": "resourcePack.description.bottom.level",
+    "controls": [
+      { "title_panel@start_4jd.title_panel": { "$splash_text_visible": false } },
+      { "main_screen_panel@global_resources_4jd.main_screen_panel": { } }
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "resource_packs_tab_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  }
+}

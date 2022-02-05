@@ -306,23 +306,87 @@
           "offset": [ 0, -11.5 ],
           "layer": 2
         }
+      },
+      {
+        "mode_button": {
+          "type": "panel",
+          "size": [ 24, 24 ],
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          "offset": [ -32, -8 ],
+          "bindings": [
+            {
+              "binding_type": "global",
+              "binding_name": "#creative_layout_button_visible",
+              "binding_name_override": "#visible"
+            }
+          ],
+          "controls": [
+            { 
+              "button@common_tooltip_4jd.gamepad_helper_select": {
+                "$hide_description": true,
+                "size": [ 16, 16 ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "offset": [ 0, -24 ]
+              }
+            },
+            { "creative_layout_toggle@inventory_4jd.creative_layout_toggle": { } }
+          ]
+        }
       }
     ]
   },
 
+  "mode_button_default": {
+    "type": "panel",
+    "size": [ 24, 24 ],
+    "$ignore_border": true,
+    "controls": [
+      { "texture@$mode_texture": { "layer": 3 } },
+      {
+        "bg_image": {
+          "type": "image",
+          "layer": 1,
+          "texture": "textures/ui4jd/global/base_color",
+          "color": [ 0.0, 0.0, 0.0 ],
+          "alpha": 0.5,
+          "size": [ 24, 24 ]
+        }
+      },
+      {
+        "hover_image": {
+          "type": "image",
+          "layer": 2,
+          "ignored": "$ignore_border",
+          "texture": "textures/ui/square_image_border_white",
+          "size": [ 24, 24 ]
+        }
+      }
+    ]
+  },
+
+  "mode_button_hover@inventory_4jd.mode_button_default": {
+    "$ignore_border": false
+  },
+
   "layout_toggle_base@common_toggles_4jd.toggle_panel": {
-    "size": [ "100% + 27px", 16 ],
-    "offset": [ 0, 2 ],
-    "anchor_from": "bottom_left",
-    "anchor_to": "bottom_left",
+    "size": [ 24, 24 ],
+    "$unchecked_control": "inventory_4jd.mode_button_default",
+    "$checked_control": "inventory_4jd.mode_button_default",
+    "$unchecked_hover_control": "inventory_4jd.mode_button_hover",
+    "$checked_hover_control": "inventory_4jd.mode_button_hover",
+
     "layer": 3,
     "$toggle_name": "layout_toggle",
     "$is_custom_button": true,
+    "$toggle_focus_enabled": false,
     "$custom_from_button_id": "button.controller_back",
     "$custom_to_button_id": "button.menu_select"
   },
 
   "creative_layout_toggle@inventory_4jd.layout_toggle_base": {
+    "$mode_texture": "ui_4jd_textures.inventory_layout",
     "$toggle_group_forced_index": "$creative_layout_index",
 
     "$toggle_binding_type": "global",
@@ -332,6 +396,7 @@
   },
 
   "survival_layout_toggle@inventory_4jd.layout_toggle_base": {
+    "$mode_texture": "ui_4jd_textures.creative_layout",
     "$toggle_group_forced_index": "$survival_layout_index",
 
     "$toggle_binding_type": "global",
@@ -383,7 +448,7 @@
             }
           ]
         }
-      },
+      }/* ,
       {
         "creative_panel": {
           "type": "panel",
@@ -399,7 +464,7 @@
             { 
               "invetnory_button@common_tooltip_4jd.gamepad_helper_select": {
                 "$icon_description_bind": "Inventory",
-                "$desc_panel_content": "inventory_4jd.survival_layout_toggle",
+                "$desc_panel_content": "",
                 "bindings": [
                   {
                     "binding_type": "global",
@@ -412,7 +477,7 @@
             { 
               "creative_button@common_tooltip_4jd.gamepad_helper_select": {
                 "$icon_description_bind": "Creative",
-                "$desc_panel_content": "inventory_4jd.creative_layout_toggle",
+                "$desc_panel_content": "",
                 "bindings": [
                   {
                     "binding_type": "global",
@@ -424,7 +489,7 @@
             }
           ]
         }
-      }
+      } */
     ]
   },
 

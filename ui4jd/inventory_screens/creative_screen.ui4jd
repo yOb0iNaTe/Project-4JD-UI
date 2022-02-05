@@ -63,8 +63,9 @@
     "type": "panel",
     "size": [ 321.5, 245 ],
     "controls": [
-      { "creative_tabs_panel@creative_tabs_4jd.creative_tabs_panel": { } },
-      { "creative_panel_content@creative_4jd.creative_panel_content": { } }
+      { "main_creative_panel_content@creative_tabs_bumpers.main_creative_panel_content": { } }
+      //{ "creative_tabs_panel@creative_tabs_4jd.creative_tabs_panel": { } },
+      //{ "creative_panel_content@creative_4jd.creative_panel_content": { } }
     ]
   }
 }

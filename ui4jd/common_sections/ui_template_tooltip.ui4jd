@@ -175,6 +175,34 @@
     "$icon_image_ref": "icon@common.gamepad_icon_button"
   },
 
+  /*//// Bumpers ////*/
+
+  "gamepad_helper_left_bumper@common_tooltip_4jd.gamepad_helper": {
+    "$icon_texture": "#controller_left_bumper_icon",
+    "$icon_description_bind": "#controller_left_bumper_description",
+    "$icon_image_ref": "icon@common.gamepad_icon_button"
+  },
+
+  "gamepad_helper_right_bumper@common_tooltip_4jd.gamepad_helper": {
+    "$icon_texture": "#controller_right_bumper_icon",
+    "$icon_description_bind": "#controller_right_bumper_description",
+    "$icon_image_ref": "icon@common.gamepad_icon_button"
+  },
+
+  /*//// Triggers ////*/
+
+  "gamepad_helper_left_trigger@common_tooltip_4jd.gamepad_helper": {
+    "$icon_texture": "#controller_left_trigger",
+    "$icon_description_bind": "#controller_left_trigger_description",
+    "$icon_image_ref": "icon@common.gamepad_icon_button"
+  },
+
+  "gamepad_helper_right_trigger@common_tooltip_4jd.gamepad_helper": {
+    "$icon_texture": "#controller_right_trigger",
+    "$icon_description_bind": "#controller_right_trigger_description",
+    "$icon_image_ref": "icon@common.gamepad_icon_button"
+  },
+
   /*//// Thumbstick Buttons Alt (No press) ////*/
 
   "gamepad_helper_thumbstick_right_alt@common_tooltip_4jd.gamepad_helper_thumbstick_right": {

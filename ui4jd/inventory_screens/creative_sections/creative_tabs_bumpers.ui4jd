@@ -1,0 +1,673 @@
+{
+  "namespace": "creative_tabs_bumpers",
+
+  /*//// Main Panel Content ////*/
+
+  "main_creative_panel_content@common_4jd.root_panel": {
+    "size": [ 321.5, 245 ],
+    "controls": [
+      { "creative_tab_pages@creative_tabs_bumpers.creative_tab_pages": { } },
+      { 
+        "dialog_bg@ui_4jd_textures.dialog_bg_opaque_1_5": {
+          "layer": 1,
+          "size": [ 321.5, 212 ],
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          "controls": [
+            { 
+              "grid_stack_panel": {
+                "type": "stack_panel",
+                "size": [ "100%c", "100%c" ],
+                "orientation": "vertical",
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [ 20, 27.5 ],
+                "layer": 2,
+                "controls": [
+                  { "00@creative_tabs_4jd.row_grid_stack_panel": { } },
+                  { "01@creative_tabs_4jd.row_grid_stack_panel": { } },
+                  { "02@creative_tabs_4jd.row_grid_stack_panel": { } },
+                  { "03@creative_tabs_4jd.row_grid_stack_panel": { } },
+                  { "04@creative_tabs_4jd.row_grid_stack_panel": { } }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "hotbar_grid@common.hotbar_grid_template": {
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          "offset": [ 33.5, -10.5 ],
+          "layer": 2,
+
+          "size": [ 243, 27 ],
+          "$background_images": "ui_4jd_textures.cell_image_1_5",
+          "$highlight_control": "common_4jd.highlight_slot_panel",
+          "$container_item_size": [ 27, 27 ],
+          "$cell_image_size": [ 27, 27 ],
+          "$item_renderer_panel_size": [ 27, 27 ],
+          "$item_renderer_size": [ 24, 24 ],
+          "$stack_count_control": "common_4jd.stack_count_label_24",
+
+          "$button_ref": "crafting.creative_hotbar_container_slot_button"
+        }
+      },
+      {
+        "mode_button": {
+          "type": "panel",
+          "size": [ 24, 24 ],
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          "offset": [ -32, -8 ],
+          "controls": [
+            { 
+              "button@common_tooltip_4jd.gamepad_helper_select": {
+                "$hide_description": true,
+                "size": [ 16, 16 ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "offset": [ 0, -24 ]
+              }
+            },
+            { "survival_layout_toggle@inventory_4jd.survival_layout_toggle": { } }
+          ]
+        }
+      }
+    ]
+  },
+
+  /*//// Individual Tabs Icons ////*/
+
+  "top_tab_b@creative_tabs_4jd.tab_back": {
+    "size": [ 41.5, 33 ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "$tab_back_texture": "ui_4jd_textures.TabTopBack"
+  },
+
+  "top_tab_f@creative_tabs_4jd.tab_front": {
+    "size": [ 41.5, 33 ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "$tab_front_texture": "ui_4jd_textures.TabTopFront"
+  },
+
+  "tab_icons": {
+    "type": "panel",
+    "size": [ 344.5, 37 ],
+    "controls": [
+      { "tab_1_b@creative_tabs_bumpers.top_tab_b": { "ignored": "($is_tab_1)", "$tab_back_texture": "ui_4jd_textures.TabTopBackLeftMost", "$tab_icon": "ui_4jd_textures.icon_structures" } },
+      { "tab_1_f@creative_tabs_bumpers.top_tab_f": { "ignored": "(not $is_tab_1)", "$tab_front_texture": "ui_4jd_textures.TabTopFrontLeftMost", "$tab_icon": "ui_4jd_textures.icon_structures" } },
+      { "tab_2_b@creative_tabs_bumpers.top_tab_b": { "ignored": "($is_tab_2)", "$tab_icon": "ui_4jd_textures.icon_decorations", "offset": [ 40, 0 ] } },
+      { "tab_2_f@creative_tabs_bumpers.top_tab_f": { "ignored": "(not $is_tab_2)", "$tab_icon": "ui_4jd_textures.icon_decorations", "offset": [ 40, 0 ] } },
+      { "tab_3_b@creative_tabs_bumpers.top_tab_b": { "ignored": "($is_tab_3)", "$tab_icon": "ui_4jd_textures.icon_redstone_and_transport", "offset": [ 80, 0 ] } },
+      { "tab_3_f@creative_tabs_bumpers.top_tab_f": { "ignored": "(not $is_tab_3)", "$tab_icon": "ui_4jd_textures.icon_redstone_and_transport", "offset": [ 80, 0 ] } },
+      { "tab_4_b@creative_tabs_bumpers.top_tab_b": { "ignored": "($is_tab_4)", "$tab_icon": "ui_4jd_textures.icon_materials", "offset": [ 120, 0 ] } },
+      { "tab_4_f@creative_tabs_bumpers.top_tab_f": { "ignored": "(not $is_tab_4)", "$tab_icon": "ui_4jd_textures.icon_materials", "offset": [ 120, 0 ] } },
+      { "tab_5_b@creative_tabs_bumpers.top_tab_b": { "ignored": "($is_tab_5)", "$tab_icon": "ui_4jd_textures.icon_food", "offset": [ 160, 0 ] } },
+      { "tab_5_f@creative_tabs_bumpers.top_tab_f": { "ignored": "(not $is_tab_5)", "$tab_icon": "ui_4jd_textures.icon_food", "offset": [ 160, 0 ] } },
+      { "tab_6_b@creative_tabs_bumpers.top_tab_b": { "ignored": "($is_tab_6)", "$tab_icon": "ui_4jd_textures.icon_tools", "offset": [ 200, 0 ] } },
+      { "tab_6_f@creative_tabs_bumpers.top_tab_f": { "ignored": "(not $is_tab_6)", "$tab_icon": "ui_4jd_textures.icon_tools", "offset": [ 200, 0 ] } },
+      { "tab_7_b@creative_tabs_bumpers.top_tab_b": { "ignored": "($is_tab_7)", "$tab_icon": "ui_4jd_textures.icon_brewing", "offset": [ 240, 0 ] } },
+      { "tab_7_f@creative_tabs_bumpers.top_tab_f": { "ignored": "(not $is_tab_7)", "$tab_icon": "ui_4jd_textures.icon_brewing", "offset": [ 240, 0 ] } },
+      { "tab_8_b@creative_tabs_bumpers.top_tab_b": { "ignored": "($is_tab_8)", "$tab_back_texture": "ui_4jd_textures.TabTopBackRightMost", "$tab_icon": "ui_4jd_textures.icon_miscellaneous", "offset": [ 280, 0 ] } },
+      { "tab_8_f@creative_tabs_bumpers.top_tab_f": { "ignored": "(not $is_tab_8)", "$tab_front_texture": "ui_4jd_textures.TabTopFrontRightMost", "$tab_icon": "ui_4jd_textures.icon_miscellaneous","offset": [ 280, 0 ] } }
+    ]
+  },
+
+  /*//// Individual Tabs ////*/
+
+  "tab_panel_content": {
+    "type": "panel",
+    "size": [ 321.5, 245 ],
+    "$is_tab_1": false,
+    "$is_tab_2": false,
+    "$is_tab_3": false,
+    "$is_tab_4": false,
+    "$is_tab_5": false,
+    "$is_tab_6": false,
+    "$is_tab_7": false,
+    "$is_tab_8": false,
+    "controls": [
+      { 
+        "tab_icons@creative_tabs_bumpers.tab_icons": {
+          "layer": 8,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left"
+        }
+      },
+      {
+        "bottom_panel_hold": {
+          "type": "panel",
+          "size": [ 321.5, 212 ],
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          "controls": [
+            { 
+              "category_panel_content@creative_pages_panels.creative_tab_pages": {
+                "layer": 8,
+                "size": [ 321.5, 212 ],
+                "anchor_from": "bottom_left",
+                "anchor_to": "bottom_left"
+              }
+            },
+            {
+              "category_label@common_4jd.global_label": {
+                "color": "$title_text_color",
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "offset": [ 0, 11.5 ],
+                "layer": 5,
+                "text": "$category_text"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "building_blocks_panel_content@creative_tabs_bumpers.tab_panel_content": {
+    "$is_tab_1": true,
+    "$category": "building_blocks",
+    "$scroll_box_offset_page_2": [ 0, 24 ],
+    "$scroll_box_offset_page_3": [ 0, 48 ],
+    "$scroll_box_offset_page_4": [ 0, 72 ],
+    "$scroll_box_offset_page_5": [ 0, 96 ],
+    "$panel_content_page_1": "creative_building_blocks_4jd.building_blocks_items_page_1",
+    "$panel_content_page_2": "creative_building_blocks_4jd.building_blocks_items_page_2",
+    "$panel_content_page_3": "creative_building_blocks_4jd.building_blocks_items_page_3",
+    "$panel_content_page_4": "creative_building_blocks_4jd.building_blocks_items_page_4",
+    "$panel_content_page_5": "creative_building_blocks_4jd.building_blocks_items_page_5",
+    "$panel_content_page_6": "common.empty_panel",
+    //"$panel_content_page_6": "creative_building_blocks_4jd.building_blocks_items_page_6",
+    "$category_text": "4jd.creativeScreen.tab.buildingBlocks",
+    "$tab_binding_name": "building_blocks_tab_toggle"
+  },
+
+  "decorations_panel_content@creative_tabs_bumpers.tab_panel_content": {
+    "$is_tab_2": true,
+    "$category": "decorations",
+    "$scroll_box_offset_page_2": [ 0, 24 ],
+    "$scroll_box_offset_page_3": [ 0, 48 ],
+    "$scroll_box_offset_page_4": [ 0, 72 ],
+    "$scroll_box_offset_page_5": [ 0, 96 ],
+    "$panel_content_page_1": "creative_decorations_4jd.decorations_items_page_1",
+    "$panel_content_page_2": "creative_decorations_4jd.decorations_items_page_2",
+    "$panel_content_page_3": "creative_decorations_4jd.decorations_items_page_3",
+    "$panel_content_page_4": "creative_decorations_4jd.decorations_items_page_4",
+    "$panel_content_page_5": "creative_decorations_4jd.decorations_items_page_5",
+    "$panel_content_page_6": "creative_decorations_4jd.decorations_items_page_6",
+    "$category_text": "4jd.craftingScreen.tab.decorations",
+    "$tab_binding_name": "decorations_tab_toggle"
+  },
+
+  "redstone_and_transport_panel_content@creative_tabs_bumpers.tab_panel_content": {
+    "$is_tab_3": true,
+    "$category": "redstone_and_transport",
+    "$scroll_box_offset_page_2": [ 0, 121 ],
+    "$2_pages_only": true,
+    "$panel_content_page_1": "creative_redstone_4jd.redstone_items_page_1",
+    "$panel_content_page_2": "creative_redstone_4jd.redstone_items_page_2",
+    "$category_text": "4jd.creativeScreen.tab.redstone_and_transport",
+    "$tab_binding_name": "redstone_and_transport_tab_toggle"
+  },
+
+  "materials_panel_content@creative_tabs_bumpers.tab_panel_content": {
+    "$is_tab_4": true,
+    "$category": "materials",
+    "$scroll_box_offset_page_2": [ 0, 121 ],
+    "$2_pages_only": true,
+    "$panel_content_page_1": "creative_materials_4jd.materials_items_page_1",
+    "$panel_content_page_2": "creative_materials_4jd.materials_items_page_2",
+    "$category_text": "4jd.creativeScreen.tab.materials",
+    "$tab_binding_name": "materials_tab_toggle"
+  },
+
+  "food_panel_content@creative_tabs_bumpers.tab_panel_content": {
+    "$is_tab_5": true,
+    "$category": "food",
+    "$1_page_only": true,
+    "$panel_content_page_1": "creative_food_4jd.food_items_page_1",
+    "$category_text": "4jd.craftingScreen.tab.food",
+    "$tab_binding_name": "food_tab_toggle"
+  },
+
+  "tools_weapons_and_armor_panel_content@creative_tabs_bumpers.tab_panel_content": {
+    "$is_tab_6": true,
+    "$category": "tools_weapons_and_armor",
+    "$scroll_box_offset_page_2": [ 0, 40 ],
+    "$scroll_box_offset_page_3": [ 0, 80 ],
+    "$scroll_box_offset_page_4": [ 0, 121 ],
+    "$4_pages_only": true,
+    "$panel_content_page_1": "creative_tools_4jd.tools_items_page_1",
+    "$panel_content_page_2": "creative_tools_4jd.tools_items_page_2",
+    "$panel_content_page_3": "creative_tools_4jd.tools_items_page_3",
+    "$panel_content_page_4": "common.empty_panel",
+    //"$panel_content_page_4": "creative_tools_4jd.tools_items_page_4",
+    "$category_text": "4jd.creativeScreen.tab.toolsWeaponsAndArmor",
+    "$tab_binding_name": "tools_weapons_and_armor_tab_toggle"
+  },
+
+  "brewing_panel_content@creative_tabs_bumpers.tab_panel_content": {
+    "$is_tab_7": true,
+    "$category": "brewing",
+    "$scroll_box_offset_page_2": [ 0, 60 ],
+    "$scroll_box_offset_page_3": [ 0, 121 ],
+    "$3_pages_only": true,
+    "$panel_content_page_1": "creative_brewing_4jd.brewing_items_page_1",
+    "$panel_content_page_2": "creative_brewing_4jd.brewing_items_page_2",
+    "$panel_content_page_3": "creative_brewing_4jd.brewing_items_page_3",
+    "$category_text": "4jd.creativeScreen.tab.brewing",
+    "$tab_binding_name": "brewing_tab_toggle"
+  },
+  
+  "miscellaneous_panel_content@creative_tabs_bumpers.tab_panel_content": {
+    "$is_tab_8": true,
+    "$category": "miscellaneous",
+    "$scroll_box_offset_page_2": [ 0, 40 ],
+    "$scroll_box_offset_page_3": [ 0, 80 ],
+    "$scroll_box_offset_page_4": [ 0, 121 ],
+    "$4_pages_only": true,
+    "$panel_content_page_1": "creative_miscellaneous_4jd.miscellaneous_items_page_1",
+    "$panel_content_page_2": "creative_miscellaneous_4jd.miscellaneous_items_page_2",
+    "$panel_content_page_3": "creative_miscellaneous_4jd.miscellaneous_items_page_3",
+    "$panel_content_page_4": "common.empty_panel",
+    //"$panel_content_page_4": "creative_miscellaneous_4jd.miscellaneous_items_page_4",
+    "$category_text": "4jd.creativeScreen.tab.miscellaneous",
+    "$tab_binding_name": "miscellaneous_tab_toggle"
+  },
+  
+  /*//// Button Tab ////*/
+
+  "left_cycle_gamepad_helper@common_tooltip_4jd.gamepad_helper_left_bumper": {
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "$hide_description": true,
+    "size": [ 16, 16 ]
+  },
+
+  "right_cycle_gamepad_helper@common_tooltip_4jd.gamepad_helper_right_bumper": {
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "$hide_description": true,
+    "size": [ 16, 16 ]
+  },
+
+  "cycle_button": {
+    "type": "panel",
+    "size": [ 24, 24 ],
+    "$ignore_border": true,
+    "controls": [
+      { "bumper_button@$bumper_button": { "layer": 4 } },
+      { 
+        "text@common_4jd.global_label": {
+          "text": "$button_cycle_text",
+          "shadow": true,
+          "size": [ "default", 10 ],
+          "layer": 3,
+          "bindings": [
+            {
+              "binding_name": "(not #gamepad_helper_visible)",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "bg_image": {
+          "type": "image",
+          "layer": 1,
+          "texture": "textures/ui4jd/global/base_color",
+          "color": [ 0.0, 0.0, 0.0 ],
+          "alpha": 0.5,
+          "size": [ 24, 24 ],
+          "bindings": [
+            {
+              "binding_name": "(not #gamepad_helper_visible)",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "hover_image": {
+          "type": "image",
+          "layer": 2,
+          "ignored": "$ignore_border",
+          "texture": "textures/ui/square_image_border_white",
+          "size": [ 24, 24 ],
+          "bindings": [
+            {
+              "binding_name": "(not #gamepad_helper_visible)",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "left_cycle@creative_tabs_bumpers.cycle_button": {
+    "$bumper_button": "creative_tabs_bumpers.left_cycle_gamepad_helper",
+    "$button_cycle_text": "<"
+  },
+
+  "left_cycle_hover@creative_tabs_bumpers.cycle_button": {
+    "$bumper_button": "creative_tabs_bumpers.left_cycle_gamepad_helper",
+    "$button_cycle_text": "<",
+    "$ignore_border": false
+  },
+
+  "right_cycle@creative_tabs_bumpers.cycle_button": {
+    "$bumper_button": "creative_tabs_bumpers.right_cycle_gamepad_helper",
+    "$button_cycle_text": ">"
+  },
+  
+  "right_cycle_hover@creative_tabs_bumpers.cycle_button": {
+    "$bumper_button": "creative_tabs_bumpers.right_cycle_gamepad_helper",
+    "$button_cycle_text": ">",
+    "$ignore_border": false
+  },
+
+  "page_cycle_tab@common_toggles_4jd.toggle_panel": {
+    "$custom_toggle_sound_name": "ui.focus",
+    "size": [ 24, 24 ],
+    "layer": 4,
+    "$toggle_focus_enabled": false,
+    "$is_custom_button": true
+  },
+
+  "prev_tab_button@creative_tabs_bumpers.page_cycle_tab": {
+    "$unchecked_control": "creative_tabs_bumpers.left_cycle",
+    "$checked_control": "creative_tabs_bumpers.left_cycle",
+    "$unchecked_hover_control": "creative_tabs_bumpers.left_cycle_hover",
+    "$checked_hover_control": "creative_tabs_bumpers.left_cycle_hover",
+
+    "$custom_from_button_id": "button.menu_tab_left",
+    "$custom_to_button_id": "button.menu_select"
+  },
+
+  "next_tab_button@creative_tabs_bumpers.page_cycle_tab": {
+    "$unchecked_control": "creative_tabs_bumpers.right_cycle",
+    "$checked_control": "creative_tabs_bumpers.right_cycle",
+    "$unchecked_hover_control": "creative_tabs_bumpers.right_cycle_hover",
+    "$checked_hover_control": "creative_tabs_bumpers.right_cycle_hover",
+
+    "$custom_from_button_id": "button.menu_tab_right",
+    "$custom_to_button_id": "button.menu_select"
+  },
+
+  /*//// Panels base ////*/
+
+  "creative_panel_content": {
+    "type": "panel",
+    "$ignore_prev_top_tab": false,
+    "$ignore_next_top_tab": false,
+    "controls": [
+      { "panel_content@$panel_tab_content": { } },
+      {
+        "prev_button@creative_tabs_bumpers.prev_tab_button": {
+          "ignored": "$ignore_prev_top_tab",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ -32, 8 ],
+          "$toggle_name": "$prev_top_tab_toggle_name",
+          "$tab_view_binding_name": "$prev_top_tab_view_binding_name",
+          "$toggle_group_forced_index": 0
+        }
+      },
+      {
+        "next_button@creative_tabs_bumpers.next_tab_button": {
+          "ignored": "$ignore_next_top_tab",
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "offset": [ 32, 8 ],
+          "$toggle_name": "$next_top_tab_toggle_name",
+          "$tab_view_binding_name": "$next_top_tab_view_binding_name",
+          "$toggle_group_forced_index": 1
+        }
+      }
+    ]
+  },
+
+  "creative_tab_pages": {
+    "type": "panel",
+    "$top_tab_category": "creative_top_tab",
+    "controls": [
+      { 
+        "page_1@creative_tabs_bumpers.creative_panel_content": {
+          "$panel_tab_content": "creative_tabs_bumpers.building_blocks_panel_content",
+          "$ignore_prev_top_tab": true,
+          "$next_top_tab_view_binding_name": "($top_tab_category + '_page_2_toggle')",
+          "$next_top_tab_toggle_name": "($top_tab_category + '_page_1_2_tabs')",
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "($top_tab_category + '_page_2_toggle')",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      { "page_2@creative_tabs_bumpers.page_2": { } }
+    ]
+  },
+
+  "page_2": {
+    "type": "panel",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($top_tab_category + '_page_2_toggle')",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      { 
+        "page_2@creative_tabs_bumpers.creative_panel_content": {
+          "$panel_tab_content": "creative_tabs_bumpers.decorations_panel_content",
+          "$prev_top_tab_view_binding_name": "($top_tab_category + '_page_1_toggle')",
+          "$next_top_tab_view_binding_name": "($top_tab_category + '_page_3_toggle')",
+          "$prev_top_tab_toggle_name": "($top_tab_category + '_page_1_2_tabs')",
+          "$next_top_tab_toggle_name": "($top_tab_category + '_page_2_3_tabs')",
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "($top_tab_category + '_page_3_toggle')",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      { "page_3@creative_tabs_bumpers.page_3": { } }
+    ]
+  },
+
+  "page_3": {
+    "type": "panel",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($top_tab_category + '_page_3_toggle')",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      { 
+        "page_3@creative_tabs_bumpers.creative_panel_content": {
+          "$panel_tab_content": "creative_tabs_bumpers.redstone_and_transport_panel_content",
+          "$prev_top_tab_view_binding_name": "($top_tab_category + '_page_2_toggle')",
+          "$next_top_tab_view_binding_name": "($top_tab_category + '_page_4_toggle')",
+          "$prev_top_tab_toggle_name": "($top_tab_category + '_page_2_3_tabs')",
+          "$next_top_tab_toggle_name": "($top_tab_category + '_page_3_4_tabs')",
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "($top_tab_category + '_page_4_toggle')",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      { "page_4@creative_tabs_bumpers.page_4": { } }
+    ]
+  },
+
+  "page_4": {
+    "type": "panel",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($top_tab_category + '_page_4_toggle')",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      { 
+        "page_4@creative_tabs_bumpers.creative_panel_content": {
+          "$panel_tab_content": "creative_tabs_bumpers.materials_panel_content",
+          "$prev_top_tab_view_binding_name": "($top_tab_category + '_page_3_toggle')",
+          "$next_top_tab_view_binding_name": "($top_tab_category + '_page_5_toggle')",
+          "$prev_top_tab_toggle_name": "($top_tab_category + '_page_3_4_tabs')",
+          "$next_top_tab_toggle_name": "($top_tab_category + '_page_4_5_tabs')",
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "($top_tab_category + '_page_5_toggle')",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      { "page_5@creative_tabs_bumpers.page_5": { } }
+    ]
+  },
+
+  "page_5": {
+    "type": "panel",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($top_tab_category + '_page_5_toggle')",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      { 
+        "page_5@creative_tabs_bumpers.creative_panel_content": {
+          "$panel_tab_content": "creative_tabs_bumpers.food_panel_content",
+          "$prev_top_tab_view_binding_name": "($top_tab_category + '_page_4_toggle')",
+          "$next_top_tab_view_binding_name": "($top_tab_category + '_page_6_toggle')",
+          "$prev_top_tab_toggle_name": "($top_tab_category + '_page_4_5_tabs')",
+          "$next_top_tab_toggle_name": "($top_tab_category + '_page_5_6_tabs')",
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "($top_tab_category + '_page_6_toggle')",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      { "page_6@creative_tabs_bumpers.page_6": { } }
+    ]
+  },
+
+  "page_6": {
+    "type": "panel",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($top_tab_category + '_page_6_toggle')",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      { 
+        "page_6@creative_tabs_bumpers.creative_panel_content": {
+          "$panel_tab_content": "creative_tabs_bumpers.tools_weapons_and_armor_panel_content",
+          "$prev_top_tab_view_binding_name": "($top_tab_category + '_page_5_toggle')",
+          "$next_top_tab_view_binding_name": "($top_tab_category + '_page_7_toggle')",
+          "$prev_top_tab_toggle_name": "($top_tab_category + '_page_5_6_tabs')",
+          "$next_top_tab_toggle_name": "($top_tab_category + '_page_6_7_tabs')",
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "($top_tab_category + '_page_7_toggle')",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      { "page_7@creative_tabs_bumpers.page_7": { } }
+    ]
+  },
+
+  "page_7": {
+    "type": "panel",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($top_tab_category + '_page_7_toggle')",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      { 
+        "page_7@creative_tabs_bumpers.creative_panel_content": {
+          "$panel_tab_content": "creative_tabs_bumpers.brewing_panel_content",
+          "$prev_top_tab_view_binding_name": "($top_tab_category + '_page_6_toggle')",
+          "$next_top_tab_view_binding_name": "($top_tab_category + '_page_8_toggle')",
+          "$prev_top_tab_toggle_name": "($top_tab_category + '_page_6_7_tabs')",
+          "$next_top_tab_toggle_name": "($top_tab_category + '_page_7_8_tabs')",
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "($top_tab_category + '_page_8_toggle')",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      { "page_8@creative_tabs_bumpers.page_8": { } }
+    ]
+  },
+
+  "page_8": {
+    "type": "panel",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "($top_tab_category + '_page_8_toggle')",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      { 
+        "page_8@creative_tabs_bumpers.creative_panel_content": {
+          "$panel_tab_content": "creative_tabs_bumpers.miscellaneous_panel_content",
+          "$prev_top_tab_view_binding_name": "($top_tab_category + '_page_7_toggle')",
+          "$prev_top_tab_toggle_name": "($top_tab_category + '_page_7_8_tabs')",
+          "$ignore_next_top_tab": true
+        }
+      }
+    ]
+  }
+}

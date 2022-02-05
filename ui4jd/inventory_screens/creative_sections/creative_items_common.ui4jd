@@ -63,8 +63,8 @@
     "type": "panel",
     "$category|default": "default",
     "$panel_content|default": "",
-    "$ignore_prev_button|default": false,
-    "$ignore_next_button|default": false,
+    "$ignore_prev_button": false,
+    "$ignore_next_button": false,
     "controls": [
       {
         "panel_content": {
@@ -125,25 +125,59 @@
         }
       },
       {
-        "prev_button@creative_items_common_4jd.prev_button": {
+        "prev_button_hold": {
+          "type": "panel",
           "ignored": "$ignore_prev_button",
           "anchor_from": "top_right",
           "anchor_to": "top_right",
           "offset": [ -10.5, 15 ],
-          "$toggle_name": "$prev_toggle_name",
-          "$tab_view_binding_name": "$prev_button_view_binding_name",
-          "$toggle_group_forced_index": 0
+          "size": [ 16, 11 ],
+          "controls": [
+            {
+              "left_cycle_gamepad_helper@common_tooltip_4jd.gamepad_helper_left_trigger": {
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle",
+                "offset": [ 34, 0 ],
+                "$hide_description": true,
+                "size": [ 16, 16 ]
+              }
+            },
+            {
+              "prev_button@creative_items_common_4jd.prev_button": {
+                "$toggle_name": "$prev_toggle_name",
+                "$tab_view_binding_name": "$prev_button_view_binding_name",
+                "$toggle_group_forced_index": 0
+              }
+            }
+          ]
         }
       },
       {
-        "next_button@creative_items_common_4jd.next_button": {
+        "next_button_hold": {
+          "type": "panel",
           "ignored": "$ignore_next_button",
           "anchor_from": "bottom_right",
           "anchor_to": "bottom_right",
           "offset": [ -10.5, -37 ],
-          "$toggle_name": "$next_toggle_name",
-          "$tab_view_binding_name": "$next_button_view_binding_name",
-          "$toggle_group_forced_index": 1
+          "size": [ 16, 11 ],
+          "controls": [
+            {
+              "right_cycle_gamepad_helper@common_tooltip_4jd.gamepad_helper_right_trigger": {
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle",
+                "offset": [ 34, 0 ],
+                "$hide_description": true,
+                "size": [ 16, 16 ]
+              }
+            },
+            {
+              "next_button@creative_items_common_4jd.next_button": {
+                "$toggle_name": "$next_toggle_name",
+                "$tab_view_binding_name": "$next_button_view_binding_name",
+                "$toggle_group_forced_index": 1
+              }
+            } 
+          ]
         }
       }
     ]

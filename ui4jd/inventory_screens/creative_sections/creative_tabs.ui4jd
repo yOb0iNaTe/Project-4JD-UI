@@ -333,7 +333,6 @@
     "type": "stack_panel",
     "orientation": "horizontal",
     "size": [ "100%c", 27 ],
-    "layer": 3,
     "controls": [
       { "01@ui_4jd_textures.cell_image_1_5": { "size": [ 27, 27 ] } },
       { "02@ui_4jd_textures.cell_image_1_5": { "size": [ 27, 27 ] } },
