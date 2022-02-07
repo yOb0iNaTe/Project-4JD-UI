@@ -10,6 +10,7 @@
     "$icon_texture": "",
     "$desc_panel_content|default": "common.empty_panel",
     "$hide_description|default": false,
+    "$hide_icon_separator|default": true,
     "$gamepad_helper_visible_binding_name|default": "#gamepad_helper_visible",
     "$gamepad_helper_visible_binding_type|default": "global",
     "$gamepad_helper_binding_condition|default": "none",
@@ -36,6 +37,13 @@
               }
             }
           ]
+        }
+      },
+      {
+        "icon_separator": {
+          "type": "panel",
+          "ignored": "($hide_icon_separator)",
+          "size": [ 6, 16 ]
         }
       },
       {

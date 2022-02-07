@@ -39,6 +39,97 @@
     "texture": "textures/ui4jd/menus/title_nintendo_switch_edition"
   },
 
+  /* Player List */
+
+  "player_list_bg": {
+    "type": "image",
+    "texture": "textures/ui4jd/player_list/player_list_bg"
+  },
+
+  "player_list_default": {
+    "type": "image",
+    "texture": "textures/ui4jd/player_list/player_list_default"
+  },
+
+  "player_list_hover": {
+    "type": "image",
+    "texture": "textures/ui4jd/player_list/player_list_hover"
+  },
+
+  /* Book */
+
+  "book_page_left": {
+    "type": "image",
+    "size": [ 146, 180 ],
+    "texture": "textures/ui4jd/book/book_page_left"
+  },
+
+  "book_page_right": {
+    "type": "image",
+    "size": [ 146, 180 ],
+    "texture": "textures/ui4jd/book/book_page_right"
+  },
+
+  "book_signing": {
+    "type": "image",
+    "size": [ 146, 180 ],
+    "texture": "textures/ui4jd/book/book_signing"
+  },
+
+  "book_previous_active": {
+    "type": "image",
+    "size": [ 23, 13 ],
+    "texture": "textures/ui4jd/book/book_previous_active"
+  },
+
+  "book_previous_inactive": {
+    "type": "image",
+    "size": [ 23, 13 ],
+    "texture": "textures/ui4jd/book/book_previous_inactive"
+  },
+
+  "book_next_active": {
+    "type": "image",
+    "size": [ 23, 13 ],
+    "texture": "textures/ui4jd/book/book_next_active"
+  },
+
+  "book_next_inactive": {
+    "type": "image",
+    "size": [ 23, 13 ],
+    "texture": "textures/ui4jd/book/book_next_inactive"
+  },
+
+  "book_edit_icon": {
+    "type": "image",
+    "size": [ 24, 24 ],
+    "texture": "textures/ui4jd/book/book_edit_icon"
+  },
+
+  "book_addtextpage_icon": {
+    "type": "image",
+    "size": [ 24, 24 ],
+    "texture": "textures/ui4jd/book/book_addtextpage_icon"
+  },
+
+  "book_shiftleft_icon": {
+    "type": "image",
+    "size": [ 24, 24 ],
+    "texture": "textures/ui4jd/book/book_shiftleft_icon"
+  },
+
+  "book_shiftright_icon": {
+    "type": "image",
+    "size": [ 24, 24 ],
+    "texture": "textures/ui4jd/book/book_shiftright_icon"
+  },
+
+  "book_delete_icon": {
+    "type": "image",
+    "size": [ 24, 24 ],
+    "texture": "textures/ui4jd/book/book_delete_icon"
+  },
+
   /* World Icons */
 
   "local_world_icon": {

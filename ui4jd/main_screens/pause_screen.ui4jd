@@ -36,6 +36,39 @@
     ]
   },
 
+  /*////// BUTTON TAB from Help and options //////*/
+
+  "players_list_toggle@common_toggles_4jd.main_button_toggle": {
+    "$toggle_name": "help_screen_toggles",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "size": [ "100%", 20 ],
+    "$button_text": "key.playerlist",
+    "$tab_view_binding_name": "player_list_tab_toggle",
+    "$toggle_group_forced_index": 100
+  },
+
+  "help_main_panel_list_toggle@common_toggles_4jd.toggle_panel": {
+    "$toggle_name": "help_screen_toggles",
+    "$custom_toggle_sound_name": "ui.back",
+    "size": [ "100% + 27px", 16 ],
+    "offset": [ 0, 2 ],
+    "anchor_from": "bottom_left",
+    "anchor_to": "bottom_left",
+    "$is_back_button": true,
+    "$tabe_view_binding_name": "help_main_panel_tab_toggle",
+    "$toggle_default_state": true,
+    "$toggle_group_forced_index": 0,
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "player_list_tab_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
   /*//// Help & Options ////*/
 
   "profile_button@start_4jd.main_button": {
@@ -74,7 +107,8 @@
       { "button_0@start_4jd.stacked_row": { "controls": [ { "profile_button@pause_4jd.profile_button": { } } ] } },
       { "button_1@start_4jd.stacked_row": { "controls": [ { "feedback_button@pause_4jd.feedback_button": { } } ] } },
       { "button_2@start_4jd.stacked_row": { "controls": [ { "settings_button@start_4jd.settings_button": { } } ] } },
-      { "button_3@start_4jd.stacked_row": { "controls": [ { "players_permissions_button@pause_4jd.players_permissions_button": { } } ] } },
+      { "button_3@start_4jd.stacked_row": { "controls": [ { "players_list_toggle@pause_4jd.players_list_toggle": { } } ] } },
+      //{ "button_3@start_4jd.stacked_row": { "controls": [ { "players_permissions_button@pause_4jd.players_permissions_button": { } } ] } },
       { 
         "button_4@start_4jd.stacked_row": {
           "bindings": [
@@ -118,8 +152,8 @@
     "size": [ 225, "100%c" ],
     "controls": [
       { "button_0@start_4jd.stacked_row": { "controls": [ { "return_to_game_button@pause_4jd.return_to_game_button": { } } ] } },
-      { "button_1@start_4jd.stacked_row": { "controls": [ { "achievements_button@start_4jd.achievements_button": { } } ] } },
-      { "button_2@start_4jd.stacked_row": { "controls": [ { "help_and_options_toggle@pause_4jd.help_and_options_toggle": { } } ] } },
+      { "button_1@start_4jd.stacked_row": { "controls": [ { "help_and_options_toggle@pause_4jd.help_and_options_toggle": { } } ] } },
+      { "button_2@start_4jd.stacked_row": { "controls": [ { "achievements_button@start_4jd.achievements_button": { } } ] } },
       { "button_3@start_4jd.stacked_row": { "controls": [ { "store_button@start_4jd.store_button": { } } ] } },
       { "button_4@start_4jd.stacked_row": { "controls": [ { "quit_button@pause_4jd.quit_button": { } } ] } }
     ]
@@ -152,38 +186,120 @@
       },
       {
         "help_and_options_panel": {
-          "type": "stack_panel",
-          "orientation": "horizontal",
-          "anchor_from": "bottom_left",
-          "anchor_to": "bottom_left",
-          "size": [ "100%", 16 ],
-          "bindings": [
-            {
-              "binding_type": "view",
-              "source_control_name": "help_and_options_tab_toggle",
-              "source_property_name": "(#toggle_state)",
-              "target_property_name": "#visible"
-            }
-          ],
+          "type": "panel",
           "controls": [
-            { 
-              "gamepad_helper_a@common_tooltip_4jd.gamepad_helper_a": {
+            {
+              "main": {
+                "type": "panel",
                 "bindings": [
                   {
-                    "binding_type": "global",
-                    "binding_name": "#gamepad_helper_visible",
-                    "binding_name_override": "#visible",
-                    "binding_condition": "none"
+                    "binding_type": "view",
+                    "source_control_name": "player_list_tab_toggle",
+                    "source_property_name": "(not #toggle_state)",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "controls": [
+                  {
+                    "gamepad_helpers_panel": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "anchor_from": "bottom_left",
+                      "anchor_to": "bottom_left",
+                      "size": [ "100%", 16 ],
+                      "controls": [
+                        { 
+                          "gamepad_helper_a@common_tooltip_4jd.gamepad_helper_a": {
+                            "bindings": [
+                              {
+                                "binding_type": "global",
+                                "binding_name": "#gamepad_helper_visible",
+                                "binding_name_override": "#visible",
+                                "binding_condition": "none"
+                              }
+                            ]
+                          }
+                        },
+                        { 
+                          "gamepad_helper_b@common_tooltip_4jd.gamepad_helper_b": {
+                            "bindings": [ ],
+                            "$icon_description_bind": "gui.back",
+                            "$desc_panel_content": "pause_4jd.main_panel_list_toggle"
+                          }
+                        }
+                      ]
+                    }
                   }
                 ]
               }
             },
-            { 
-              "gamepad_helper_b@common_tooltip_4jd.gamepad_helper_b": {
-                "bindings": [ ],
-                "$icon_description_bind": "gui.back",
-                "$desc_panel_content": "pause_4jd.main_panel_list_toggle"
+            {
+              "player_list": {
+                "type": "panel",
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "player_list_tab_toggle",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "controls": [
+                  {
+                    "gamepad_helpers_panel": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "anchor_from": "bottom_left",
+                      "anchor_to": "bottom_left",
+                      "size": [ "100%", 16 ],
+                      "bindings": [
+                        {
+                          "binding_type": "view",
+                          "source_control_name": "help_and_options_tab_toggle",
+                          "source_property_name": "(#toggle_state)",
+                          "target_property_name": "#visible"
+                        }
+                      ],
+                      "controls": [
+                        { 
+                          "gamepad_helper_a@common_tooltip_4jd.gamepad_helper_a": {
+                            "bindings": [
+                              {
+                                "binding_type": "global",
+                                "binding_name": "#gamepad_helper_visible",
+                                "binding_name_override": "#visible",
+                                "binding_condition": "none"
+                              }
+                            ]
+                          }
+                        },
+                        { 
+                          "gamepad_helper_b@common_tooltip_4jd.gamepad_helper_b": {
+                            "bindings": [ ],
+                            "$icon_description_bind": "gui.back",
+                            "$desc_panel_content": "pause_4jd.help_main_panel_list_toggle"
+                          }
+                        },
+                        { 
+                          "gamepad_helper_select@common_tooltip_4jd.gamepad_helper_select": {
+                            "bindings": [ ],
+                            "$icon_description_bind": "permissions.title",
+                            "$desc_panel_content": "player_list_4jd.permission_button"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
               }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "help_and_options_tab_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
             }
           ]
         }
@@ -217,8 +333,39 @@
         "help_and_options_panel": {
           "type": "panel",
           "controls": [
-            { "title_panel@start_4jd.title_panel": { "$splash_text_visible": false } },
-            { "help_and_options_buttons@pause_4jd.help_and_options_buttons": { } }
+            {
+              "main": {
+                "type": "panel",
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "player_list_tab_toggle",
+                    "source_property_name": "(not #toggle_state)",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "controls": [
+                  { "title_panel@start_4jd.title_panel": { "$splash_text_visible": false } },
+                  { "help_and_options_buttons@pause_4jd.help_and_options_buttons": { } }
+                ]
+              }
+            },
+            {
+              "player_list": {
+                "type": "panel",
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "player_list_tab_toggle",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "controls": [
+                  { "player_list_panel@player_list_4jd.player_list_panel": { } }
+                ]
+              }
+            }
           ],
           "bindings": [
             {

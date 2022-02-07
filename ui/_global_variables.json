@@ -12,7 +12,7 @@
   "$anvil_cost_fail_text_color": [ 1.0, 0.375, 0.375 ], //[ 0.929, 0.337, 0.337 ],
   //"$anvil_cost_success_text_color": [ 0.000, 0.647, 0.000 ]
 
-  "$global_font_type": "normal", // Use "DFGMaruGothic" if you are using JPN language.
+  "$global_font_type": "ExtendedASCII", // Use "DFGMaruGothic" if you are using JPN language.
   "$global_font_scale_factor": 1.0, // Use 0.8 if you are using JPN language.
 
   //////// Enchanting Table ////////
