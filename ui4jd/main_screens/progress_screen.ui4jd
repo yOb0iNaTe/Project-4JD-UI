@@ -182,13 +182,15 @@
       { "binding_name": "#progress_text" }
     ]
   },
-
-  "gamepad_helpers@start.gamepad_helpers": {
+  
+  "gamepad_helpers": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
     "anchor_from": "bottom_left",
     "anchor_to": "bottom_left",
-    "offset": [ 0, 0 ],
+    "size": [ "100%", 16 ],
     "controls": [
-      { "gamepad_helper_a@common.gamepad_helper_a": {} }
+      { "gamepad_helper_a@common_tooltip_4jd.gamepad_helper_a": { } }
     ]
   },
 
@@ -251,8 +253,7 @@
       },
       //{ "title_panel@progress_4jd.title_stack_panel": {} },
       //{ "cancel_button@progress_4jd.cancel_button": { "offset": [ 0, -56 ] } },
-      { "popup_dialog_factory@progress.popup_dialog_factory": {} },
-      { "gamepad_helpers@progress_4jd.gamepad_helpers": {} }
+      { "popup_dialog_factory@progress.popup_dialog_factory": {} }
     ]
   },
 
@@ -310,8 +311,7 @@
     "controls": [
       { "main_title@start_4jd.title_panel": { "$splash_text_visible": false } },
       { "title_text_panel@progress_4jd.title_text_panel": { } },
-      { "popup_dialog_factory@progress.popup_dialog_factory": {} },
-      { "gamepad_helpers@progress_4jd.gamepad_helpers": {} }
+      { "popup_dialog_factory@progress.popup_dialog_factory": {} }
     ]
   },
 

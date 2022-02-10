@@ -446,10 +446,25 @@
 
   "gui_elements": {
     "type": "panel",
+    "$4jd_offset|default": [ 0, -22 ],
     "controls": [
-      { "gui_desktop@hud_4jd.gui_desktop": { "offset": [ 0, -22 ] } },
       { "gui_pocket@hud_4jd.gui_pocket": {} },
-      { "exp_rend@hud_4jd.exp_progress_bar_and_hotbar": { "offset": [ 0, -22 ] } }
+      { 
+        "gui_desktop@hud_4jd.gui_desktop": {
+          "offset": "$4jd_offset"
+        }
+      },
+      { 
+        "exp_rend@hud_4jd.exp_progress_bar_and_hotbar": {
+          "offset": "$4jd_offset"
+        }
+      }
+    ],
+    "variables": [
+      {
+        "requires": "(not $touch)",
+        "$4jd_offset": [ 0, -22 ]
+      }
     ]
   },
 

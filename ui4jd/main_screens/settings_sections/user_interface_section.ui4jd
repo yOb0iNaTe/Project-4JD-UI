@@ -21,8 +21,8 @@
               }
             },
             {
-              "option_toggle3@settings_common_4jd.option_toggle": {
-                "ignored": "(not $text_to_speech_supported)",
+              "option_toggle_3@settings_common_4jd.option_toggle": {
+                //"ignored": "(not $text_to_speech_supported)",
                 "$option_label": "options.enableOpenChatMessage",
                 "$option_binding_name": "#enable_open_chat_message",
                 "$option_enabled_binding_name": "#enable_open_chat_message_enabled",

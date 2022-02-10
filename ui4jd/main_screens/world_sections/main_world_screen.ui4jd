@@ -388,7 +388,11 @@
                 "$icon_description_bind": "gui.back",
                 "$desc_panel_content": "create_world_4jd.back_button"
               }
-            }
+            },
+            { "gamepad_helper_left_bumper@common_tooltip_4jd.gamepad_helper_left_bumper": { "$hide_icon_separator": false, "$icon_description_bind": "" } },
+            { "gamepad_helper_right_bumper@common_tooltip_4jd.gamepad_helper_right_bumper": { "$hide_icon_separator": false,  "$icon_description_bind": "createWorldScreen.worldOptions" } },
+            { "gamepad_helper_left_trigger@common_tooltip_4jd.gamepad_helper_left_trigger": { "$hide_icon_separator": false, "$icon_description_bind": "" } },
+            { "gamepad_helper_right_trigger@common_tooltip_4jd.gamepad_helper_right_trigger": { "$hide_icon_separator": false,  "$icon_description_bind": "Scroll" } }
           ]
         }
       },

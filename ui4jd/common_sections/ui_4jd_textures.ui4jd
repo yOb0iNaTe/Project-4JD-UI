@@ -188,6 +188,36 @@
     "texture": "textures/ui4jd/inventory/creative_layout"
   },
 
+  /* Loom */
+
+  "loom_input_slots": {
+    "type": "image",
+    "size": [ 75, 82.5 ],
+    "texture": "textures/ui4jd/loom/loom_input_slots"
+  },
+
+  "loom_patterns_panel_1_5": {
+    "type": "image",
+    "texture": "textures/ui4jd/loom/loom_patterns_panel_1.5"
+  },
+
+  "loom_active_pattern": {
+    "type": "image",
+    "size": [ 27, 27 ],
+    "texture": "textures/ui4jd/loom/loom_active_pattern"
+  },
+
+  "loom_active_pattern_hover": {
+    "type": "image",
+    "size": [ 27, 27 ],
+    "texture": "textures/ui4jd/loom/loom_active_pattern_hover"
+  },
+
+  "loom_inactive_pattern": {
+    "type": "image",
+    "size": [ 27, 27 ],
+    "texture": "textures/ui4jd/loom/loom_inactive_pattern"
+  },
 
   /* Pack Showcase */
 

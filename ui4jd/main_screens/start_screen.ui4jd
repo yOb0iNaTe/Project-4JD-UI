@@ -217,7 +217,7 @@
 
   "feedback_button@start_4jd.main_button": {
     "$pressed_button_name": "button.menu_open_uri",
-    "$button_text": "feedbackScreen.button"
+    "$button_text": "options.group.feedback"
   },
 
   "stacked_row": {
